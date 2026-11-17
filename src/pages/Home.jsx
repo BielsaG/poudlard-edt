@@ -4,14 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import img from '../assets/photos/photo-poudlard-accueil.jpg'
 import { getHouses, getSubjects, getTeachers } from '../services'
-import { Avatar, Eyebrow, SubjectInitial } from '../components'
+import { Avatar, Eyebrow } from '../components'
 
 const TEACHERS_PREVIEW = 3
 const SUBJECTS_PREVIEW = 3
-
-function Eyebrow({ children, className = '' }) {
-  return <p className={`text-xs font-bold tracking-[0.2em] uppercase ${className}`}>{children}</p>
-}
 
 export default function Home() {
   const [houses, setHouses] = useState([])

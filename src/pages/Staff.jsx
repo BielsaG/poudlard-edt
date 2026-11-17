@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { PageTitle, StaffCard } from '../components'
+import { Avatar, Label, PageTitle } from '../components'
 import { getStaffDirectory } from '../services'
 
 const fieldClass =
@@ -68,10 +68,31 @@ export default function Staff() {
           <p className="mt-10 text-center text-stone-dark">Aucun membre du staff ne correspond à votre recherche.</p>
         )}
 
+        {/* Cartes */}
         <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {filteredStaff.map((wizard) => (
-            <li key={wizard.id}>
-              <StaffCard wizard={wizard} />
+            <li
+              key={wizard.id}
+              className="flex gap-5 rounded-md border border-stone/60 bg-parchment-light p-7 shadow-md shadow-castle/5"
+            >
+              <Avatar
+                firstName={wizard.firstName}
+                lastName={wizard.lastName}
+                className="size-18 bg-stone/60 font-title text-2xl text-castle shadow-md"
+              />
+
+              <div className="min-w-0 flex-1">
+                <h2 className="font-title text-xl">
+                  {wizard.firstName} {wizard.lastName}
+                </h2>
+
+                <hr className="my-4 border-stone/50" />
+
+                <Label>Matière enseignée</Label>
+                <p className="mt-1 font-bold">
+                  {wizard.subjects.length > 0 ? wizard.subjects.map((s) => s.name).join(', ') : '—'}
+                </p>
+              </div>
             </li>
           ))}
         </ul>
