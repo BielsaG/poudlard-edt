@@ -1,19 +1,24 @@
 
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate, useRevalidator } from "react-router-dom";
+import { deleteWizard, updateWizard } from "../services";
 
 function Profile() {
 
   const profil = useLoaderData();
+  const navigate = useNavigate();
+  const revalidator = useRevalidator();
 
   const [modifier, setModifier] = useState(false);
   const [confirmationSuppression, setConfirmationSuppression] = useState(false);
+  const [chargement, setChargement] = useState(false);
+  const [erreur, setErreur] = useState("");
 
   const [prenom, setPrenom] = useState(profil.prenom);
   const [nom, setNom] = useState(profil.nom);
   const [email, setEmail] = useState(profil.email);
-  const [maison, setMaison] = useState(profil.maison || "");
-  const [classe, setClasse] = useState(profil.classe || "");
+  const [maison, setMaison] = useState(profil.houseId || "");
+  const [classe, setClasse] = useState(profil.classId || "");
   const [ville, setVille] = useState(profil.villeOrigine || "");
   const [animal, setAnimal] = useState(profil.animal || "");
   const [bois, setBois] = useState(profil.baguette?.bois || "");
@@ -23,15 +28,48 @@ function Profile() {
 
   const estEleve = profil.roles.includes("Élève");
 
-  function enregistrer() {
-    setModifier(false);
+  async function enregistrer() {
+    setChargement(true);
+    setErreur("");
 
-    // Plus tard : appel au service pour modifier le profil.
+    const donnees = {
+      firstName: prenom,
+      lastName: nom,
+      email,
+      houseId: maison || null,
+      classId: classe || null,
+      villeOrigine: ville,
+      animal,
+      baguette: { bois, coeur, longueur },
+    };
+
+    if (motDePasse) {
+      donnees.password = motDePasse;
+    }
+
+    try {
+      await updateWizard(profil.id, donnees);
+      setModifier(false);
+      setMotDePasse("");
+      revalidator.revalidate();
+    } catch (error) {
+      setErreur(error.message);
+    } finally {
+      setChargement(false);
+    }
   }
 
-  function supprimer() {
-    // Plus tard : appel au service pour supprimer le profil.
-    setConfirmationSuppression(false);
+  async function supprimer() {
+    setChargement(true);
+    setErreur("");
+
+    try {
+      await deleteWizard(profil.id);
+      navigate("/");
+    } catch (error) {
+      setErreur(error.message);
+      setChargement(false);
+    }
   }
 
   return (
@@ -147,10 +185,9 @@ function Profile() {
                 {modifier ? (<select className="w-full rounded-md bg-white p-2 shadow-sm outline-none focus:ring-2 focus:ring-[#A8813F]" value={maison}
                     onChange={(e) => setMaison(e.target.value)}>
                     <option value="">Choisir une maison</option>
-                    <option value="Gryffondor">Gryffondor</option>
-                    <option value="Serpentard">Serpentard</option>
-                    <option value="Serdaigle">Serdaigle</option>
-                    <option value="Poufsouffle">Poufsouffle</option>
+                    {profil.maisons.map((maison) => (
+                      <option key={maison.id} value={maison.id}>{maison.name}</option>
+                    ))}
                 </select>) : (<p className="font-medium">{profil.maison}</p>)}
               </div>
 
@@ -160,8 +197,8 @@ function Profile() {
                 {modifier ? (<select className="w-full rounded-md bg-white p-2 shadow-sm outline-none focus:ring-2 focus:ring-[#A8813F]" value={classe}
                     onChange={(e) => setClasse(e.target.value)}>
                     <option value="">Choisir une classe</option>
-                    {[1, 2, 3, 4, 5, 6].map((niveau) => (
-                      <option key={niveau} value={`${niveau}e année`}> {niveau}e année</option>))}
+                    {profil.classes.map((classe) => (
+                      <option key={classe.id} value={classe.id}>{classe.name}</option>))}
                   </select>) : (<p className="font-medium">{profil.classe}</p>)}
               </div>
 
@@ -186,22 +223,24 @@ function Profile() {
 
       <div className="mx-auto mb-6 flex max-w-5xl justify-end gap-3">
 
+        {erreur && <p className="mr-auto text-red-700">{erreur}</p>}
+
         {modifier ? (<>
-            <button className="rounded-md bg-gray-500 px-5 py-2 font-semibold text-white transition hover:bg-gray-600" onClick={() => setModifier(false)} type="button">
+            <button className="rounded-md bg-gray-500 px-5 py-2 font-semibold text-white transition hover:bg-gray-600" onClick={() => setModifier(false)} type="button" disabled={chargement}>
               Annuler
             </button>
 
-            <button className="rounded-md bg-green-700 px-5 py-2 font-semibold text-white transition hover:bg-green-800" onClick={enregistrer} type="button">
-              Enregistrer
+            <button className="rounded-md bg-green-700 px-5 py-2 font-semibold text-white transition hover:bg-green-800" onClick={enregistrer} type="button" disabled={chargement}>
+              {chargement ? "Enregistrement..." : "Enregistrer"}
             </button>
           </>) : 
           (<>
-            <button className="rounded-md bg-[#A8813F] px-5 py-2 font-semibold text-white transition hover:bg-[#89672F]" onClick={() => setModifier(true)} type="button">
+            <button className="rounded-md bg-[#A8813F] px-5 py-2 font-semibold text-white transition hover:bg-[#89672F]" onClick={() => setModifier(true)} type="button" disabled={chargement}>
               Modifier
             </button>
 
             <button className="rounded-md bg-red-700 px-5 py-2 font-semibold text-white transition hover:bg-red-800" onClick={() => setConfirmationSuppression(true)}
-              type="button">
+              type="button" disabled={chargement}>
               Supprimer
             </button>
           </>
@@ -217,12 +256,12 @@ function Profile() {
               {profil.prenom} {profil.nom} ?
             </p>
 
-            <button className="mr-2 rounded-md bg-gray-500 px-4 py-2 text-white hover:bg-gray-600" onClick={() => setConfirmationSuppression(false)}>
+            <button className="mr-2 rounded-md bg-gray-500 px-4 py-2 text-white hover:bg-gray-600" onClick={() => setConfirmationSuppression(false)} disabled={chargement}>
               Annuler
             </button>
 
-            <button className="rounded-md bg-red-700 px-4 py-2 text-white hover:bg-red-800" onClick={supprimer}>
-              Confirmer
+            <button className="rounded-md bg-red-700 px-4 py-2 text-white hover:bg-red-800" onClick={supprimer} disabled={chargement}>
+              {chargement ? "Suppression..." : "Confirmer"}
             </button>
           </div>
         </div>

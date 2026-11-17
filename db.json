@@ -74,7 +74,14 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "villeOrigine": "Londres",
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Dragon",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "506b",
@@ -1868,5 +1875,6 @@
       "start": "20:00",
       "end": "21:30"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

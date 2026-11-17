@@ -3,42 +3,10 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Profile from './pages/Profile.jsx'
-
-const API = 'http://localhost:3000'
+import { getWizardProfile } from './services'
 
 async function profileLoader({ params }) {
-  const responses = await Promise.all([
-    fetch(`${API}/wizards/${params.id}`),
-    fetch(`${API}/roles`),
-    fetch(`${API}/houses`),
-    fetch(`${API}/classes`),
-  ])
-
-  if (responses.some((response) => !response.ok)) {
-    throw new Response('Impossible de charger le profil', { status: 500 })
-  }
-
-  const [wizardResponse, rolesResponse, housesResponse, classesResponse] =
-    responses
-  const wizard = await wizardResponse.json()
-  const roles = await rolesResponse.json()
-  const houses = await housesResponse.json()
-  const classes = await classesResponse.json()
-
-  return {
-    prenom: wizard.firstName,
-    nom: wizard.lastName,
-    email: wizard.email,
-    photo: wizard.avatar,
-    roles: wizard.roleIds.map(
-      (roleId) => roles.find((role) => role.id === roleId)?.label || roleId,
-    ),
-    maison: houses.find((house) => house.id === wizard.houseId)?.name || '',
-    classe: classes.find((classe) => classe.id === wizard.classId)?.name || '',
-    villeOrigine: '',
-    animal: '',
-    baguette: {},
-  }
+  return getWizardProfile(params.id)
 }
 
 // Routes de l'application (voir CAHIER_DES_CHARGES.md, section 5)
