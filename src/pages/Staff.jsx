@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { Avatar, Badge, Label, PageTitle } from '../components'
+import { PageTitle, StaffCard } from '../components'
 import { getStaffDirectory } from '../services'
 
 const fieldClass =
@@ -11,7 +11,7 @@ export default function Staff() {
   const [staff, setStaff] = useState([])
   const [error, setError] = useState(null)
   const [search, setSearch] = useState('')
-  const [roleId, setRoleId] = useState('') // '' = tous les rôles
+  const [roleId, setRoleId] = useState('')
 
   useEffect(() => {
     getStaffDirectory()
@@ -60,18 +60,6 @@ export default function Staff() {
               className={`${fieldClass} w-full pl-10`}
             />
           </label>
-
-          <label>
-            <span className="sr-only">Filtrer par rôle</span>
-            <select value={roleId} onChange={(e) => setRoleId(e.target.value)} className={`${fieldClass} w-full sm:w-44`}>
-              <option value="">Tous les rôles</option>
-              {roles.map((role) => (
-                <option key={role.id} value={role.id}>
-                  {role.label}
-                </option>
-              ))}
-            </select>
-          </label>
         </div>
 
         {error && <p className="mt-10 text-center text-error">{error}</p>}
@@ -80,39 +68,10 @@ export default function Staff() {
           <p className="mt-10 text-center text-stone-dark">Aucun membre du staff ne correspond à votre recherche.</p>
         )}
 
-        {/* Cartes */}
         <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {filteredStaff.map((wizard) => (
-            <li
-              key={wizard.id}
-              className="flex gap-5 rounded-md border border-stone/60 bg-parchment-light p-7 shadow-md shadow-castle/5"
-            >
-              <Avatar
-                firstName={wizard.firstName}
-                lastName={wizard.lastName}
-                className="size-18 bg-stone/60 font-title text-2xl text-castle shadow-md"
-              />
-
-              <div className="min-w-0 flex-1">
-                <h2 className="font-title text-xl">
-                  {wizard.firstName} {wizard.lastName}
-                </h2>
-
-                <ul className="mt-2 flex flex-wrap gap-1.5">
-                  {wizard.roles.map((role) => (
-                    <li key={role.id}>
-                      <Badge>{role.label}</Badge>
-                    </li>
-                  ))}
-                </ul>
-
-                <hr className="my-4 border-stone/50" />
-
-                <Label>Matière enseignée</Label>
-                <p className="mt-1 font-bold">
-                  {wizard.subjects.length > 0 ? wizard.subjects.map((s) => s.name).join(', ') : '—'}
-                </p>
-              </div>
+            <li key={wizard.id}>
+              <StaffCard wizard={wizard} />
             </li>
           ))}
         </ul>
