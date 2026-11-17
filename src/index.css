@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Charte graphique (CAHIER_DES_CHARGES.md, section 7)
+   Chaque couleur devient une classe Tailwind : bg-slate-castle, text-brass, border-stone... */
+@theme {
+  --color-parchment: #F4EDE1;
+  --color-stone-light: #E8DFD1;
+  --color-stone: #BFB3A2;
+  --color-stone-dark: #6E6459;
+  --color-castle: #2A2420;
+  --color-brass: #A8813F;
+  --color-brass-light: #D4A94F;
+
+  --color-gryffindor: #8E2B2B;
+  --color-slytherin: #1F5A3E;
+  --color-ravenclaw: #1F3A5F;
+  --color-hufflepuff: #E2B33C;
+
+  --color-success: #3F7A4F;
+  --color-error: #B0412E;
+  --color-warning: #C98A2E;
+
+  --font-title: "Cinzel", serif;
+  --font-body: "Source Sans 3", sans-serif;
+}
+
+/* Texture pointillée du header : trop longue à écrire en classes Tailwind.
+   Les points sont couleur parchemin (le hover du bouton connexion reprend cette couleur) */
+@utility bg-texture-castle {
+  background-color: var(--color-castle);
+  background-image: radial-gradient(color-mix(in srgb, var(--color-parchment) 6%, transparent) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+@layer base {
+  body {
+    @apply bg-parchment font-body text-castle;
+  }
+}
