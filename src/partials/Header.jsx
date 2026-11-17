@@ -1,17 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { getCurrentUser, logout } from '../services'
 import logo from '../assets/logos/logo-hogward.png'
 import Navbar from './Navbar'
 
-const IS_LOGGED_IN = false
-const FAKE_USER = { id: '3a8f', firstName: 'Albus', lastName: 'Dumbledore', role: 'Gérant' }
-const user = IS_LOGGED_IN ? FAKE_USER : null
-
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const [user, setUser] = useState(getCurrentUser())
   const closeMenu = () => setOpen(false)
+
+  useEffect(() => {
+    function updateUser() {
+      setUser(getCurrentUser())
+    }
+
+    window.addEventListener('auth-change', updateUser)
+    return () => window.removeEventListener('auth-change', updateUser)
+  }, [])
+
+  function handleLogout() {
+    logout()
+    setUser(null)
+  }
 
   return (
     <header className="bg-texture-castle sticky top-0 z-50 border-b border-black/40 text-parchment">
@@ -27,7 +39,7 @@ export default function Header() {
         </Link>
 
         <div className="hidden flex-1 md:flex">
-          <Navbar user={user} />
+          <Navbar user={user} onLogout={handleLogout} />
         </div>
 
         <button
@@ -44,7 +56,7 @@ export default function Header() {
 
       {open && (
         <div id="menu-mobile" className="border-t border-white/10 px-4 pb-6 md:hidden">
-          <Navbar user={user} mobile onNavigate={closeMenu} />
+          <Navbar user={user} mobile onNavigate={closeMenu} onLogout={handleLogout} />
         </div>
       )}
     </header>

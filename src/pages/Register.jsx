@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createWizard, getClasses, getHouses } from "../services";
+import { createWizard, getClasses, getHouses, login } from "../services";
 
 function Register() {
 
@@ -65,6 +65,7 @@ function Register() {
 
     try {
       const nouveauWizard = await createWizard(wizard);
+      await login(email, motDePasse);
       setSucces("Inscription réussie.");
       navigate(`/sorciers/${nouveauWizard.id}`);
     } catch (error) {
