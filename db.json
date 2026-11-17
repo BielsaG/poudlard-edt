@@ -1,0 +1,1868 @@
+{
+  "houses": [
+    {
+      "id": "c3fc",
+      "name": "Gryffondor",
+      "founder": "Godric Gryffondor",
+      "color": "#8E2B2B",
+      "textColor": "#FFFFFF",
+      "emblem": "Lion",
+      "commonRoom": "Tour de Gryffondor"
+    },
+    {
+      "id": "e53a",
+      "name": "Serpentard",
+      "founder": "Salazar Serpentard",
+      "color": "#1F5A3E",
+      "textColor": "#FFFFFF",
+      "emblem": "Serpent",
+      "commonRoom": "Cachots"
+    },
+    {
+      "id": "3b02",
+      "name": "Serdaigle",
+      "founder": "Rowena Serdaigle",
+      "color": "#1F3A5F",
+      "textColor": "#FFFFFF",
+      "emblem": "Aigle",
+      "commonRoom": "Tour de Serdaigle"
+    },
+    {
+      "id": "6c48",
+      "name": "Poufsouffle",
+      "founder": "Helga Poufsouffle",
+      "color": "#E2B33C",
+      "textColor": "#2A2420",
+      "emblem": "Blaireau",
+      "commonRoom": "Sous-sol près des cuisines"
+    }
+  ],
+  "roles": [
+    {
+      "id": "bbf3",
+      "name": "admin",
+      "label": "Directeur",
+      "description": "Accès complet : gère les sorciers, classes, matières et rôles"
+    },
+    {
+      "id": "3fef",
+      "name": "staff",
+      "label": "Professeur",
+      "description": "Membre du personnel, consulte les emplois du temps"
+    },
+    {
+      "id": "f924",
+      "name": "user",
+      "label": "Élève",
+      "description": "Apprenti sorcier, consulte les emplois du temps"
+    }
+  ],
+  "wizards": [
+    {
+      "id": "3a8f",
+      "firstName": "Albus",
+      "lastName": "Dumbledore",
+      "email": "albus.dumbledore@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Albus%20Dumbledore",
+      "roleIds": [
+        "bbf3"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "506b",
+      "firstName": "Minerva",
+      "lastName": "McGonagall",
+      "email": "minerva.mcgonagall@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Minerva%20McGonagall",
+      "roleIds": [
+        "bbf3",
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": "c3fc"
+    },
+    {
+      "id": "8b5b",
+      "firstName": "Severus",
+      "lastName": "Rogue",
+      "email": "severus.rogue@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Severus%20Rogue",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": "e53a"
+    },
+    {
+      "id": "7a76",
+      "firstName": "Filius",
+      "lastName": "Flitwick",
+      "email": "filius.flitwick@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Filius%20Flitwick",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": "3b02"
+    },
+    {
+      "id": "7c76",
+      "firstName": "Pomona",
+      "lastName": "Chourave",
+      "email": "pomona.chourave@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Pomona%20Chourave",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": "6c48"
+    },
+    {
+      "id": "fb00",
+      "firstName": "Remus",
+      "lastName": "Lupin",
+      "email": "remus.lupin@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Remus%20Lupin",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "8f86",
+      "firstName": "Aurora",
+      "lastName": "Sinistra",
+      "email": "aurora.sinistra@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Aurora%20Sinistra",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "bebb",
+      "firstName": "Cuthbert",
+      "lastName": "Binns",
+      "email": "cuthbert.binns@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Cuthbert%20Binns",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "f6a6",
+      "firstName": "Rubeus",
+      "lastName": "Hagrid",
+      "email": "rubeus.hagrid@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Rubeus%20Hagrid",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "f0fb",
+      "firstName": "Sibylle",
+      "lastName": "Trelawney",
+      "email": "sibylle.trelawney@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Sibylle%20Trelawney",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "23c6",
+      "firstName": "Septima",
+      "lastName": "Vector",
+      "email": "septima.vector@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Septima%20Vector",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "f5da",
+      "firstName": "Bathsheda",
+      "lastName": "Babbling",
+      "email": "bathsheda.babbling@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Bathsheda%20Babbling",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "2cec",
+      "firstName": "Charity",
+      "lastName": "Burbage",
+      "email": "charity.burbage@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charity%20Burbage",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "fb44",
+      "firstName": "Rolanda",
+      "lastName": "Bibine",
+      "email": "rolanda.bibine@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Rolanda%20Bibine",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "d660",
+      "firstName": "Argus",
+      "lastName": "Rusard",
+      "email": "argus.rusard@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Argus%20Rusard",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "a8d4",
+      "firstName": "Poppy",
+      "lastName": "Pomfresh",
+      "email": "poppy.pomfresh@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Poppy%20Pomfresh",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "1bed",
+      "firstName": "Irma",
+      "lastName": "Pince",
+      "email": "irma.pince@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Irma%20Pince",
+      "roleIds": [
+        "3fef"
+      ],
+      "houseId": null,
+      "classId": null,
+      "headOfHouseId": null
+    },
+    {
+      "id": "440e",
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "email": "harry.potter@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Harry%20Potter",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null
+    },
+    {
+      "id": "4f31",
+      "firstName": "Ron",
+      "lastName": "Weasley",
+      "email": "ron.weasley@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Ron%20Weasley",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null
+    },
+    {
+      "id": "af31",
+      "firstName": "Hermione",
+      "lastName": "Granger",
+      "email": "hermione.granger@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Hermione%20Granger",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "da99",
+      "headOfHouseId": null
+    },
+    {
+      "id": "ea68",
+      "firstName": "Neville",
+      "lastName": "Londubat",
+      "email": "neville.londubat@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Neville%20Londubat",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "da99",
+      "headOfHouseId": null
+    },
+    {
+      "id": "ef78",
+      "firstName": "Ginny",
+      "lastName": "Weasley",
+      "email": "ginny.weasley@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Ginny%20Weasley",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "88c7",
+      "headOfHouseId": null
+    },
+    {
+      "id": "6e4d",
+      "firstName": "Dean",
+      "lastName": "Thomas",
+      "email": "dean.thomas@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Dean%20Thomas",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "88c7",
+      "headOfHouseId": null
+    },
+    {
+      "id": "3cea",
+      "firstName": "Seamus",
+      "lastName": "Finnigan",
+      "email": "seamus.finnigan@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Seamus%20Finnigan",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "9fc3",
+      "headOfHouseId": null
+    },
+    {
+      "id": "27d2",
+      "firstName": "Lavande",
+      "lastName": "Brown",
+      "email": "lavande.brown@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Lavande%20Brown",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "9fc3",
+      "headOfHouseId": null
+    },
+    {
+      "id": "b484",
+      "firstName": "Colin",
+      "lastName": "Crivey",
+      "email": "colin.crivey@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Colin%20Crivey",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "f7ea",
+      "headOfHouseId": null
+    },
+    {
+      "id": "e73c",
+      "firstName": "Fred",
+      "lastName": "Weasley",
+      "email": "fred.weasley@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Fred%20Weasley",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "f7ea",
+      "headOfHouseId": null
+    },
+    {
+      "id": "f575",
+      "firstName": "George",
+      "lastName": "Weasley",
+      "email": "george.weasley@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=George%20Weasley",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "ed46",
+      "headOfHouseId": null
+    },
+    {
+      "id": "dcad",
+      "firstName": "Katie",
+      "lastName": "Bell",
+      "email": "katie.bell@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Katie%20Bell",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "ed46",
+      "headOfHouseId": null
+    },
+    {
+      "id": "6ba2",
+      "firstName": "Drago",
+      "lastName": "Malefoy",
+      "email": "drago.malefoy@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Drago%20Malefoy",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "145f",
+      "headOfHouseId": null
+    },
+    {
+      "id": "b0ae",
+      "firstName": "Pansy",
+      "lastName": "Parkinson",
+      "email": "pansy.parkinson@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Pansy%20Parkinson",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "145f",
+      "headOfHouseId": null
+    },
+    {
+      "id": "e0ca",
+      "firstName": "Vincent",
+      "lastName": "Crabbe",
+      "email": "vincent.crabbe@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Vincent%20Crabbe",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "da99",
+      "headOfHouseId": null
+    },
+    {
+      "id": "d8c4",
+      "firstName": "Gregory",
+      "lastName": "Goyle",
+      "email": "gregory.goyle@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Gregory%20Goyle",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "da99",
+      "headOfHouseId": null
+    },
+    {
+      "id": "fa28",
+      "firstName": "Blaise",
+      "lastName": "Zabini",
+      "email": "blaise.zabini@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Blaise%20Zabini",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "88c7",
+      "headOfHouseId": null
+    },
+    {
+      "id": "15d2",
+      "firstName": "Théodore",
+      "lastName": "Nott",
+      "email": "theodore.nott@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Théodore%20Nott",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "88c7",
+      "headOfHouseId": null
+    },
+    {
+      "id": "3e0a",
+      "firstName": "Millicent",
+      "lastName": "Bulstrode",
+      "email": "millicent.bulstrode@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Millicent%20Bulstrode",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "9fc3",
+      "headOfHouseId": null
+    },
+    {
+      "id": "d841",
+      "firstName": "Daphné",
+      "lastName": "Greengrass",
+      "email": "daphne.greengrass@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Daphné%20Greengrass",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "9fc3",
+      "headOfHouseId": null
+    },
+    {
+      "id": "969e",
+      "firstName": "Astoria",
+      "lastName": "Greengrass",
+      "email": "astoria.greengrass@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Astoria%20Greengrass",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "f7ea",
+      "headOfHouseId": null
+    },
+    {
+      "id": "58b0",
+      "firstName": "Marcus",
+      "lastName": "Flint",
+      "email": "marcus.flint@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Marcus%20Flint",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "f7ea",
+      "headOfHouseId": null
+    },
+    {
+      "id": "6f7e",
+      "firstName": "Adrian",
+      "lastName": "Pucey",
+      "email": "adrian.pucey@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Adrian%20Pucey",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "ed46",
+      "headOfHouseId": null
+    },
+    {
+      "id": "3dfc",
+      "firstName": "Graham",
+      "lastName": "Montague",
+      "email": "graham.montague@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Graham%20Montague",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "ed46",
+      "headOfHouseId": null
+    },
+    {
+      "id": "967a",
+      "firstName": "Luna",
+      "lastName": "Lovegood",
+      "email": "luna.lovegood@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Luna%20Lovegood",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "145f",
+      "headOfHouseId": null
+    },
+    {
+      "id": "64cb",
+      "firstName": "Cho",
+      "lastName": "Chang",
+      "email": "cho.chang@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Cho%20Chang",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "145f",
+      "headOfHouseId": null
+    },
+    {
+      "id": "8d51",
+      "firstName": "Padma",
+      "lastName": "Patil",
+      "email": "padma.patil@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Padma%20Patil",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "da99",
+      "headOfHouseId": null
+    },
+    {
+      "id": "2c97",
+      "firstName": "Terry",
+      "lastName": "Boot",
+      "email": "terry.boot@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Terry%20Boot",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "da99",
+      "headOfHouseId": null
+    },
+    {
+      "id": "8baa",
+      "firstName": "Michael",
+      "lastName": "Corner",
+      "email": "michael.corner@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Michael%20Corner",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "88c7",
+      "headOfHouseId": null
+    },
+    {
+      "id": "b50a",
+      "firstName": "Anthony",
+      "lastName": "Goldstein",
+      "email": "anthony.goldstein@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Anthony%20Goldstein",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "88c7",
+      "headOfHouseId": null
+    },
+    {
+      "id": "c2f8",
+      "firstName": "Marietta",
+      "lastName": "Edgecombe",
+      "email": "marietta.edgecombe@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Marietta%20Edgecombe",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "9fc3",
+      "headOfHouseId": null
+    },
+    {
+      "id": "824c",
+      "firstName": "Roger",
+      "lastName": "Davies",
+      "email": "roger.davies@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Roger%20Davies",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "9fc3",
+      "headOfHouseId": null
+    },
+    {
+      "id": "1c09",
+      "firstName": "Pénélope",
+      "lastName": "Deauclaire",
+      "email": "penelope.deauclaire@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Pénélope%20Deauclaire",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "f7ea",
+      "headOfHouseId": null
+    },
+    {
+      "id": "caf4",
+      "firstName": "Marcus",
+      "lastName": "Belby",
+      "email": "marcus.belby@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Marcus%20Belby",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "f7ea",
+      "headOfHouseId": null
+    },
+    {
+      "id": "941d",
+      "firstName": "Mandy",
+      "lastName": "Brocklehurst",
+      "email": "mandy.brocklehurst@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Mandy%20Brocklehurst",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "ed46",
+      "headOfHouseId": null
+    },
+    {
+      "id": "014b",
+      "firstName": "Lisa",
+      "lastName": "Turpin",
+      "email": "lisa.turpin@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Lisa%20Turpin",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "3b02",
+      "classId": "ed46",
+      "headOfHouseId": null
+    },
+    {
+      "id": "3ce1",
+      "firstName": "Cedric",
+      "lastName": "Diggory",
+      "email": "cedric.diggory@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Cedric%20Diggory",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "145f",
+      "headOfHouseId": null
+    },
+    {
+      "id": "07f8",
+      "firstName": "Ernie",
+      "lastName": "Macmillan",
+      "email": "ernie.macmillan@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Ernie%20Macmillan",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "145f",
+      "headOfHouseId": null
+    },
+    {
+      "id": "2f82",
+      "firstName": "Hannah",
+      "lastName": "Abbot",
+      "email": "hannah.abbot@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Hannah%20Abbot",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "da99",
+      "headOfHouseId": null
+    },
+    {
+      "id": "efc2",
+      "firstName": "Justin",
+      "lastName": "Finch-Fletchley",
+      "email": "justin.finch-fletchley@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Justin%20Finch-Fletchley",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "da99",
+      "headOfHouseId": null
+    },
+    {
+      "id": "f916",
+      "firstName": "Susan",
+      "lastName": "Bones",
+      "email": "susan.bones@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Susan%20Bones",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "88c7",
+      "headOfHouseId": null
+    },
+    {
+      "id": "24a8",
+      "firstName": "Zacharias",
+      "lastName": "Smith",
+      "email": "zacharias.smith@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Zacharias%20Smith",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "88c7",
+      "headOfHouseId": null
+    },
+    {
+      "id": "940f",
+      "firstName": "Eloise",
+      "lastName": "Midgen",
+      "email": "eloise.midgen@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Eloise%20Midgen",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "9fc3",
+      "headOfHouseId": null
+    },
+    {
+      "id": "1f83",
+      "firstName": "Wayne",
+      "lastName": "Hopkins",
+      "email": "wayne.hopkins@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Wayne%20Hopkins",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "9fc3",
+      "headOfHouseId": null
+    },
+    {
+      "id": "6f99",
+      "firstName": "Megan",
+      "lastName": "Jones",
+      "email": "megan.jones@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Megan%20Jones",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "f7ea",
+      "headOfHouseId": null
+    },
+    {
+      "id": "eee3",
+      "firstName": "Owen",
+      "lastName": "Cauldwell",
+      "email": "owen.cauldwell@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Owen%20Cauldwell",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "f7ea",
+      "headOfHouseId": null
+    },
+    {
+      "id": "692f",
+      "firstName": "Heidi",
+      "lastName": "Macavoy",
+      "email": "heidi.macavoy@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Heidi%20Macavoy",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "ed46",
+      "headOfHouseId": null
+    },
+    {
+      "id": "e8c6",
+      "firstName": "Laura",
+      "lastName": "Madley",
+      "email": "laura.madley@poudlard.uk",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Laura%20Madley",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "6c48",
+      "classId": "ed46",
+      "headOfHouseId": null
+    }
+  ],
+  "subjects": [
+    {
+      "id": "8b48",
+      "name": "Métamorphose",
+      "room": "Salle de métamorphose (1er étage)",
+      "teacherId": "506b",
+      "description": "Transformer la forme et l'apparence des objets et des êtres."
+    },
+    {
+      "id": "3b7f",
+      "name": "Sortilèges",
+      "room": "Salle 2E",
+      "teacherId": "7a76",
+      "description": "Apprendre les enchantements et leur bonne prononciation."
+    },
+    {
+      "id": "fc05",
+      "name": "Potions",
+      "room": "Cachot de potions",
+      "teacherId": "8b5b",
+      "description": "Préparer des potions et connaître leurs ingrédients."
+    },
+    {
+      "id": "0fec",
+      "name": "Défense contre les forces du Mal",
+      "room": "Salle 3C",
+      "teacherId": "fb00",
+      "description": "Se protéger des créatures et des sorts maléfiques."
+    },
+    {
+      "id": "94db",
+      "name": "Botanique",
+      "room": "Serre n°3",
+      "teacherId": "7c76",
+      "description": "Étudier et cultiver les plantes magiques."
+    },
+    {
+      "id": "ca3a",
+      "name": "Astronomie",
+      "room": "Tour d'astronomie",
+      "teacherId": "8f86",
+      "description": "Observer les étoiles et les planètes."
+    },
+    {
+      "id": "0aac",
+      "name": "Histoire de la magie",
+      "room": "Salle 4F",
+      "teacherId": "bebb",
+      "description": "Les grands événements du monde sorcier."
+    },
+    {
+      "id": "8b2c",
+      "name": "Soins aux créatures magiques",
+      "room": "Lisière de la Forêt interdite",
+      "teacherId": "f6a6",
+      "description": "Soigner et comprendre les créatures magiques."
+    },
+    {
+      "id": "c2bd",
+      "name": "Divination",
+      "room": "Tour nord",
+      "teacherId": "f0fb",
+      "description": "Lire l'avenir dans les feuilles de thé et les boules de cristal."
+    },
+    {
+      "id": "8da6",
+      "name": "Arithmancie",
+      "room": "Salle 7A",
+      "teacherId": "23c6",
+      "description": "Les propriétés magiques des nombres."
+    },
+    {
+      "id": "bd0c",
+      "name": "Étude des runes",
+      "room": "Salle 6A",
+      "teacherId": "f5da",
+      "description": "Traduire les runes anciennes."
+    },
+    {
+      "id": "621d",
+      "name": "Étude des Moldus",
+      "room": "Salle 1B",
+      "teacherId": "2cec",
+      "description": "Comprendre la vie et les objets des Moldus."
+    },
+    {
+      "id": "e49f",
+      "name": "Vol sur balai",
+      "room": "Terrain de Quidditch",
+      "teacherId": "fb44",
+      "description": "Apprendre à voler sur un balai."
+    }
+  ],
+  "classes": [
+    {
+      "id": "145f",
+      "name": "1re année",
+      "level": 1,
+      "subjectIds": [
+        "8b48",
+        "3b7f",
+        "fc05",
+        "0fec",
+        "94db",
+        "0aac",
+        "ca3a",
+        "e49f"
+      ]
+    },
+    {
+      "id": "da99",
+      "name": "2e année",
+      "level": 2,
+      "subjectIds": [
+        "8b48",
+        "3b7f",
+        "fc05",
+        "0fec",
+        "94db",
+        "0aac",
+        "ca3a"
+      ]
+    },
+    {
+      "id": "88c7",
+      "name": "3e année",
+      "level": 3,
+      "subjectIds": [
+        "8b48",
+        "3b7f",
+        "fc05",
+        "0fec",
+        "94db",
+        "0aac",
+        "ca3a",
+        "8b2c",
+        "c2bd"
+      ]
+    },
+    {
+      "id": "9fc3",
+      "name": "4e année",
+      "level": 4,
+      "subjectIds": [
+        "8b48",
+        "3b7f",
+        "fc05",
+        "0fec",
+        "94db",
+        "0aac",
+        "ca3a",
+        "8b2c",
+        "8da6"
+      ]
+    },
+    {
+      "id": "f7ea",
+      "name": "5e année",
+      "level": 5,
+      "subjectIds": [
+        "8b48",
+        "3b7f",
+        "fc05",
+        "0fec",
+        "94db",
+        "0aac",
+        "ca3a",
+        "bd0c",
+        "c2bd"
+      ]
+    },
+    {
+      "id": "ed46",
+      "name": "6e année",
+      "level": 6,
+      "subjectIds": [
+        "8b48",
+        "3b7f",
+        "fc05",
+        "0fec",
+        "94db",
+        "0aac",
+        "ca3a",
+        "8da6",
+        "bd0c",
+        "621d"
+      ]
+    }
+  ],
+  "timeslots": [
+    {
+      "id": "725a",
+      "classId": "145f",
+      "subjectId": "0aac",
+      "day": "lundi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "2a7b",
+      "classId": "145f",
+      "subjectId": "e49f",
+      "day": "lundi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "860d",
+      "classId": "145f",
+      "subjectId": "94db",
+      "day": "lundi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "cd6c",
+      "classId": "145f",
+      "subjectId": "8b48",
+      "day": "lundi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "8a1f",
+      "classId": "145f",
+      "subjectId": "ca3a",
+      "day": "lundi",
+      "start": "21:45",
+      "end": "23:15"
+    },
+    {
+      "id": "8b46",
+      "classId": "145f",
+      "subjectId": "fc05",
+      "day": "mardi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "287c",
+      "classId": "145f",
+      "subjectId": "0fec",
+      "day": "mardi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "ced9",
+      "classId": "145f",
+      "subjectId": "8b48",
+      "day": "mercredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "041d",
+      "classId": "145f",
+      "subjectId": "3b7f",
+      "day": "jeudi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "ff02",
+      "classId": "145f",
+      "subjectId": "e49f",
+      "day": "jeudi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "cee7",
+      "classId": "145f",
+      "subjectId": "0fec",
+      "day": "jeudi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "948d",
+      "classId": "145f",
+      "subjectId": "94db",
+      "day": "vendredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "6c87",
+      "classId": "145f",
+      "subjectId": "fc05",
+      "day": "vendredi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "009e",
+      "classId": "145f",
+      "subjectId": "3b7f",
+      "day": "vendredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "8a7f",
+      "classId": "da99",
+      "subjectId": "94db",
+      "day": "lundi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "770d",
+      "classId": "da99",
+      "subjectId": "8b48",
+      "day": "lundi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "fd28",
+      "classId": "da99",
+      "subjectId": "fc05",
+      "day": "lundi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "7db7",
+      "classId": "da99",
+      "subjectId": "94db",
+      "day": "mardi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "f1ad",
+      "classId": "da99",
+      "subjectId": "fc05",
+      "day": "mardi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "bc60",
+      "classId": "da99",
+      "subjectId": "0fec",
+      "day": "mercredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "926f",
+      "classId": "da99",
+      "subjectId": "0aac",
+      "day": "mercredi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "e789",
+      "classId": "da99",
+      "subjectId": "3b7f",
+      "day": "mercredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "3f57",
+      "classId": "da99",
+      "subjectId": "3b7f",
+      "day": "vendredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "fd14",
+      "classId": "da99",
+      "subjectId": "8b48",
+      "day": "vendredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "c160",
+      "classId": "da99",
+      "subjectId": "0fec",
+      "day": "vendredi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "4d11",
+      "classId": "da99",
+      "subjectId": "ca3a",
+      "day": "vendredi",
+      "start": "21:45",
+      "end": "23:15"
+    },
+    {
+      "id": "5cea",
+      "classId": "88c7",
+      "subjectId": "8b2c",
+      "day": "lundi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "325a",
+      "classId": "88c7",
+      "subjectId": "0aac",
+      "day": "lundi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "9cba",
+      "classId": "88c7",
+      "subjectId": "fc05",
+      "day": "lundi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "e530",
+      "classId": "88c7",
+      "subjectId": "8b2c",
+      "day": "mardi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "282b",
+      "classId": "88c7",
+      "subjectId": "8b48",
+      "day": "mardi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "d36c",
+      "classId": "88c7",
+      "subjectId": "c2bd",
+      "day": "mercredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "b9d2",
+      "classId": "88c7",
+      "subjectId": "0fec",
+      "day": "mercredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "1f6b",
+      "classId": "88c7",
+      "subjectId": "94db",
+      "day": "mercredi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "e6ab",
+      "classId": "88c7",
+      "subjectId": "8b48",
+      "day": "jeudi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "f0d7",
+      "classId": "88c7",
+      "subjectId": "0fec",
+      "day": "jeudi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "c1c1",
+      "classId": "88c7",
+      "subjectId": "3b7f",
+      "day": "jeudi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "e218",
+      "classId": "88c7",
+      "subjectId": "fc05",
+      "day": "jeudi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "62ab",
+      "classId": "88c7",
+      "subjectId": "ca3a",
+      "day": "jeudi",
+      "start": "21:45",
+      "end": "23:15"
+    },
+    {
+      "id": "8a18",
+      "classId": "88c7",
+      "subjectId": "c2bd",
+      "day": "vendredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "a890",
+      "classId": "88c7",
+      "subjectId": "3b7f",
+      "day": "vendredi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "fec8",
+      "classId": "9fc3",
+      "subjectId": "3b7f",
+      "day": "lundi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "df4f",
+      "classId": "9fc3",
+      "subjectId": "0fec",
+      "day": "lundi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "7aae",
+      "classId": "9fc3",
+      "subjectId": "8da6",
+      "day": "lundi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "b26c",
+      "classId": "9fc3",
+      "subjectId": "94db",
+      "day": "mardi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "57d2",
+      "classId": "9fc3",
+      "subjectId": "3b7f",
+      "day": "mercredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "1fa5",
+      "classId": "9fc3",
+      "subjectId": "8b2c",
+      "day": "mercredi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "d328",
+      "classId": "9fc3",
+      "subjectId": "8b48",
+      "day": "mercredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "263d",
+      "classId": "9fc3",
+      "subjectId": "fc05",
+      "day": "mercredi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "fe57",
+      "classId": "9fc3",
+      "subjectId": "fc05",
+      "day": "jeudi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "4de7",
+      "classId": "9fc3",
+      "subjectId": "8b48",
+      "day": "jeudi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "8b88",
+      "classId": "9fc3",
+      "subjectId": "0fec",
+      "day": "jeudi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "6a2c",
+      "classId": "9fc3",
+      "subjectId": "ca3a",
+      "day": "jeudi",
+      "start": "20:00",
+      "end": "21:30"
+    },
+    {
+      "id": "e130",
+      "classId": "9fc3",
+      "subjectId": "8da6",
+      "day": "vendredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "f7eb",
+      "classId": "9fc3",
+      "subjectId": "8b2c",
+      "day": "vendredi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "b5e8",
+      "classId": "9fc3",
+      "subjectId": "0aac",
+      "day": "vendredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "03b6",
+      "classId": "f7ea",
+      "subjectId": "fc05",
+      "day": "lundi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "1ba4",
+      "classId": "f7ea",
+      "subjectId": "c2bd",
+      "day": "lundi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "60ad",
+      "classId": "f7ea",
+      "subjectId": "94db",
+      "day": "lundi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "b592",
+      "classId": "f7ea",
+      "subjectId": "0aac",
+      "day": "mardi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "61ff",
+      "classId": "f7ea",
+      "subjectId": "8b48",
+      "day": "mardi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "2d3c",
+      "classId": "f7ea",
+      "subjectId": "ca3a",
+      "day": "mardi",
+      "start": "21:45",
+      "end": "23:15"
+    },
+    {
+      "id": "425c",
+      "classId": "f7ea",
+      "subjectId": "3b7f",
+      "day": "mercredi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "8d99",
+      "classId": "f7ea",
+      "subjectId": "bd0c",
+      "day": "mercredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "d19b",
+      "classId": "f7ea",
+      "subjectId": "0fec",
+      "day": "mercredi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "dd0b",
+      "classId": "f7ea",
+      "subjectId": "3b7f",
+      "day": "jeudi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "6cc6",
+      "classId": "f7ea",
+      "subjectId": "fc05",
+      "day": "jeudi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "0d5d",
+      "classId": "f7ea",
+      "subjectId": "bd0c",
+      "day": "jeudi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "32cb",
+      "classId": "f7ea",
+      "subjectId": "8b48",
+      "day": "vendredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "e540",
+      "classId": "f7ea",
+      "subjectId": "0fec",
+      "day": "vendredi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "14c2",
+      "classId": "f7ea",
+      "subjectId": "c2bd",
+      "day": "vendredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "b54b",
+      "classId": "ed46",
+      "subjectId": "621d",
+      "day": "lundi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "3cf6",
+      "classId": "ed46",
+      "subjectId": "3b7f",
+      "day": "lundi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "941f",
+      "classId": "ed46",
+      "subjectId": "8b48",
+      "day": "mardi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "a1c2",
+      "classId": "ed46",
+      "subjectId": "fc05",
+      "day": "mardi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "57c6",
+      "classId": "ed46",
+      "subjectId": "3b7f",
+      "day": "mardi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "f561",
+      "classId": "ed46",
+      "subjectId": "0aac",
+      "day": "mercredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "c5cb",
+      "classId": "ed46",
+      "subjectId": "0fec",
+      "day": "mercredi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "11a3",
+      "classId": "ed46",
+      "subjectId": "94db",
+      "day": "mercredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "ce9d",
+      "classId": "ed46",
+      "subjectId": "bd0c",
+      "day": "mercredi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "97dc",
+      "classId": "ed46",
+      "subjectId": "621d",
+      "day": "jeudi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "bee5",
+      "classId": "ed46",
+      "subjectId": "8da6",
+      "day": "jeudi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "00fe",
+      "classId": "ed46",
+      "subjectId": "8b48",
+      "day": "jeudi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "7ee5",
+      "classId": "ed46",
+      "subjectId": "bd0c",
+      "day": "vendredi",
+      "start": "09:00",
+      "end": "10:30"
+    },
+    {
+      "id": "fc32",
+      "classId": "ed46",
+      "subjectId": "8da6",
+      "day": "vendredi",
+      "start": "10:45",
+      "end": "12:15"
+    },
+    {
+      "id": "4bdb",
+      "classId": "ed46",
+      "subjectId": "0fec",
+      "day": "vendredi",
+      "start": "14:00",
+      "end": "15:30"
+    },
+    {
+      "id": "42a2",
+      "classId": "ed46",
+      "subjectId": "fc05",
+      "day": "vendredi",
+      "start": "15:45",
+      "end": "17:15"
+    },
+    {
+      "id": "1c40",
+      "classId": "ed46",
+      "subjectId": "ca3a",
+      "day": "vendredi",
+      "start": "20:00",
+      "end": "21:30"
+    }
+  ]
+}
