@@ -44,7 +44,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="rounded-md border border-stone/60 p-2 md:hidden"
+          className="rounded-md p-2 md:hidden"
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
@@ -55,7 +55,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div id="menu-mobile" className="border-t border-white/10 px-4 pb-6 md:hidden">
+        <div id="menu-mobile" className="px-4 pb-6 md:hidden">
           <Navbar user={user} mobile onNavigate={closeMenu} onLogout={handleLogout} />
         </div>
       )}

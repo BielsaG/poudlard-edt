@@ -12,15 +12,13 @@ const baseClass = 'border-b-2 pb-1 font-semibold transition-colors'
 
 const navLinkClass = ({ isActive }) => {
   if (isActive) {
-    // Lien actif
     return `${baseClass} border-brass text-parchment`
   }
-  // Lien inactif
   return `${baseClass} border-transparent text-stone hover:border-brass hover:text-parchment`
 }
 
 const buttonClass =
-  'bg-texture-castle rounded-md border border-stone/60 font-bold transition-colors hover:border-parchment hover:bg-parchment hover:text-castle'
+  'bg-texture-castle rounded-md font-bold transition-colors hover:border-parchment hover:bg-parchment hover:text-castle'
 
 export default function Navbar({ user, mobile = false, onNavigate, onLogout }) {
   if (user) {
@@ -45,7 +43,7 @@ export default function Navbar({ user, mobile = false, onNavigate, onLogout }) {
 
         <div className={mobile ? 'flex items-center justify-between' : 'flex items-center gap-4'}>
           <Link to={`/sorciers/${user.id}`} className="flex items-center gap-3" onClick={onNavigate}>
-            <span className="flex size-10 items-center justify-center rounded-full border-2 border-stone bg-stone-light font-bold text-castle">
+            <span className="flex size-10 items-center justify-center rounded-full bg-stone-light font-bold text-castle">
               {user.firstName[0]}
               {user.lastName[0]}
             </span>
@@ -65,7 +63,6 @@ export default function Navbar({ user, mobile = false, onNavigate, onLogout }) {
     )
   }
 
-  // ---- Visiteur : liens publics + bouton de connexion ---
   return (
     <div className={mobile ? 'flex flex-col gap-6 pt-4' : 'flex flex-1 items-center'}>
       <nav aria-label="Navigation principale" className={mobile ? '' : 'mx-auto'}>
