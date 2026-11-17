@@ -4,15 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import img from '../assets/photos/photo-poudlard-accueil.jpg'
 import { getHouses, getSubjects, getTeachers } from '../services'
+import { Avatar, Eyebrow, SubjectInitial } from '../components'
 
 // Nombre d'éléments affichés dans les sections
 const TEACHERS_PREVIEW = 3
 const SUBJECTS_PREVIEW = 3
-
-// Sur-titre en majuscules espacées
-function Eyebrow({ children, className = '' }) {
-  return <p className={`text-xs font-bold tracking-[0.2em] uppercase ${className}`}>{children}</p>
-}
 
 export default function Home() {
   const [houses, setHouses] = useState([])
@@ -122,10 +118,7 @@ export default function Home() {
                   to={`/sorciers/${teacher.id}`}
                   className="flex items-center gap-4 rounded-md border border-stone/60 bg-parchment-light px-4 py-4 transition-colors hover:border-brass"
                 >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-stone/50 text-xs font-bold text-stone-dark">
-                    {teacher.firstName[0]}
-                    {teacher.lastName[0]}
-                  </span>
+                  <Avatar firstName={teacher.firstName} lastName={teacher.lastName} />
                   <span className="flex flex-col">
                     <span className="font-bold">
                       {teacher.firstName} {teacher.lastName}
@@ -157,9 +150,7 @@ export default function Home() {
           <ul className="mt-8 grid gap-5 md:grid-cols-3">
             {subjects.map((subject) => (
               <li key={subject.id} className="flex gap-4 rounded-md border border-stone/60 bg-parchment-light p-6">
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-full border border-brass/60 bg-stone-light font-title font-bold text-stone-dark">
-                  {subject.name[0]}
-                </span>
+                <SubjectInitial name={subject.name} />
                 <div className="min-w-0">
                   <h3 className="font-title text-xl">{subject.name}</h3>
                   <p className="mt-1 flex items-center gap-1.5 text-stone-dark">

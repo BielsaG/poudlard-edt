@@ -1,8 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
-import Home from './pages/Home.jsx'
-import NotFound from './pages/NotFound.jsx'
-import Profile from './pages/Profile.jsx'
+import { 
+  Home, 
+  NotFound, 
+  Profile,
+  Staff,
+  Subjects } from './pages'
 import { getWizardProfile } from './services'
 
 async function profileLoader({ params }) {
@@ -18,8 +21,8 @@ const router = createBrowserRouter([
       // ---- Pages publiques ----
       { index: true, element: <Home /> },
       // { path: 'connexion', element: <Login /> },
-      // { path: 'staff', element: <Staff /> },
-      // { path: 'matieres', element: <Subjects /> },
+      { path: 'staff', element: <Staff /> },
+      { path: 'matieres', element: <Subjects /> },
 
       // ---- Pages connectées ----
       // { path: 'emploi-du-temps', element: <Timetable /> },
