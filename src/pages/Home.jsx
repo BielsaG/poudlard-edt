@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import img from '../assets/photos/photo-poudlard-accueil.jpg'
 import { getHouses, getSubjects, getTeachers } from '../services'
+import { Avatar, Eyebrow, SubjectInitial } from '../components'
 
 const TEACHERS_PREVIEW = 3
 const SUBJECTS_PREVIEW = 3
@@ -108,10 +109,7 @@ export default function Home() {
                   to={`/sorciers/${teacher.id}`}
                   className="flex items-center gap-4 rounded-md bg-parchment-light px-4 py-4 transition-colors hover:border-brass"
                 >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-stone/50 text-xs font-bold text-stone-dark">
-                    {teacher.firstName[0]}
-                    {teacher.lastName[0]}
-                  </span>
+                  <Avatar firstName={teacher.firstName} lastName={teacher.lastName} />
                   <span className="flex flex-col">
                     <span className="font-bold">
                       {teacher.firstName} {teacher.lastName}

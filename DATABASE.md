@@ -444,7 +444,7 @@ Pour un membre du staff, `houseId` et `classId` valent `null`. C'est la règle R
 
 | `id` | Matière | Salle | Professeur |
 | --- | --- | --- | --- |
-| `8b48` | Métamorphose | Salle de métamorphose (1er étage) | Minerva McGonagall (`506b`) |
+| `8b48` | Métamorphose | Salle de métamorphose | Minerva McGonagall (`506b`) |
 | `3b7f` | Sortilèges | Salle 2E | Filius Flitwick (`7a76`) |
 | `fc05` | Potions | Cachot de potions | Severus Rogue (`8b5b`) |
 | `0fec` | Défense contre les forces du Mal | Salle 3C | Remus Lupin (`fb00`) |

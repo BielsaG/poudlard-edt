@@ -1136,7 +1136,7 @@
     {
       "id": "8b48",
       "name": "Métamorphose",
-      "room": "Salle de métamorphose (1er étage)",
+      "room": "Salle de métamorphose",
       "teacherId": "506b",
       "description": "Transformer la forme et l'apparence des objets et des êtres."
     },
