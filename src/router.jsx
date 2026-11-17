@@ -3,13 +3,13 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Profile from './pages/Profile.jsx'
+import Register from './pages/Register.jsx'
 import { getWizardProfile } from './services'
 
 async function profileLoader({ params }) {
   return getWizardProfile(params.id)
 }
 
-// Routes de l'application (voir CAHIER_DES_CHARGES.md, section 5)
 const router = createBrowserRouter([
   {
     path: '/',
@@ -17,6 +17,8 @@ const router = createBrowserRouter([
     children: [
       // ---- Pages publiques ----
       { index: true, element: <Home /> },
+      { path: 'inscription', element: <Register /> },
+      { path: 'register', element: <Register /> },
       // { path: 'connexion', element: <Login /> },
       // { path: 'staff', element: <Staff /> },
       // { path: 'matieres', element: <Subjects /> },
