@@ -8,6 +8,7 @@
       "textColor": "#FFFFFF",
       "emblem": "Lion",
       "traits": "Courage & bravoure",
+      "image": "/src/assets/logos/logo-gryffindor.png",
       "commonRoom": "Tour de Gryffondor"
     },
     {
@@ -18,6 +19,7 @@
       "textColor": "#FFFFFF",
       "emblem": "Serpent",
       "traits": "Ambition & finesse",
+      "image": "/src/assets/logos/logo-slytherin.png",
       "commonRoom": "Cachots"
     },
     {
@@ -28,6 +30,7 @@
       "textColor": "#FFFFFF",
       "emblem": "Aigle",
       "traits": "Sagesse & esprit",
+      "image": "/src/assets/logos/logo-ravenclaw.png",
       "commonRoom": "Tour de Serdaigle"
     },
     {
@@ -38,6 +41,7 @@
       "textColor": "#2A2420",
       "emblem": "Blaireau",
       "traits": "Loyauté & patience",
+      "image": "/src/assets/logos/logo-hufflepuff.png",
       "commonRoom": "Sous-sol près des cuisines"
     }
   ],
