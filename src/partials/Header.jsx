@@ -1,9 +1,7 @@
-import Navbar from '../Navbar'
-
 export default function Header() {
   return (
     <header>
-      <Navbar />
+      <h1>coucou</h1>
     </header>
   )
 }
