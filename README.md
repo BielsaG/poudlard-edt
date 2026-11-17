@@ -1,16 +1,30 @@
-# React + Vite
+# poudlard-edt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Cahier des charges fonctionnel
 
-Currently, two official plugins are available:
+**Poudlard EDT** est une application qui permet de gérer les emplois du temps des élèves de Poudlard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dumbeldore et toute son équipe ont bien trop de choses à faire pour s'occuper de ça, c'est pourquoi ils ont fait appel à toi. :mage:
 
-## React Compiler
+Le but est de pouvoir recenser les personnes évoluant à Poudlard, les matières et les classes pour pouvoir créer des emplois du temps. La partie emploi du temps sera gérée par la magie, car trop complexe.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Contraintes et spécifications
 
-## Expanding the ESLint configuration
+* Chaque matière à sa propre salle dédiée
+* Un sorcier peut avoir plusieurs rôles
+* Il y a 6 niveaux de classe et un sorcier ne peut appartenir qu'à un seul niveau
+* Tous les sorciers d'une même classe ont le même emploi du temps, avec les mêmes matières
+* Un apprenti sorcier appartiendra à une seule maison : Gryffondor, Serpentard, Serdaigle et Poufsouffle
+* Les sorciers n'étant pas apprentis (le staff) n'appartiennent à aucune maison
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Fonctionnalités
+
+L'application doit permettre aux gérants dans l'école de Poudlard de pouvoir gérer les matières, les classes, les sorciers et les rôles.
+
+Les élèves pourront consulter leur emploi du temps, et ceux de leurs camarades. Ils pourront également consulter ceux des professeurs.
+
+La liste des non-apprentis sorciers (staff) et des matières est publique. Le reste doit être protégé par un système d'authentification.
+
+## Wireframe
+
+![Wireframe](./assets/wireframe.png)
