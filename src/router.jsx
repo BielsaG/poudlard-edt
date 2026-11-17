@@ -1,35 +1,32 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, redirect } from 'react-router-dom'
 import App from './App.jsx'
-import { 
-  Home, 
-  NotFound, 
-  Profile,
-  Staff,
-  Subjects } from './pages'
-import { getWizardProfile } from './services'
+import { Home, Login, NotFound, Profile, Register, Staff, Subjects } from './pages'
+import { getCurrentUser, getWizardProfile } from './services'
 
 async function profileLoader({ params }) {
+  if (!getCurrentUser()) {
+    throw redirect('/connexion')
+  }
+
   return getWizardProfile(params.id)
 }
 
-// Routes de l'application (voir CAHIER_DES_CHARGES.md, section 5)
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />, // Layout commun (header, nav, footer...)
+    element: <App />,
     children: [
-      // ---- Pages publiques ----
       { index: true, element: <Home /> },
-      // { path: 'connexion', element: <Login /> },
+      { path: 'connexion', element: <Login /> },
+      { path: 'inscription', element: <Register /> },
+      { path: 'register', element: <Register /> },
       { path: 'staff', element: <Staff /> },
       { path: 'matieres', element: <Subjects /> },
 
-      // ---- Pages connectées ----
       // { path: 'emploi-du-temps', element: <Timetable /> },
       // { path: 'emploi-du-temps/:type/:id', element: <Timetable /> },
       { path: 'sorciers/:id', element: <Profile />, loader: profileLoader },
 
-      // ---- Pages gérant ----
       // {
       //   path: 'admin',
       //   children: [
@@ -40,7 +37,6 @@ const router = createBrowserRouter([
       //   ],
       // },
 
-      // ---- 404 : doit rester en dernier ----
       { path: '*', element: <NotFound /> },
     ],
   },

@@ -1,10 +1,13 @@
 import { get } from './api'
 
-// Tous les sorciers (élèves + staff)
-export const getWizards = () => get('/wizards')
-
-// Un sorcier par son id
 export const getWizardById = (id) => get(`/wizards/${id}`)
+
+export const createWizard = (wizard) =>
+  get('/wizards', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(wizard),
+  })
 
 export async function getWizardProfile(id) {
   const [wizard, roles, houses, classes] = await Promise.all([
@@ -47,11 +50,8 @@ export const deleteWizard = (id) =>
     method: 'DELETE',
   })
 
-// Le staff : les sorciers sans maison
 export const getStaff = () => get('/wizards?houseId=null')
 
-// Professeurs avec leur matière
-// (json-server ne sait pas relier subjects.teacherId à wizards : on le fait ici)
 export async function getTeachers() {
   const [staff, subjects] = await Promise.all([getStaff(), get('/subjects')])
 
@@ -60,7 +60,7 @@ export async function getTeachers() {
       ...wizard,
       subject: subjects.find((s) => s.teacherId === wizard.id) ?? null,
     }))
-    .filter((wizard) => wizard.subject) // on garde ceux qui enseignent une matière
+    .filter((wizard) => wizard.subject)
 }
 
 // Annuaire du staff : chaque membre avec ses rôles et ses matières
