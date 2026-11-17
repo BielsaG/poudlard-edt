@@ -4,12 +4,14 @@
    Chaque couleur devient une classe Tailwind : bg-slate-castle, text-brass, border-stone... */
 @theme {
   --color-parchment: #F4EDE1;
+  --color-parchment-light: #FCF9F3;
   --color-stone-light: #E8DFD1;
   --color-stone: #BFB3A2;
   --color-stone-dark: #6E6459;
   --color-castle: #2A2420;
   --color-brass: #A8813F;
   --color-brass-light: #D4A94F;
+  --color-brass-dark: #7C5E2A;
 
   --color-gryffindor: #8E2B2B;
   --color-slytherin: #1F5A3E;
@@ -29,6 +31,13 @@
 @utility bg-texture-castle {
   background-color: var(--color-castle);
   background-image: radial-gradient(color-mix(in srgb, var(--color-parchment) 6%, transparent) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+/* Texture pointillée claire (section maisons de l'accueil) */
+@utility bg-texture-parchment {
+  background-color: var(--color-parchment);
+  background-image: radial-gradient(color-mix(in srgb, var(--color-stone) 25%, transparent) 1px, transparent 1px);
   background-size: 4px 4px;
 }
 
