@@ -1,7 +1,5 @@
 # Cahier des charges — Poudlard's Timetable
 
-> Version du 17/11/2026
-
 ## Sommaire
 
 1. [Présentation du projet](#1-présentation-du-projet)
