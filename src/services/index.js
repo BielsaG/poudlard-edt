@@ -1,0 +1,7 @@
+// Point d'entrée unique : import { getHouses, getTeachers } from '../services'
+export * from './houseService'
+export * from './wizardService'
+export * from './subjectService'
+export * from './classService'
+export * from './roleService'
+export * from './timeslotService'

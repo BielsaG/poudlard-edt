@@ -7,6 +7,7 @@
       "color": "#8E2B2B",
       "textColor": "#FFFFFF",
       "emblem": "Lion",
+      "traits": "Courage & bravoure",
       "commonRoom": "Tour de Gryffondor"
     },
     {
@@ -16,6 +17,7 @@
       "color": "#1F5A3E",
       "textColor": "#FFFFFF",
       "emblem": "Serpent",
+      "traits": "Ambition & finesse",
       "commonRoom": "Cachots"
     },
     {
@@ -25,6 +27,7 @@
       "color": "#1F3A5F",
       "textColor": "#FFFFFF",
       "emblem": "Aigle",
+      "traits": "Sagesse & esprit",
       "commonRoom": "Tour de Serdaigle"
     },
     {
@@ -34,6 +37,7 @@
       "color": "#E2B33C",
       "textColor": "#2A2420",
       "emblem": "Blaireau",
+      "traits": "Loyauté & patience",
       "commonRoom": "Sous-sol près des cuisines"
     }
   ],
