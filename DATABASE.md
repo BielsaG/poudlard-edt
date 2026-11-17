@@ -65,6 +65,7 @@ Les `id` ne sont pas parlants : servez-vous des tableaux de la [section 7](#7-do
 | `textColor` | string | Couleur du texte à poser sur `color` |
 | `emblem` | string | Animal emblème |
 | `traits` | string | Valeurs de la maison (ex. « Courage & bravoure ») |
+| `image` | string | Chemin du logo de la maison (dans `src/assets/logos/`) |
 | `commonRoom` | string | Salle commune |
 
 ```json
@@ -76,6 +77,7 @@ Les `id` ne sont pas parlants : servez-vous des tableaux de la [section 7](#7-do
   "textColor": "#FFFFFF",
   "emblem": "Lion",
   "traits": "Courage & bravoure",
+  "image": "/src/assets/logos/logo-gryffindor.png",
   "commonRoom": "Tour de Gryffondor"
 }
 ```

@@ -20,7 +20,6 @@ export default function Home() {
   const [subjects, setSubjects] = useState([])
   const [error, setError] = useState(null)
 
-  // Récupération des données au chargement de la page
   useEffect(() => {
     Promise.all([getHouses(), getTeachers(), getSubjects()])
       .then(([housesData, teachersData, subjectsData]) => {
@@ -90,9 +89,8 @@ export default function Home() {
               className="rounded-md border border-t-4 border-stone/60 bg-parchment-light px-6 py-8 text-center shadow-md shadow-castle/5"
               style={{ borderTopColor: house.color }} // couleur venant du json : impossible en classe Tailwind
             >
-              <span className="mx-auto flex size-16 items-center justify-center rounded-full border border-stone/60 bg-stone-light font-title text-2xl font-bold">
-                {house.name[0]}
-              </span>
+              {/* object-contain : le logo garde ses proportions, quel que soit le format de l'image */}
+              <img src={house.image} alt={`Blason de ${house.name}`} className="mx-auto h-24 w-full object-contain" />
               <h3 className="mt-5 font-title text-xl">{house.name}</h3>
               <p className="mt-1 text-stone-dark">{house.traits}</p>
             </li>
