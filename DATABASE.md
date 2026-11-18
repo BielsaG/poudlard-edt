@@ -114,6 +114,17 @@ Les `id` ne sont pas parlants : servez-vous des tableaux de la [section 7](#7-do
 | `houseId` | string \| null | Maison de l'élève, `null` pour le staff |
 | `classId` | string \| null | Classe de l'élève, `null` pour le staff |
 | `headOfHouseId` | string \| null | Maison dirigée, pour les 4 directeurs de maison |
+| `animal` | string \| null | Animal de compagnie, **facultatif** : `Hibou`, `Chouette`, `Chat`, `Rat` ou `Crapaud` ; `null` (ou `""`) si le sorcier n'en a pas |
+| `baguette` | object \| null | Baguette magique (voir ci-dessous) ; `null` pour un Cracmol (Argus Rusard) |
+| `villeOrigine` | string | Ville d'origine, facultatif (renseigné par le formulaire d'inscription) |
+
+**Objet `baguette`**
+
+| Champ | Type | Description |
+| --- | --- | --- |
+| `bois` | string | Type de bois (Houx, Saule, Vigne…) |
+| `coeur` | string | Élément magique au cœur de la baguette : `Plume de phénix`, `Ventricule de dragon` ou `Crin de licorne` |
+| `longueur` | string | Taille de la baguette, au format `"28cm"` |
 
 Exemple d'élève :
 
@@ -130,7 +141,13 @@ Exemple d'élève :
   ],
   "houseId": "c3fc",
   "classId": "da99",
-  "headOfHouseId": null
+  "headOfHouseId": null,
+  "animal": "Chat",
+  "baguette": {
+    "bois": "Vigne",
+    "coeur": "Ventricule de dragon",
+    "longueur": "27cm"
+  }
 }
 ```
 
@@ -413,6 +430,8 @@ await fetch(`${API}/wizards`, {
     houseId: 'c3fc',
     classId: '145f',
     headOfHouseId: null,
+    animal: null, // facultatif
+    baguette: { bois: 'Chêne', coeur: 'Crin de licorne', longueur: '28cm' },
   }),
 });
 ```
