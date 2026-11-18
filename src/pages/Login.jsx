@@ -49,7 +49,7 @@ function Login() {
 
           <button className="w-full rounded-md bg-[#A8813F] px-5 py-3 font-semibold text-white transition hover:bg-[#89672F]"
             type="submit" disabled={chargement}>
-            {chargement ? "Connexion..." : "Se connecter"}
+            {chargement ? "Connexion" : "Se connecter"}
           </button>
         </form>
 

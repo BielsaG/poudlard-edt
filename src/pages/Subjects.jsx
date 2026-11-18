@@ -13,7 +13,6 @@ export default function Subjects() {
       .catch(() => setError('Impossible de charger les matières. Le serveur est-il lancé (npm run server) ?'))
   }, [])
 
-  // Matières dont le nom, le professeur ou la salle contient le texte recherché
   const query = search.trim().toLowerCase()
   const filteredSubjects = subjects.filter((subject) => {
     const teacher = subject.teacher ? `${subject.teacher.firstName} ${subject.teacher.lastName}` : ''

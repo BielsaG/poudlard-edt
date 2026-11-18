@@ -4,7 +4,6 @@ export default function NotFound() {
   return (
     <section>
       <title>Page introuvable — Poudlard Emploi du temps</title>
-      {/* noindex : les moteurs de recherche ne référencent pas la page 404 */}
       <meta name="robots" content="noindex" />
       <h1>404</h1>
       <p>Cette page a disparu, comme par magie.</p>
