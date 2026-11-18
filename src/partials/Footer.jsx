@@ -14,7 +14,7 @@ export default function Footer() {
         <Link to="/" className="flex items-center gap-4">
           <img src={logo} alt="" className="h-14 w-12 object-cover" />
           <span className="flex flex-col">
-            <span className="font-title text-lg font-bold tracking-wide">Poudlard edt</span>
+            <span className="font-title text-lg font-bold tracking-wide">Poudlard EDT</span>
             <span className="text-xs text-stone">Organisation scolaire depuis 990</span>
           </span>
         </Link>

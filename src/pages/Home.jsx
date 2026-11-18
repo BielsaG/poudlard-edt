@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import img from '../assets/photos/photo-poudlard-accueil.jpg'
-import { getHouses, getSubjects, getTeachers } from '../services'
+import { getCurrentUser, getHouses, getSubjects, getTeachers } from '../services'
 import { 
   Avatar, 
   Eyebrow, 
@@ -18,6 +18,16 @@ export default function Home() {
   const [teachers, setTeachers] = useState([])
   const [subjects, setSubjects] = useState([])
   const [error, setError] = useState(null)
+  const [user, setUser] = useState(getCurrentUser())
+
+  useEffect(() => {
+    function updateUser() {
+      setUser(getCurrentUser())
+    }
+
+    window.addEventListener('auth-change', updateUser)
+    return () => window.removeEventListener('auth-change', updateUser)
+  }, [])
 
   useEffect(() => {
     Promise.all([getHouses(), getTeachers(), getSubjects()])
@@ -31,6 +41,8 @@ export default function Home() {
 
   return (
     <>
+      {/* React 19 place ces balises dans le <head> de la page */}
+      <title>Poudlard Emploi du temps — Les emplois du temps de l'école de sorcellerie</title>
       <section className="relative isolate flex min-h-[38rem] items-center overflow-hidden">
         <img src={img} alt="" className="absolute inset-0 -z-20 size-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-linear-to-r from-castle/95 via-castle/80 to-castle/50" />
@@ -50,12 +62,14 @@ export default function Home() {
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link
-              to="/connexion"
-              className="rounded-md border border-brass bg-brass px-5 py-2.5 font-bold text-parchment transition-colors hover:border-brass-light hover:bg-brass-light hover:text-castle"
-            >
-              Se connecter
-            </Link>
+            {!user && (
+              <Link
+                to="/connexion"
+                className="rounded-md border border-brass bg-brass px-5 py-2.5 font-bold text-parchment transition-colors hover:border-brass-light hover:bg-brass-light hover:text-castle"
+              >
+                Se connecter
+              </Link>
+            )}
             <Link
               to="/matieres"
               className="flex items-center gap-2 rounded-md border border-stone/60 px-5 py-2.5 font-bold text-parchment transition-colors hover:border-parchment hover:bg-parchment hover:text-castle"

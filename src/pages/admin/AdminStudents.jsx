@@ -92,52 +92,71 @@ export default function AdminStudents() {
 
   return (
     <section>
-      <div className="admin-heading">
+      <div className="mb-5 flex items-center justify-between gap-4">
         <h2>Élèves</h2>
-        <button className="admin-add-button" type="button" onClick={() => openForm()}>
+        <button
+          className="inline-flex min-h-10 cursor-pointer items-center gap-2 rounded-[0.35rem] border border-brass bg-brass px-[0.85rem] py-[0.55rem] font-[inherit] font-bold text-parchment-light hover:border-brass-dark hover:bg-stone-light hover:text-castle"
+          type="button"
+          onClick={() => openForm()}
+        >
           <FontAwesomeIcon icon={faPlus} />
           Ajouter
         </button>
       </div>
 
-      {error && <p className="admin-error" role="alert">{error}</p>}
+      {error && <p className="m-0 mb-4 text-error" role="alert">{error}</p>}
 
       {showForm && (
-        <form className="admin-form" key={editingStudent?.id ?? 'new'} onSubmit={handleSubmit}>
-          <h3>{editingStudent ? 'Modifier un élève' : 'Ajouter un élève'}</h3>
-          <label className="admin-field">
+        <form
+          className="mb-6 grid grid-cols-[repeat(auto-fit,minmax(min(100%,14rem),1fr))] gap-4 rounded-[0.45rem] border border-stone bg-parchment p-4 [&>h3]:col-span-full [&_input]:w-full [&_input]:min-h-10 [&_input]:rounded-[0.3rem] [&_input]:border [&_input]:border-stone [&_input]:bg-parchment-light [&_input]:p-2 [&_input]:text-castle [&_input]:font-normal [&_select]:w-full [&_select]:min-h-10 [&_select]:rounded-[0.3rem] [&_select]:border [&_select]:border-stone [&_select]:bg-parchment-light [&_select]:p-2 [&_select]:text-castle [&_select]:font-normal [&_textarea]:w-full [&_textarea]:min-h-10 [&_textarea]:rounded-[0.3rem] [&_textarea]:border [&_textarea]:border-stone [&_textarea]:bg-parchment-light [&_textarea]:p-2 [&_textarea]:text-castle [&_textarea]:font-normal"
+          key={editingStudent?.id ?? 'new'}
+          onSubmit={handleSubmit}
+        >
+          <h3 className="col-span-full">
+            {editingStudent ? 'Modifier un élève' : 'Ajouter un élève'}
+          </h3>
+          <label className="grid content-start gap-[0.4rem] font-semibold">
             Prénom
             <input name="firstName" defaultValue={editingStudent?.firstName ?? ''} required />
           </label>
-          <label className="admin-field">
+          <label className="grid content-start gap-[0.4rem] font-semibold">
             Nom
             <input name="lastName" defaultValue={editingStudent?.lastName ?? ''} required />
           </label>
-          <label className="admin-field">
+          <label className="grid content-start gap-[0.4rem] font-semibold">
             Adresse e-mail
             <input name="email" type="email" defaultValue={editingStudent?.email ?? ''} required />
           </label>
-          <label className="admin-field">
+          <label className="grid content-start gap-[0.4rem] font-semibold">
             Mot de passe
             <input name="password" type="password" required={!editingStudent} />
           </label>
-          <label className="admin-field">
+          <label className="grid content-start gap-[0.4rem] font-semibold">
             Maison
             <select name="houseId" defaultValue={editingStudent?.houseId ?? ''} required>
               <option value="">Choisir une maison</option>
               {houses.map((house) => <option key={house.id} value={house.id}>{house.name}</option>)}
             </select>
           </label>
-          <label className="admin-field">
+          <label className="grid content-start gap-[0.4rem] font-semibold">
             Classe
             <select name="classId" defaultValue={editingStudent?.classId ?? ''} required>
               <option value="">Choisir une classe</option>
               {classes.map((classe) => <option key={classe.id} value={classe.id}>{classe.name}</option>)}
             </select>
           </label>
-          <div className="admin-form-actions">
-            <button className="admin-add-button" type="submit">Enregistrer</button>
-            <button className="admin-cancel-button" type="button" onClick={() => setShowForm(false)}>
+          <div className="col-span-full flex justify-end gap-2">
+            <button
+              className="inline-flex min-h-10 cursor-pointer items-center gap-2 rounded-[0.35rem] border border-brass bg-brass px-[0.85rem] py-[0.55rem] font-[inherit] font-bold text-parchment-light hover:border-brass-dark hover:bg-stone-light hover:text-castle"
+              type="submit"
+            >
+              Enregistrer
+            </button>
+            <button
+              className="min-h-10 cursor-pointer rounded-[0.35rem] border border-brass bg-parchment-light px-[0.85rem] py-[0.55rem] font-[inherit] text-castle hover:border-brass-dark hover:bg-stone-light hover:text-castle"
+              type="button"
+              onClick={() => setShowForm(false)}
+            >
               Annuler
             </button>
           </div>
@@ -162,11 +181,11 @@ export default function AdminStudents() {
               <td>{houseNames.get(student.houseId) ?? ''}</td>
               <td>{classNames.get(student.classId) ?? ''}</td>
               <td className="data-list-actions-cell">
-                <div className="data-list-actions admin-actions">
-                  <button className="admin-icon-button" type="button" aria-label={`Modifier ${student.firstName} ${student.lastName}`} onClick={() => openForm(student)}>
+                <div className="flex justify-end gap-2 max-[480px]:justify-start">
+                  <button className="h-10 w-10 cursor-pointer rounded-[0.35rem] border border-brass bg-parchment-light p-2 font-[inherit] text-castle hover:border-brass-dark hover:bg-stone-light" type="button" aria-label={`Modifier ${student.firstName} ${student.lastName}`} onClick={() => openForm(student)}>
                     <FontAwesomeIcon icon={faPen} />
                   </button>
-                  <button className="admin-icon-button" type="button" aria-label={`Supprimer ${student.firstName} ${student.lastName}`} onClick={() => handleDelete(student)}>
+                  <button className="h-10 w-10 cursor-pointer rounded-[0.35rem] border border-brass bg-parchment-light p-2 font-[inherit] text-castle hover:border-brass-dark hover:bg-stone-light" type="button" aria-label={`Supprimer ${student.firstName} ${student.lastName}`} onClick={() => handleDelete(student)}>
                     <FontAwesomeIcon icon={faTrash} />
                   </button>
                 </div>
