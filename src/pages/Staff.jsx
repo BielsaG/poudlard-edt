@@ -13,7 +13,6 @@ export default function Staff() {
       .catch(() => setError('Impossible de charger le staff. Le serveur est-il lancé (npm run server) ?'))
   }, [])
 
-  // Liste filtrée par la recherche (sur le prénom et le nom)
   const filteredStaff = staff.filter((wizard) => {
     const fullName = `${wizard.firstName} ${wizard.lastName}`.toLowerCase()
     return fullName.includes(search.trim().toLowerCase())
