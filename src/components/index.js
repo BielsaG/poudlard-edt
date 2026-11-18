@@ -7,9 +7,10 @@ import HouseCard from './HouseCard'
 import Label from './Label'
 import List from './List'
 import PageTitle from './PageTitle'
+import Pagination from './Pagination'
 import SearchBar from './SearchBar'
 import StaffCard from './StaffCard'
 import SubjectCard from './SubjectCard'
 import SubjectInitial from './SubjectInitial'
 
-export { Avatar, BackLink, Badge, Card, Eyebrow, HouseCard, Label, List, PageTitle, SearchBar, StaffCard, SubjectCard, SubjectInitial }
+export { Avatar, BackLink, Badge, Card, Eyebrow, HouseCard, Label, List, PageTitle, Pagination, SearchBar, StaffCard, SubjectCard, SubjectInitial }
