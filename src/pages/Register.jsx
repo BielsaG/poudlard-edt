@@ -27,13 +27,20 @@ function Register() {
   const [longueur, setLongueur] = useState("");
 
   useEffect(() => {
-    Promise.all([getHouses(), getClasses()])
-      .then(([maisonsData, classesData]) => {
+    async function chargerDonnees() {
+      try {
+        const maisonsData = await getHouses();
+        const classesData = await getClasses();
         setMaisons(maisonsData);
         setClasses(classesData);
-      })
-      .catch(() => setErreur("Impossible de charger les données du formulaire."))
-      .finally(() => setChargementDonnees(false));
+      } catch {
+        setErreur("Impossible de charger les données du formulaire.");
+      } finally {
+        setChargementDonnees(false);
+      }
+    }
+
+    chargerDonnees();
   }, []);
 
   async function inscrire(e) {
