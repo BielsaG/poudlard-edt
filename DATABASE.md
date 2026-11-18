@@ -116,7 +116,7 @@ Les `id` ne sont pas parlants : servez-vous des tableaux de la [section 7](#7-do
 | `headOfHouseId` | string \| null | Maison dirigée, pour les 4 directeurs de maison |
 | `animal` | string \| null | Animal de compagnie, **facultatif** : `Hibou`, `Chouette`, `Chat`, `Rat` ou `Crapaud` ; `null` (ou `""`) si le sorcier n'en a pas |
 | `baguette` | object \| null | Baguette magique (voir ci-dessous) ; `null` pour un Cracmol (Argus Rusard) |
-| `villeOrigine` | string | Ville d'origine, facultatif (renseigné par le formulaire d'inscription) |
+| `villeOrigine` | string | Ville d'origine (renseignée pour tous les sorciers de démo, saisie dans le formulaire d'inscription) |
 
 **Objet `baguette`**
 
@@ -180,6 +180,8 @@ Exemple de membre du staff :
 | `room` | string | Salle dédiée à la matière (une salle par matière) |
 | `teacherId` | string | `id` du sorcier qui enseigne la matière |
 | `description` | string | Description courte |
+| `color` | string | Couleur de la matière (hex), pour colorer ses créneaux dans l'emploi du temps |
+| `textColor` | string | Couleur du texte à poser sur `color` (contraste AA ≥ 4,5:1 vérifié) |
 
 ```json
 {
@@ -187,9 +189,29 @@ Exemple de membre du staff :
   "name": "Potions",
   "room": "Cachot de potions",
   "teacherId": "8b5b",
-  "description": "Préparer des potions et connaître leurs ingrédients."
+  "description": "Préparer des potions et connaître leurs ingrédients.",
+  "color": "#2E6B4F",
+  "textColor": "#FFFFFF"
 }
 ```
+
+Couleurs des matières :
+
+| Matière | `color` | `textColor` |
+| --- | --- | --- |
+| Métamorphose | `#6B4E9B` violet | blanc |
+| Sortilèges | `#2F6FA3` bleu | blanc |
+| Potions | `#2E6B4F` vert chaudron | blanc |
+| Défense contre les forces du Mal | `#8E3B3B` rouge sombre | blanc |
+| Botanique | `#4F7A2F` vert feuille | blanc |
+| Astronomie | `#1F2F5C` bleu nuit | blanc |
+| Histoire de la magie | `#7A6A55` sépia | blanc |
+| Soins aux créatures magiques | `#8A5A2B` brun | blanc |
+| Divination | `#A0457A` prune | blanc |
+| Arithmancie | `#3E7C7B` sarcelle | blanc |
+| Étude des runes | `#C9963E` ocre | ardoise `#2A2420` |
+| Étude des Moldus | `#A8552A` brique | blanc |
+| Vol sur balai | `#7FB3D5` bleu ciel | ardoise `#2A2420` |
 
 ### `classes` — classes
 
