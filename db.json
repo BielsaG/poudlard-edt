@@ -8,7 +8,7 @@
       "textColor": "#FFFFFF",
       "emblem": "Lion",
       "traits": "Courage & bravoure",
-      "image": "/src/assets/logos/logo-gryffindor.png",
+      "image": "/logos/logo-gryffindor.png",
       "commonRoom": "Tour de Gryffondor"
     },
     {
@@ -19,7 +19,7 @@
       "textColor": "#FFFFFF",
       "emblem": "Serpent",
       "traits": "Ambition & finesse",
-      "image": "/src/assets/logos/logo-slytherin.png",
+      "image": "/logos/logo-slytherin.png",
       "commonRoom": "Cachots"
     },
     {
@@ -30,7 +30,7 @@
       "textColor": "#FFFFFF",
       "emblem": "Aigle",
       "traits": "Sagesse & esprit",
-      "image": "/src/assets/logos/logo-ravenclaw.png",
+      "image": "/logos/logo-ravenclaw.png",
       "commonRoom": "Tour de Serdaigle"
     },
     {
@@ -41,7 +41,7 @@
       "textColor": "#2A2420",
       "emblem": "Blaireau",
       "traits": "Loyauté & patience",
-      "image": "/src/assets/logos/logo-hufflepuff.png",
+      "image": "/logos/logo-hufflepuff.png",
       "commonRoom": "Sous-sol près des cuisines"
     }
   ],
@@ -1468,6 +1468,27 @@
         "longueur": "18cm"
       },
       "id": "Qtks24JlGDo"
+    },
+    {
+      "firstName": "Gaïane",
+      "lastName": "Bielsa",
+      "email": "mail@mail.com",
+      "password": "azerty",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Ga%C3%AFane%20Bielsa",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "da99",
+      "headOfHouseId": null,
+      "villeOrigine": "Londres",
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "chêne",
+        "coeur": "licorne",
+        "longueur": "36"
+      },
+      "id": "c4QTvk6wKdI"
     }
   ],
   "subjects": [
