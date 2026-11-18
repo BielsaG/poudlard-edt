@@ -23,7 +23,7 @@ export default function Subjects() {
 
   return (
     <section className="bg-texture-parchment px-4 py-16">
-      <title>Les matières enseignées — Poudlard's Timetable</title>
+      <title>Les matières enseignées — Poudlard Emploi du temps</title>
       <div className="mx-auto max-w-300">
         <PageTitle
           eyebrow="Programme scolaire"

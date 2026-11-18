@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       {/* React 19 place ces balises dans le <head> de la page */}
-      <title>Poudlard's Timetable — Emplois du temps de l'école de sorcellerie</title>
+      <title>Poudlard Emploi du temps — Les emplois du temps de l'école de sorcellerie</title>
       <section className="relative isolate flex min-h-[38rem] items-center overflow-hidden">
         <img src={img} alt="" className="absolute inset-0 -z-20 size-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-linear-to-r from-castle/95 via-castle/80 to-castle/50" />
