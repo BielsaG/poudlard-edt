@@ -1,4 +1,4 @@
-import { get } from './api'
+import { get, post } from './api'
 
 const USER_KEY = 'poudlard'
 
