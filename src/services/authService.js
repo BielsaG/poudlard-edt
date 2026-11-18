@@ -1,18 +1,15 @@
-import { get } from './api'
+import { get, post } from './api'
 
-const USER_KEY = 'poudlard-user'
+const USER_KEY = 'poudlard'
 
 export async function login(email, password) {
-  const wizards = await get(
-    `/wizards?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`,
-  )
+  const wizard = await post('/login', { email, password })
 
-  if (wizards.length === 0) {
+  if (!wizard) {
     throw new Error('Email ou mot de passe incorrect.')
   }
 
   const roles = await get('/roles')
-  const wizard = wizards[0]
   const role = roles.find((item) => wizard.roleIds.includes(item.id))
 
   const user = {

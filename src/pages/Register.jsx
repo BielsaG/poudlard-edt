@@ -34,7 +34,7 @@ function Register() {
         setMaisons(maisonsData);
         setClasses(classesData);
       } catch {
-        setErreur("Impossible de charger les données du formulaire.");
+        setErreur("Impossible de charger les données");
       } finally {
         setChargementDonnees(false);
       }
@@ -86,7 +86,6 @@ function Register() {
     <div className="min-h-screen bg-[#F4EDE1] px-4 py-10 text-[#2A2420] sm:px-8">
       <div className="mx-auto max-w-3xl rounded-lg bg-[#FFFDFA] p-6 shadow-md sm:p-8">
         <h1 className="font-serif text-3xl font-bold">Inscription</h1>
-        <p className="mt-2 text-[#6E6459]">Crée ton profil de sorcier</p>
 
         {erreur && <p className="mt-5 rounded-md bg-red-100 p-3 text-red-700">{erreur}</p>}
         {succes && <p className="mt-5 rounded-md bg-green-100 p-3 text-green-700">{succes}</p>}

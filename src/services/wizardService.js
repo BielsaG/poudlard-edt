@@ -78,7 +78,6 @@ export async function getTeachers() {
     .filter((wizard) => wizard.subject)
 }
 
-// Annuaire du staff : chaque membre avec ses rôles et ses matières
 export async function getStaffDirectory() {
   const [staff, roles, subjects] = await Promise.all([
     get('/wizards?houseId=null&_sort=lastName'),

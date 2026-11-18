@@ -1,6 +1,5 @@
 import { getSubjects } from './subjectService'
 
-// ---- Fausses données, comme celles renvoyées par json-server ----
 const subjects = [
   { id: 's1', name: 'Potions', room: 'Cachot de potions', teacherId: 't1' },
   { id: 's2', name: 'Divination', room: 'Tour nord', teacherId: 't2' },
@@ -14,7 +13,6 @@ const staff = [
   { id: 't3', firstName: 'Rolanda', lastName: 'Bibine' },
 ]
 
-// Les classes sont volontairement dans le désordre pour vérifier le tri
 const classes = [
   { id: 'c3', level: 3, subjectIds: ['s1', 's2'] },
   { id: 'c1', level: 1, subjectIds: ['s1', 's3'] },
@@ -22,10 +20,8 @@ const classes = [
   { id: 'c5', level: 5, subjectIds: ['s2'] },
 ]
 
-// Réponse HTTP simulée
 const jsonResponse = (body, status = 200) => ({ ok: status < 400, status, json: async () => body })
 
-// On remplace fetch : selon l'URL appelée, on renvoie les bonnes données
 function mockApi() {
   global.fetch = jest.fn(async (url) => {
     if (url.endsWith('/subjects')) return jsonResponse(subjects)
@@ -73,7 +69,6 @@ describe('getSubjects', () => {
     expect(potions.levels).toEqual([1, 2, 3])
   })
 
-  // Les 4 cas du texte des niveaux
   test.each([
     ['s1', '1 à 3', 'niveaux qui se suivent'],
     ['s2', '3 et 5', 'niveaux avec un trou'],
