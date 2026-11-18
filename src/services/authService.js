@@ -1,9 +1,13 @@
-import { get, post } from './api'
+import { get } from './api'
 
 const USER_KEY = 'poudlard'
 
 export async function login(email, password) {
-  const wizard = await post('/login', { email, password })
+  const wizards = await get('/wizards')
+
+  const wizard = wizards.find(
+    (item) => item.email === email && item.password === password
+  )
 
   if (!wizard) {
     throw new Error('Email ou mot de passe incorrect.')
