@@ -1,4 +1,4 @@
-import { get } from './api'
+import { del, get, patch, post } from './api'
 
 function formatLevels(levels) {
   if (levels.length === 0) return '—'
@@ -19,6 +19,10 @@ function getSubjectClasses(subjectId, classes) {
 
 // Une matière par son id
 export const getSubjectById = (id) => get(`/subjects/${id}`)
+export const createSubject = (subject) => post('/subjects', subject)
+export const updateSubject = (id, subject) =>
+  patch(`/subjects/${encodeURIComponent(id)}`, subject)
+export const deleteSubject = (id) => del(`/subjects/${encodeURIComponent(id)}`)
 
 // Toutes les matières avec leur professeur et les niveaux où elles sont enseignées
 // (json-server ne sait pas faire ces jointures : on les fait ici)
