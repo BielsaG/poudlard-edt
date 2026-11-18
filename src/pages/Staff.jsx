@@ -44,7 +44,8 @@ export default function Staff() {
           subtitle="Celles et ceux qui transmettent leur savoir et font vivre Poudlard."
         />
 
-        <div className="mx-auto mt-10 flex max-w-3xl flex-col gap-3 sm:flex-row">
+        {/* w-full sur mobile, 2/3 de la largeur des cartes à partir de sm */}
+        <div className="mx-auto mt-10 flex w-full flex-col gap-3 sm:w-2/3 sm:flex-row">
           <SearchBar
             value={search}
             onChange={handleSearch}

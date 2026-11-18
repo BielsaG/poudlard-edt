@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 import Navbar from './Navbar'
@@ -38,15 +38,56 @@ describe('Navbar — utilisateur connecté', () => {
   test('affiche le nom, les initiales et le rôle', () => {
     renderNavbar({ user, onLogout: () => {} })
 
-    expect(screen.getByText('Albus Dumbledore')).toBeInTheDocument()
-    expect(screen.getByText('AD')).toBeInTheDocument()
-    expect(screen.getByText('Directeur')).toBeInTheDocument()
+    // On cherche dans le bouton du profil (le nom apparaît aussi dans l'en-tête du menu)
+    const profile = screen.getByRole('button', { name: /Albus Dumbledore/ })
+    expect(within(profile).getByText('Albus Dumbledore')).toBeInTheDocument()
+    expect(within(profile).getByText('AD')).toBeInTheDocument()
+    expect(within(profile).getByText('Directeur')).toBeInTheDocument()
   })
 
-  test('le profil mène vers la fiche du sorcier', () => {
+  test('le menu du profil est fermé au départ', () => {
     renderNavbar({ user, onLogout: () => {} })
 
-    expect(screen.getByRole('link', { name: /Albus Dumbledore/ })).toHaveAttribute('href', '/sorciers/3a8f')
+    expect(screen.getByRole('button', { name: /Albus Dumbledore/ })).toHaveAttribute('aria-expanded', 'false')
+    expect(screen.queryByRole('link', { name: 'Mon profil' })).not.toBeInTheDocument()
+  })
+
+  test('cliquer sur le profil ouvre le menu : tableau de bord et fiche du sorcier', async () => {
+    renderNavbar({ user, onLogout: () => {} })
+
+    await userEvent.click(screen.getByRole('button', { name: /Albus Dumbledore/ }))
+
+    expect(screen.getByRole('link', { name: 'Tableau de bord' })).toHaveAttribute('href', '/admin')
+    expect(screen.getByRole('link', { name: 'Mon profil' })).toHaveAttribute('href', '/sorciers/3a8f')
+  })
+
+  test('un professeur est envoyé vers son planning', async () => {
+    renderNavbar({ user: { ...user, role: 'Professeur' }, onLogout: () => {} })
+
+    await userEvent.click(screen.getByRole('button', { name: /Albus Dumbledore/ }))
+
+    expect(screen.getByRole('link', { name: 'Mon planning' })).toHaveAttribute('href', '/planning')
+  })
+
+  test('à la souris, le menu s’ouvre au survol et se ferme en sortant', async () => {
+    renderNavbar({ user, onLogout: () => {} })
+    const trigger = screen.getByRole('button', { name: /Albus Dumbledore/ })
+
+    await userEvent.hover(trigger)
+    expect(trigger).toHaveAttribute('aria-expanded', 'true')
+    expect(screen.getByRole('link', { name: 'Mon profil' })).toBeInTheDocument()
+
+    await userEvent.unhover(trigger)
+    expect(trigger).toHaveAttribute('aria-expanded', 'false')
+  })
+
+  test('la touche Échap referme le menu', async () => {
+    renderNavbar({ user, onLogout: () => {} })
+
+    await userEvent.click(screen.getByRole('button', { name: /Albus Dumbledore/ }))
+    await userEvent.keyboard('{Escape}')
+
+    expect(screen.queryByRole('link', { name: 'Mon profil' })).not.toBeInTheDocument()
   })
 
   test('n’affiche plus le bouton « Se connecter »', () => {
