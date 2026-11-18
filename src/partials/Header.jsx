@@ -33,7 +33,7 @@ export default function Header() {
           <span className="flex flex-col leading-none">
             <span className="font-title text-xl font-bold tracking-wide">Poudlard</span>
             <span className="mt-1 text-[0.65rem] font-semibold tracking-[0.3em] text-brass uppercase">
-              Emploi Du Temps
+              Emploi du temps
             </span>
           </span>
         </Link>

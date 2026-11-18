@@ -21,6 +21,7 @@ export default function Staff() {
 
   return (
     <section className="bg-texture-parchment px-4 py-16">
+      <title>Le corps enseignant — Poudlard Emploi du temps</title>
       <div className="mx-auto max-w-300">
         <PageTitle
           eyebrow="Annuaire"
