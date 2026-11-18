@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react'
-import { PageTitle, SearchBar, SubjectCard } from '../components'
+import { PageTitle, Pagination, SearchBar, SubjectCard } from '../components'
 import { getSubjects } from '../services'
+
+// Nombre de matières par page (13 matières -> 5 pages)
+const PER_PAGE = 3
 
 export default function Subjects() {
   const [subjects, setSubjects] = useState([])
   const [error, setError] = useState(null)
   const [search, setSearch] = useState('')
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
     getSubjects()
@@ -20,10 +24,22 @@ export default function Subjects() {
     return text.includes(query)
   })
 
+  // Découpage de la liste filtrée en pages
+  const totalPages = Math.ceil(filteredSubjects.length / PER_PAGE)
+  const pageSubjects = filteredSubjects.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+
+  // Nouvelle recherche : on revient à la première page
+  function handleSearch(value) {
+    setSearch(value)
+    setPage(1)
+  }
+
   return (
-    <section className="bg-texture-parchment px-4 py-16">
+    <section className="bg-texture-parchment flex flex-1 flex-col px-4 py-16">
+      {/* flex-1 : la section remplit la hauteur disponible, le motif descend jusqu'au footer.
+          mt-auto sur la pagination : elle est poussée en bas, juste au-dessus du footer */}
       <title>Les matières enseignées — Poudlard Emploi du temps</title>
-      <div className="mx-auto max-w-300">
+      <div className="mx-auto flex w-full max-w-300 flex-1 flex-col">
         <PageTitle
           eyebrow="Programme scolaire"
           title="Les matières enseignées"
@@ -32,7 +48,7 @@ export default function Subjects() {
 
         <SearchBar
           value={search}
-          onChange={setSearch}
+          onChange={handleSearch}
           placeholder="Rechercher une matière, un professeur, une salle…"
           className="mx-auto mt-10 max-w-3xl"
         />
@@ -44,12 +60,14 @@ export default function Subjects() {
         )}
 
         <ul className="mt-10 flex flex-col gap-3">
-          {filteredSubjects.map((subject) => (
+          {pageSubjects.map((subject) => (
             <li key={subject.id}>
               <SubjectCard subject={subject} />
             </li>
           ))}
         </ul>
+
+        <Pagination currentPage={page} totalPages={totalPages} onPageChange={setPage} className="mt-auto pt-10" />
       </div>
     </section>
   )
