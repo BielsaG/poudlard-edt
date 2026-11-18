@@ -64,6 +64,8 @@ Les `id` ne sont pas parlants : servez-vous des tableaux de la [section 7](#7-do
 | `color` | string | Couleur de la maison (hex) |
 | `textColor` | string | Couleur du texte à poser sur `color` |
 | `emblem` | string | Animal emblème |
+| `traits` | string | Valeurs de la maison (ex. « Courage & bravoure ») |
+| `image` | string | Chemin du logo de la maison (dans `src/assets/logos/`) |
 | `commonRoom` | string | Salle commune |
 
 ```json
@@ -74,6 +76,8 @@ Les `id` ne sont pas parlants : servez-vous des tableaux de la [section 7](#7-do
   "color": "#8E2B2B",
   "textColor": "#FFFFFF",
   "emblem": "Lion",
+  "traits": "Courage & bravoure",
+  "image": "/src/assets/logos/logo-gryffindor.png",
   "commonRoom": "Tour de Gryffondor"
 }
 ```
@@ -110,6 +114,17 @@ Les `id` ne sont pas parlants : servez-vous des tableaux de la [section 7](#7-do
 | `houseId` | string \| null | Maison de l'élève, `null` pour le staff |
 | `classId` | string \| null | Classe de l'élève, `null` pour le staff |
 | `headOfHouseId` | string \| null | Maison dirigée, pour les 4 directeurs de maison |
+| `animal` | string \| null | Animal de compagnie, **facultatif** : `Hibou`, `Chouette`, `Chat`, `Rat` ou `Crapaud` ; `null` (ou `""`) si le sorcier n'en a pas |
+| `baguette` | object \| null | Baguette magique (voir ci-dessous) ; `null` pour un Cracmol (Argus Rusard) |
+| `villeOrigine` | string | Ville d'origine, facultatif (renseigné par le formulaire d'inscription) |
+
+**Objet `baguette`**
+
+| Champ | Type | Description |
+| --- | --- | --- |
+| `bois` | string | Type de bois (Houx, Saule, Vigne…) |
+| `coeur` | string | Élément magique au cœur de la baguette : `Plume de phénix`, `Ventricule de dragon` ou `Crin de licorne` |
+| `longueur` | string | Taille de la baguette, au format `"28cm"` |
 
 Exemple d'élève :
 
@@ -126,7 +141,13 @@ Exemple d'élève :
   ],
   "houseId": "c3fc",
   "classId": "da99",
-  "headOfHouseId": null
+  "headOfHouseId": null,
+  "animal": "Chat",
+  "baguette": {
+    "bois": "Vigne",
+    "coeur": "Ventricule de dragon",
+    "longueur": "27cm"
+  }
 }
 ```
 
@@ -409,6 +430,8 @@ await fetch(`${API}/wizards`, {
     houseId: 'c3fc',
     classId: '145f',
     headOfHouseId: null,
+    animal: null, // facultatif
+    baguette: { bois: 'Chêne', coeur: 'Crin de licorne', longueur: '28cm' },
   }),
 });
 ```
@@ -440,7 +463,7 @@ Pour un membre du staff, `houseId` et `classId` valent `null`. C'est la règle R
 
 | `id` | Matière | Salle | Professeur |
 | --- | --- | --- | --- |
-| `8b48` | Métamorphose | Salle de métamorphose (1er étage) | Minerva McGonagall (`506b`) |
+| `8b48` | Métamorphose | Salle de métamorphose | Minerva McGonagall (`506b`) |
 | `3b7f` | Sortilèges | Salle 2E | Filius Flitwick (`7a76`) |
 | `fc05` | Potions | Cachot de potions | Severus Rogue (`8b5b`) |
 | `0fec` | Défense contre les forces du Mal | Salle 3C | Remus Lupin (`fb00`) |

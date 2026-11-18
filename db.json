@@ -7,6 +7,8 @@
       "color": "#8E2B2B",
       "textColor": "#FFFFFF",
       "emblem": "Lion",
+      "traits": "Courage & bravoure",
+      "image": "/src/assets/logos/logo-gryffindor.png",
       "commonRoom": "Tour de Gryffondor"
     },
     {
@@ -16,6 +18,8 @@
       "color": "#1F5A3E",
       "textColor": "#FFFFFF",
       "emblem": "Serpent",
+      "traits": "Ambition & finesse",
+      "image": "/src/assets/logos/logo-slytherin.png",
       "commonRoom": "Cachots"
     },
     {
@@ -25,6 +29,8 @@
       "color": "#1F3A5F",
       "textColor": "#FFFFFF",
       "emblem": "Aigle",
+      "traits": "Sagesse & esprit",
+      "image": "/src/assets/logos/logo-ravenclaw.png",
       "commonRoom": "Tour de Serdaigle"
     },
     {
@@ -34,6 +40,8 @@
       "color": "#E2B33C",
       "textColor": "#2A2420",
       "emblem": "Blaireau",
+      "traits": "Loyauté & patience",
+      "image": "/src/assets/logos/logo-hufflepuff.png",
       "commonRoom": "Sous-sol près des cuisines"
     }
   ],
@@ -70,7 +78,14 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "villeOrigine": "Londres",
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Dragon",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "506b",
@@ -85,7 +100,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": "c3fc"
+      "headOfHouseId": "c3fc",
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Sapin",
+        "coeur": "Ventricule de dragon",
+        "longueur": "24cm"
+      }
     },
     {
       "id": "8b5b",
@@ -99,7 +120,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": "e53a"
+      "headOfHouseId": "e53a",
+      "animal": null,
+      "baguette": {
+        "bois": "Ébène",
+        "coeur": "Ventricule de dragon",
+        "longueur": "33cm"
+      }
     },
     {
       "id": "7a76",
@@ -113,7 +140,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": "3b02"
+      "headOfHouseId": "3b02",
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Charme",
+        "coeur": "Crin de licorne",
+        "longueur": "23cm"
+      }
     },
     {
       "id": "7c76",
@@ -127,7 +160,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": "6c48"
+      "headOfHouseId": "6c48",
+      "animal": "Crapaud",
+      "baguette": {
+        "bois": "Saule",
+        "coeur": "Crin de licorne",
+        "longueur": "25cm"
+      }
     },
     {
       "id": "fb00",
@@ -141,7 +180,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Cyprès",
+        "coeur": "Crin de licorne",
+        "longueur": "26cm"
+      }
     },
     {
       "id": "8f86",
@@ -155,7 +200,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Cèdre",
+        "coeur": "Plume de phénix",
+        "longueur": "30cm"
+      }
     },
     {
       "id": "bebb",
@@ -169,7 +220,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "32cm"
+      }
     },
     {
       "id": "f6a6",
@@ -183,7 +240,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Crin de licorne",
+        "longueur": "41cm"
+      }
     },
     {
       "id": "f0fb",
@@ -197,7 +260,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Noisetier",
+        "coeur": "Crin de licorne",
+        "longueur": "29cm"
+      }
     },
     {
       "id": "23c6",
@@ -211,7 +280,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Érable",
+        "coeur": "Ventricule de dragon",
+        "longueur": "28cm"
+      }
     },
     {
       "id": "f5da",
@@ -225,7 +300,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Aulne",
+        "coeur": "Plume de phénix",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "2cec",
@@ -239,7 +320,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Pommier",
+        "coeur": "Crin de licorne",
+        "longueur": "25cm"
+      }
     },
     {
       "id": "fb44",
@@ -253,7 +340,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Frêne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "30cm"
+      }
     },
     {
       "id": "d660",
@@ -267,7 +360,9 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": null
     },
     {
       "id": "a8d4",
@@ -281,7 +376,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Cerisier",
+        "coeur": "Crin de licorne",
+        "longueur": "26cm"
+      }
     },
     {
       "id": "1bed",
@@ -295,7 +396,13 @@
       ],
       "houseId": null,
       "classId": null,
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Charme",
+        "coeur": "Ventricule de dragon",
+        "longueur": "24cm"
+      }
     },
     {
       "id": "440e",
@@ -309,7 +416,13 @@
       ],
       "houseId": "c3fc",
       "classId": "145f",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Houx",
+        "coeur": "Plume de phénix",
+        "longueur": "28cm"
+      }
     },
     {
       "id": "4f31",
@@ -323,7 +436,13 @@
       ],
       "houseId": "c3fc",
       "classId": "145f",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Rat",
+      "baguette": {
+        "bois": "Saule",
+        "coeur": "Crin de licorne",
+        "longueur": "35cm"
+      }
     },
     {
       "id": "af31",
@@ -337,7 +456,13 @@
       ],
       "houseId": "c3fc",
       "classId": "da99",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Vigne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "ea68",
@@ -351,7 +476,13 @@
       ],
       "houseId": "c3fc",
       "classId": "da99",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Crapaud",
+      "baguette": {
+        "bois": "Cerisier",
+        "coeur": "Crin de licorne",
+        "longueur": "33cm"
+      }
     },
     {
       "id": "ef78",
@@ -365,7 +496,13 @@
       ],
       "houseId": "c3fc",
       "classId": "88c7",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "If",
+        "coeur": "Ventricule de dragon",
+        "longueur": "30cm"
+      }
     },
     {
       "id": "6e4d",
@@ -379,7 +516,13 @@
       ],
       "houseId": "c3fc",
       "classId": "88c7",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Frêne",
+        "coeur": "Crin de licorne",
+        "longueur": "30cm"
+      }
     },
     {
       "id": "3cea",
@@ -393,7 +536,13 @@
       ],
       "houseId": "c3fc",
       "classId": "9fc3",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "31cm"
+      }
     },
     {
       "id": "27d2",
@@ -407,7 +556,13 @@
       ],
       "houseId": "c3fc",
       "classId": "9fc3",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Pommier",
+        "coeur": "Crin de licorne",
+        "longueur": "26cm"
+      }
     },
     {
       "id": "b484",
@@ -421,7 +576,13 @@
       ],
       "houseId": "c3fc",
       "classId": "f7ea",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Bouleau",
+        "coeur": "Crin de licorne",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "e73c",
@@ -435,7 +596,13 @@
       ],
       "houseId": "c3fc",
       "classId": "f7ea",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Érable",
+        "coeur": "Ventricule de dragon",
+        "longueur": "32cm"
+      }
     },
     {
       "id": "f575",
@@ -449,7 +616,13 @@
       ],
       "houseId": "c3fc",
       "classId": "ed46",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Érable",
+        "coeur": "Ventricule de dragon",
+        "longueur": "32cm"
+      }
     },
     {
       "id": "dcad",
@@ -463,7 +636,13 @@
       ],
       "houseId": "c3fc",
       "classId": "ed46",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Saule",
+        "coeur": "Crin de licorne",
+        "longueur": "28cm"
+      }
     },
     {
       "id": "6ba2",
@@ -477,7 +656,13 @@
       ],
       "houseId": "e53a",
       "classId": "145f",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Aubépine",
+        "coeur": "Crin de licorne",
+        "longueur": "25cm"
+      }
     },
     {
       "id": "b0ae",
@@ -491,7 +676,13 @@
       ],
       "houseId": "e53a",
       "classId": "145f",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Cyprès",
+        "coeur": "Ventricule de dragon",
+        "longueur": "26cm"
+      }
     },
     {
       "id": "e0ca",
@@ -505,7 +696,13 @@
       ],
       "houseId": "e53a",
       "classId": "da99",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "33cm"
+      }
     },
     {
       "id": "d8c4",
@@ -519,7 +716,13 @@
       ],
       "houseId": "e53a",
       "classId": "da99",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Crin de licorne",
+        "longueur": "34cm"
+      }
     },
     {
       "id": "fa28",
@@ -533,7 +736,13 @@
       ],
       "houseId": "e53a",
       "classId": "88c7",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Ébène",
+        "coeur": "Plume de phénix",
+        "longueur": "31cm"
+      }
     },
     {
       "id": "15d2",
@@ -547,7 +756,13 @@
       ],
       "houseId": "e53a",
       "classId": "88c7",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Aulne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "29cm"
+      }
     },
     {
       "id": "3e0a",
@@ -561,7 +776,13 @@
       ],
       "houseId": "e53a",
       "classId": "9fc3",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Sapin",
+        "coeur": "Crin de licorne",
+        "longueur": "30cm"
+      }
     },
     {
       "id": "d841",
@@ -575,7 +796,13 @@
       ],
       "houseId": "e53a",
       "classId": "9fc3",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Saule",
+        "coeur": "Plume de phénix",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "969e",
@@ -589,7 +816,13 @@
       ],
       "houseId": "e53a",
       "classId": "f7ea",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Cerisier",
+        "coeur": "Crin de licorne",
+        "longueur": "24cm"
+      }
     },
     {
       "id": "58b0",
@@ -603,7 +836,13 @@
       ],
       "houseId": "e53a",
       "classId": "f7ea",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Noyer",
+        "coeur": "Ventricule de dragon",
+        "longueur": "34cm"
+      }
     },
     {
       "id": "6f7e",
@@ -617,7 +856,13 @@
       ],
       "houseId": "e53a",
       "classId": "ed46",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Frêne",
+        "coeur": "Crin de licorne",
+        "longueur": "31cm"
+      }
     },
     {
       "id": "3dfc",
@@ -631,7 +876,13 @@
       ],
       "houseId": "e53a",
       "classId": "ed46",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "32cm"
+      }
     },
     {
       "id": "967a",
@@ -645,7 +896,13 @@
       ],
       "houseId": "3b02",
       "classId": "145f",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Sorbier",
+        "coeur": "Crin de licorne",
+        "longueur": "25cm"
+      }
     },
     {
       "id": "64cb",
@@ -659,7 +916,13 @@
       ],
       "houseId": "3b02",
       "classId": "145f",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Noisetier",
+        "coeur": "Plume de phénix",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "8d51",
@@ -673,7 +936,13 @@
       ],
       "houseId": "3b02",
       "classId": "da99",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Tilleul",
+        "coeur": "Crin de licorne",
+        "longueur": "26cm"
+      }
     },
     {
       "id": "2c97",
@@ -687,7 +956,13 @@
       ],
       "houseId": "3b02",
       "classId": "da99",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Hêtre",
+        "coeur": "Ventricule de dragon",
+        "longueur": "29cm"
+      }
     },
     {
       "id": "8baa",
@@ -701,7 +976,13 @@
       ],
       "houseId": "3b02",
       "classId": "88c7",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Aulne",
+        "coeur": "Crin de licorne",
+        "longueur": "30cm"
+      }
     },
     {
       "id": "b50a",
@@ -715,7 +996,13 @@
       ],
       "houseId": "3b02",
       "classId": "88c7",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Bouleau",
+        "coeur": "Plume de phénix",
+        "longueur": "28cm"
+      }
     },
     {
       "id": "c2f8",
@@ -729,7 +1016,13 @@
       ],
       "houseId": "3b02",
       "classId": "9fc3",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Pommier",
+        "coeur": "Crin de licorne",
+        "longueur": "25cm"
+      }
     },
     {
       "id": "824c",
@@ -743,7 +1036,13 @@
       ],
       "houseId": "3b02",
       "classId": "9fc3",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Frêne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "31cm"
+      }
     },
     {
       "id": "1c09",
@@ -757,7 +1056,13 @@
       ],
       "houseId": "3b02",
       "classId": "f7ea",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Cèdre",
+        "coeur": "Crin de licorne",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "caf4",
@@ -771,7 +1076,13 @@
       ],
       "houseId": "3b02",
       "classId": "f7ea",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Hêtre",
+        "coeur": "Ventricule de dragon",
+        "longueur": "29cm"
+      }
     },
     {
       "id": "941d",
@@ -785,7 +1096,13 @@
       ],
       "houseId": "3b02",
       "classId": "ed46",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Saule",
+        "coeur": "Plume de phénix",
+        "longueur": "26cm"
+      }
     },
     {
       "id": "014b",
@@ -799,7 +1116,13 @@
       ],
       "houseId": "3b02",
       "classId": "ed46",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Crapaud",
+      "baguette": {
+        "bois": "Tilleul",
+        "coeur": "Crin de licorne",
+        "longueur": "24cm"
+      }
     },
     {
       "id": "3ce1",
@@ -813,7 +1136,13 @@
       ],
       "houseId": "6c48",
       "classId": "145f",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Frêne",
+        "coeur": "Crin de licorne",
+        "longueur": "31cm"
+      }
     },
     {
       "id": "07f8",
@@ -827,7 +1156,13 @@
       ],
       "houseId": "6c48",
       "classId": "145f",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Ventricule de dragon",
+        "longueur": "30cm"
+      }
     },
     {
       "id": "2f82",
@@ -841,7 +1176,13 @@
       ],
       "houseId": "6c48",
       "classId": "da99",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Cerisier",
+        "coeur": "Crin de licorne",
+        "longueur": "25cm"
+      }
     },
     {
       "id": "efc2",
@@ -855,7 +1196,13 @@
       ],
       "houseId": "6c48",
       "classId": "da99",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Hêtre",
+        "coeur": "Plume de phénix",
+        "longueur": "29cm"
+      }
     },
     {
       "id": "f916",
@@ -869,7 +1216,13 @@
       ],
       "houseId": "6c48",
       "classId": "88c7",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Crapaud",
+      "baguette": {
+        "bois": "Saule",
+        "coeur": "Crin de licorne",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "24a8",
@@ -883,7 +1236,13 @@
       ],
       "houseId": "6c48",
       "classId": "88c7",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "If",
+        "coeur": "Ventricule de dragon",
+        "longueur": "30cm"
+      }
     },
     {
       "id": "940f",
@@ -897,7 +1256,13 @@
       ],
       "houseId": "6c48",
       "classId": "9fc3",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Rat",
+      "baguette": {
+        "bois": "Bouleau",
+        "coeur": "Crin de licorne",
+        "longueur": "24cm"
+      }
     },
     {
       "id": "1f83",
@@ -911,7 +1276,13 @@
       ],
       "houseId": "6c48",
       "classId": "9fc3",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": null,
+      "baguette": {
+        "bois": "Noisetier",
+        "coeur": "Ventricule de dragon",
+        "longueur": "28cm"
+      }
     },
     {
       "id": "6f99",
@@ -925,7 +1296,13 @@
       ],
       "houseId": "6c48",
       "classId": "f7ea",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Pommier",
+        "coeur": "Crin de licorne",
+        "longueur": "26cm"
+      }
     },
     {
       "id": "eee3",
@@ -939,7 +1316,13 @@
       ],
       "houseId": "6c48",
       "classId": "f7ea",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Érable",
+        "coeur": "Plume de phénix",
+        "longueur": "27cm"
+      }
     },
     {
       "id": "692f",
@@ -953,7 +1336,13 @@
       ],
       "houseId": "6c48",
       "classId": "ed46",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Crapaud",
+      "baguette": {
+        "bois": "Tilleul",
+        "coeur": "Crin de licorne",
+        "longueur": "25cm"
+      }
     },
     {
       "id": "e8c6",
@@ -967,14 +1356,160 @@
       ],
       "houseId": "6c48",
       "classId": "ed46",
-      "headOfHouseId": null
+      "headOfHouseId": null,
+      "animal": "Chat",
+      "baguette": {
+        "bois": "Cerisier",
+        "coeur": "Ventricule de dragon",
+        "longueur": "23cm"
+      }
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Billat",
+      "email": "trenty@gmail.com",
+      "password": "123456",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null,
+      "villeOrigine": "Mérignac",
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "",
+        "coeur": "",
+        "longueur": ""
+      },
+      "id": "HPD8MBm_lJo"
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Billat",
+      "email": "trenty@gmail.com",
+      "password": "123456",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null,
+      "villeOrigine": "Mérignac",
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "",
+        "coeur": "",
+        "longueur": ""
+      },
+      "id": "9LJCTwxvTAA"
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Billat",
+      "email": "charlene@gmail.com",
+      "password": "123456",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null,
+      "villeOrigine": "Mérignac",
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "",
+        "coeur": "",
+        "longueur": ""
+      },
+      "id": "DrsP8KEpHfQ"
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Billat",
+      "email": "charlene@gmail.com",
+      "password": "123456",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null,
+      "villeOrigine": "Mérignac",
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Dragon",
+        "longueur": "18cm"
+      },
+      "id": "y-u6e99MCN4"
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Bille",
+      "email": "cha@gmail.com",
+      "password": "123456",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null,
+      "villeOrigine": "Mérignac",
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Dragon",
+        "longueur": "18cm"
+      },
+      "id": "_1ysz-vGEv0"
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Billat",
+      "email": "trentycharlene@gmail.com",
+      "password": "123456",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null,
+      "villeOrigine": "Mérignac",
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Dragon",
+        "longueur": "18cm"
+      },
+      "id": "Qtks24JlGDo"
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Nul",
+      "email": "char.blt@gmail.com",
+      "houseId": "3b02",
+      "classId": "145f",
+      "password": "unrat",
+      "avatar": "",
+      "headOfHouseId": null,
+      "roleIds": [
+        "f924"
+      ],
+      "id": "1fW0fiVhMYY"
     }
   ],
   "subjects": [
     {
       "id": "8b48",
       "name": "Métamorphose",
-      "room": "Salle de métamorphose (1er étage)",
+      "room": "Salle de métamorphose",
       "teacherId": "506b",
       "description": "Transformer la forme et l'apparence des objets et des êtres."
     },
@@ -1864,5 +2399,6 @@
       "start": "20:00",
       "end": "21:30"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
