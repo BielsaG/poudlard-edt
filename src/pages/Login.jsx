@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../services";
+import logo from "../assets/logos/logo-hogward.png";
+import couverturePoudlard from "../assets/photos/photo-poudlard-accueil.jpg";
 
 function Login() {
 
@@ -27,10 +29,13 @@ function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4EDE1] px-4 py-10 text-[#2A2420] sm:px-8">
+    <div className="relative isolate min-h-screen overflow-hidden px-4 py-16 text-[#2A2420] sm:px-8">
+      <img src={couverturePoudlard} alt="" className="absolute inset-0 -z-20 size-full object-cover" />
+      <div className="absolute inset-0 -z-10 bg-castle/75" />
+
       <div className="mx-auto max-w-md rounded-lg bg-[#FFFDFA] p-6 shadow-md sm:p-8">
-        <h1 className="font-serif text-3xl font-bold">Connexion</h1>
-        <p className="mt-2 text-[#6E6459]">Accède à ton espace de sorcier</p>
+        <img src={logo} alt="Poudlard" className="relative z-10 mx-auto -mt-24 h-36 w-36 object-contain" />
+        <h1 className="text-center font-serif text-3xl font-bold">Connexion</h1>
 
         {erreur && <p className="mt-5 rounded-md bg-red-100 p-3 text-red-700">{erreur}</p>}
 
