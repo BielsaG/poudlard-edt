@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { getCurrentUser, logout } from '../services'
@@ -10,6 +10,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const [user, setUser] = useState(getCurrentUser())
   const closeMenu = () => setOpen(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     function updateUser() {
@@ -23,6 +24,9 @@ export default function Header() {
   function handleLogout() {
     logout()
     setUser(null)
+    // Retour à l'accueil. replace : remplace la page actuelle dans l'historique,
+    // le bouton "Retour" du navigateur ne ramène donc pas sur une page réservée aux connectés
+    navigate('/', { replace: true })
   }
 
   return (

@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import UserMenu from './UserMenu'
 
 const links = [
   { to: '/', label: 'Accueil' },
@@ -41,19 +42,9 @@ export default function Navbar({ user, mobile = false, onNavigate, onLogout }) {
           </ul>
         </nav>
 
-        <div className={mobile ? 'flex items-center justify-between' : 'flex items-center gap-4'}>
-          <Link to={`/sorciers/${user.id}`} className="flex items-center gap-3" onClick={onNavigate}>
-            <span className="flex size-10 items-center justify-center rounded-full bg-stone-light font-bold text-castle">
-              {user.firstName[0]}
-              {user.lastName[0]}
-            </span>
-            <span className="flex flex-col leading-tight">
-              <span className="font-bold">
-                {user.firstName} {user.lastName}
-              </span>
-              <span className="text-sm text-stone">{user.role}</span>
-            </span>
-          </Link>
+        <div className={mobile ? 'flex items-end justify-between gap-4' : 'flex items-center gap-4'}>
+          {/* Profil + menu déroulant (tableau de bord, mon profil) */}
+          <UserMenu user={user} mobile={mobile} onNavigate={onNavigate} />
 
           <button type="button" onClick={logout} className={`${buttonClass} p-2.5`} aria-label="Se déconnecter" title="Se déconnecter">
             <FontAwesomeIcon icon={faArrowRightFromBracket} className="text-lg" />
