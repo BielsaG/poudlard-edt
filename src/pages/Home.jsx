@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import img from '../assets/photos/photo-poudlard-accueil.jpg'
 import { getHouses, getSubjects, getTeachers } from '../services'
-import { Avatar, Eyebrow } from '../components'
+import { 
+  Avatar, 
+  Eyebrow, 
+  HouseCard 
+} from '../components'
 
 const TEACHERS_PREVIEW = 3
 const SUBJECTS_PREVIEW = 3
@@ -28,7 +32,6 @@ export default function Home() {
   return (
     <>
       <section className="relative isolate flex min-h-[38rem] items-center overflow-hidden">
-        {/* Photo de fond + voile sombre (plus foncé à gauche pour la lisibilité du texte) */}
         <img src={img} alt="" className="absolute inset-0 -z-20 size-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-linear-to-r from-castle/95 via-castle/80 to-castle/50" />
 
@@ -74,15 +77,7 @@ export default function Home() {
 
         <ul className="mx-auto mt-12 grid max-w-300 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {houses.map((house) => (
-            <li
-              key={house.id}
-              className="rounded-md bg-parchment-light px-6 py-8 text-center shadow-md shadow-castle/5"
-              style={{ borderTopColor: house.color }}
-            >
-              <img src={house.image} alt={`Blason de ${house.name}`} className="mx-auto h-24 w-full object-contain" />
-              <h3 className="mt-5 font-title text-xl">{house.name}</h3>
-              <p className="mt-1 text-stone-dark">{house.traits}</p>
-            </li>
+            <HouseCard key={house.id} house={house} />
           ))}
         </ul>
       </section>
@@ -103,7 +98,7 @@ export default function Home() {
               <li key={teacher.id}>
                 <Link
                   to={`/sorciers/${teacher.id}`}
-                  className="flex items-center gap-4 rounded-md bg-parchment-light px-4 py-4 transition-colors hover:border-brass"
+                  className="group flex items-center gap-4 rounded-md bg-parchment-light px-4 py-4 shadow-xl transition duration-200 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-brass/25"
                 >
                   <Avatar firstName={teacher.firstName} lastName={teacher.lastName} />
                   <span className="flex flex-col">
@@ -112,7 +107,11 @@ export default function Home() {
                     </span>
                     <span className="text-sm text-stone-dark">{teacher.subject.name}</span>
                   </span>
-                  <FontAwesomeIcon icon={faChevronRight} className="ml-auto text-sm text-stone-dark" />
+                  {/* group-hover : la flèche réagit au survol de toute la ligne */}
+                  <FontAwesomeIcon
+                    icon={faChevronRight}
+                    className="ml-auto text-sm text-stone-dark transition group-hover:translate-x-1 group-hover:text-brass-dark"
+                  />
                 </Link>
               </li>
             ))}
@@ -135,7 +134,7 @@ export default function Home() {
 
           <ul className="mt-8 grid gap-5 md:grid-cols-3">
             {subjects.map((subject) => (
-              <li key={subject.id} className="flex gap-4 rounded-md bg-parchment-light p-6">
+              <li key={subject.id} className="flex gap-4 rounded-md bg-parchment-light p-6 shadow-xl">
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-stone-light font-title font-bold text-stone-dark">
                   {subject.name[0]}
                 </span>

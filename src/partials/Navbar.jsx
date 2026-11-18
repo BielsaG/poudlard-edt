@@ -77,7 +77,7 @@ export default function Navbar({ user, mobile = false, onNavigate, onLogout }) {
         </ul>
       </nav>
 
-      <Link to="/connexion" className={`${buttonClass} px-5 py-2.5 text-center`} onClick={onNavigate}>
+      <Link to="/connexion" className={`${buttonClass} border border-stone/60 px-5 py-2.5 text-center`} onClick={onNavigate}>
         Se connecter
       </Link>
     </div>
