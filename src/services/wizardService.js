@@ -22,7 +22,7 @@ export async function getWizardProfile(id) {
     nom: wizard.lastName,
     email: wizard.email,
     photo: wizard.avatar,
-    roles: wizard.roleIds.map(
+    roles: (wizard.roleIds || []).map(
       (roleId) => roles.find((role) => role.id === roleId)?.label || roleId,
     ),
     maison: houses.find((house) => house.id === wizard.houseId)?.name || '',

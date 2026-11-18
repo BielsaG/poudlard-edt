@@ -1,30 +1,76 @@
 
-import { useState } from "react";
-import { useLoaderData, useNavigate, useRevalidator } from "react-router-dom";
-import { deleteWizard, updateWizard } from "../services";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { deleteWizard, getCurrentUser, getWizardProfile, updateWizard } from "../services";
 
 function Profile() {
-
-  const profil = useLoaderData();
+  const { id } = useParams();
   const navigate = useNavigate();
-  const revalidator = useRevalidator();
 
+  const [profil, setProfil] = useState(null);
+  const [chargementProfil, setChargementProfil] = useState(true);
   const [modifier, setModifier] = useState(false);
   const [confirmationSuppression, setConfirmationSuppression] = useState(false);
   const [chargement, setChargement] = useState(false);
   const [erreur, setErreur] = useState("");
 
-  const [prenom, setPrenom] = useState(profil.prenom);
-  const [nom, setNom] = useState(profil.nom);
-  const [email, setEmail] = useState(profil.email);
-  const [maison, setMaison] = useState(profil.houseId || "");
-  const [classe, setClasse] = useState(profil.classId || "");
-  const [ville, setVille] = useState(profil.villeOrigine || "");
-  const [animal, setAnimal] = useState(profil.animal || "");
-  const [bois, setBois] = useState(profil.baguette?.bois || "");
-  const [coeur, setCoeur] = useState(profil.baguette?.coeur || "");
-  const [longueur, setLongueur] = useState(profil.baguette?.longueur || "");
+  const [prenom, setPrenom] = useState("");
+  const [nom, setNom] = useState("");
+  const [email, setEmail] = useState("");
+  const [maison, setMaison] = useState("");
+  const [classe, setClasse] = useState("");
+  const [ville, setVille] = useState("");
+  const [animal, setAnimal] = useState("");
+  const [bois, setBois] = useState("");
+  const [coeur, setCoeur] = useState("");
+  const [longueur, setLongueur] = useState("");
   const [motDePasse, setMotDePasse] = useState("");
+
+  function synchroniserFormulaire(donnees) {
+    setPrenom(donnees.prenom);
+    setNom(donnees.nom);
+    setEmail(donnees.email);
+    setMaison(donnees.houseId || "");
+    setClasse(donnees.classId || "");
+    setVille(donnees.villeOrigine || "");
+    setAnimal(donnees.animal || "");
+    setBois(donnees.baguette?.bois || "");
+    setCoeur(donnees.baguette?.coeur || "");
+    setLongueur(donnees.baguette?.longueur || "");
+  }
+
+//   utilisateur pas connecté
+  useEffect(() => {
+    if (!getCurrentUser()) {
+      navigate("/connexion");
+      return;
+    }
+
+    async function chargerProfil() {
+      setChargementProfil(true);
+      setErreur("");
+
+      try {
+        const donnees = await getWizardProfile(id);
+        setProfil(donnees);
+        synchroniserFormulaire(donnees);
+      } catch (error) {
+        setErreur(error.message);
+      } finally {
+        setChargementProfil(false);
+      }
+    }
+
+    chargerProfil();
+  }, [id, navigate]);
+
+  if (chargementProfil) {
+    return <p className="py-10 text-center text-[#6E6459]">Chargement du profil...</p>;
+  }
+
+  if (!profil) {
+    return <p className="py-10 text-center text-red-700">{erreur || "Profil introuvable."}</p>;
+  }
 
   const estEleve = profil.roles.includes("Élève");
 
@@ -49,9 +95,11 @@ function Profile() {
 
     try {
       await updateWizard(profil.id, donnees);
+      const donneesActualisees = await getWizardProfile(profil.id);
+      setProfil(donneesActualisees);
+      synchroniserFormulaire(donneesActualisees);
       setModifier(false);
       setMotDePasse("");
-      revalidator.revalidate();
     } catch (error) {
       setErreur(error.message);
     } finally {
@@ -78,7 +126,6 @@ function Profile() {
       <div className="mx-auto mb-8 flex max-w-5xl items-center justify-between">
         <div>
           <h1 className="font-serif text-3xl font-bold">Fiche du sorcier</h1>
-          <p className="mt-2 text-[#6E6459]">Registre officiel de Poudlard</p>
         </div>
       </div>
 

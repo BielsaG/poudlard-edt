@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
+<<<<<<< Updated upstream
 import { Home, NotFound, Profile, Staff, Subjects } from './pages'
 import { getWizardProfile } from './services'
 import AdminLayout, { AdminHome } from './pages/admin/AdminLayout.jsx'
@@ -10,6 +11,9 @@ import AdminClasses from './pages/admin/AdminClasses.jsx'
 async function profileLoader({ params }) {
   return getWizardProfile(params.id)
 }
+=======
+import { Home, Login, NotFound, Profile, Register, Staff, Subjects } from './pages'
+>>>>>>> Stashed changes
 
 // Routes de l'application (voir CAHIER_DES_CHARGES.md, section 5)
 const router = createBrowserRouter([
@@ -36,7 +40,7 @@ const router = createBrowserRouter([
       // ---- Pages connectées ----
       // { path: 'emploi-du-temps', element: <Timetable /> },
       // { path: 'emploi-du-temps/:type/:id', element: <Timetable /> },
-      { path: 'sorciers/:id', element: <Profile />, loader: profileLoader },
+      { path: 'sorciers/:id', element: <Profile /> },
 
       // ---- Pages gérant ----
       // {
