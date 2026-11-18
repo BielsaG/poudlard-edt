@@ -1,30 +1,114 @@
-# poudlard-edt
+# 🧙 Poudlard EDT
 
-# Cahier des charges fonctionnel
+Application web de gestion des emplois du temps des élèves et du personnel de Poudlard.
 
-**Poudlard EDT** est une application qui permet de gérer les emplois du temps des élèves de Poudlard.
+## Présentation du projet
 
-Dumbeldore et toute son équipe ont bien trop de choses à faire pour s'occuper de ça, c'est pourquoi ils ont fait appel à toi. :mage:
+**Poudlard EDT** est une application permettant de gérer les emplois du temps des élèves et des membres du personnel de l'école de sorcellerie Poudlard.
 
-Le but est de pouvoir recenser les personnes évoluant à Poudlard, les matières et les classes pour pouvoir créer des emplois du temps. La partie emploi du temps sera gérée par la magie, car trop complexe.
+Dumbledore et toute son équipe ayant déjà beaucoup de responsabilités, ont décidé de faire appel à nous pour développer une application permettant de centraliser la gestion de l'établissement.
 
-## Contraintes et spécifications
-
-* Chaque matière à sa propre salle dédiée
-* Un sorcier peut avoir plusieurs rôles
-* Il y a 6 niveaux de classe et un sorcier ne peut appartenir qu'à un seul niveau
-* Tous les sorciers d'une même classe ont le même emploi du temps, avec les mêmes matières
-* Un apprenti sorcier appartiendra à une seule maison : Gryffondor, Serpentard, Serdaigle et Poufsouffle
-* Les sorciers n'étant pas apprentis (le staff) n'appartiennent à aucune maison
+L'application permet de recenser les sorciers, les matières, les classes, les maisons et les rôles afin de faciliter l'organisation de la vie scolaire.
 
 ## Fonctionnalités
 
-L'application doit permettre aux gérants dans l'école de Poudlard de pouvoir gérer les matières, les classes, les sorciers et les rôles.
+L'application propose plusieurs fonctionnalités :
 
-Les élèves pourront consulter leur emploi du temps, et ceux de leurs camarades. Ils pourront également consulter ceux des professeurs.
+- **Gestion des sorciers** : création, consultation et gestion des profils.
+- **Gestion des matières** : ajout et gestion des différentes matières enseignées.
+- **Gestion des classes** : organisation des élèves en six niveaux.
+- **Gestion des maisons** : répartition des apprentis entre Gryffondor, Serpentard, Serdaigle et Poufsouffle.
+- **Gestion des rôles** : attribution de plusieurs rôles à un même sorcier.
+- **Consultation des emplois du temps** : accès aux emplois du temps des élèves et des professeurs.
+- **Authentification** : accès aux fonctionnalités protégées selon le profil de l'utilisateur.
 
-La liste des non-apprentis sorciers (staff) et des matières est publique. Le reste doit être protégé par un système d'authentification.
+## Cahier des charges et contraintes
 
-## Wireframe
+Le projet respecte les règles suivantes :
 
-![Wireframe](./assets/wireframe.png)
+- Chaque matière possède sa propre salle dédiée.
+- Un sorcier peut posséder plusieurs rôles.
+- Il existe six niveaux de classe.
+- Un sorcier ne peut appartenir qu'à un seul niveau de classe.
+- Tous les élèves d'une même classe possèdent le même emploi du temps.
+- Chaque apprenti sorcier appartient à une seule maison.
+- Les membres du staff n'appartiennent à aucune maison.
+- Les quatre maisons sont Gryffondor, Serpentard, Serdaigle et Poufsouffle.
+
+### Gestion des accès
+
+- La liste des membres du staff et des matières est accessible publiquement.
+- Les autres informations et fonctionnalités sont protégées par un système d'authentification.
+
+## Technologies utilisées
+
+- **React** : bibliothèque JavaScript pour construire l'interface utilisateur.
+- **Vite** : outil de développement et de compilation.
+- **JavaScript** : langage de programmation.
+- **Tailwind CSS** : framework CSS pour la mise en forme.
+- **React Router** : gestion de la navigation entre les pages.
+- **LocalStorage** : stockage local des informations de session utilisateur.
+
+## Installation
+
+### 1. Prérequis
+
+Avant de commencer, assurez-vous d'avoir installé :
+
+- [Node.js](https://nodejs.org/).
+- [npm](https://www.npmjs.com/).
+- [Git](https://git-scm.com/).
+
+### 2. Récupérer le projet
+
+Cloner le dépôt GitHub :
+
+```bash
+git clone https://github.com/BielsaG/poudlard-edt.git
+```
+
+Accéder au dossier du projet :
+
+```bash
+cd poudlard-edt
+```
+
+### 3. Installer les dépendances
+
+À la racine du projet, exécuter :
+
+```bash
+npm install
+```
+
+## Lancement du projet
+
+Pour lancer le serveur de développement :
+
+```bash
+npm run dev
+```
+
+Une fois le serveur démarré, Vite affiche une adresse locale dans le terminal.
+
+Par défaut, l'application est généralement accessible à l'adresse :
+
+```text
+http://localhost:5173
+```
+
+Ouvrir cette adresse dans un navigateur pour accéder à Poudlard EDT.
+
+Pour arrêter le serveur, utiliser :
+
+```bash
+Ctrl + C
+```
+
+## Build du projet
+
+Pour générer une version optimisée de l'application destinée à la production :
+
+```bash
+npm run build
+```
