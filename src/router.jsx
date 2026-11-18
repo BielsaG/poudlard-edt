@@ -5,6 +5,9 @@ import AdminLayout, { AdminHome } from './pages/admin/AdminLayout.jsx'
 import AdminSubjects from './pages/admin/AdminSubjects.jsx'
 import AdminStudents from './pages/admin/AdminStudents.jsx'
 import AdminClasses from './pages/admin/AdminClasses.jsx'
+import PlanningLayout, { PlanningHome } from './pages/planning/PlanningLayout.jsx'
+import PlanningEdt from './pages/planning/PlanningEdt.jsx'
+import PlanningSubjects from './pages/planning/PlanningSubjects.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,15 @@ const router = createBrowserRouter([
           { path: 'matieres', element: <AdminSubjects /> },
           { path: 'eleves', element: <AdminStudents /> },
           { path: 'classes', element: <AdminClasses /> },
+        ],
+      },
+      {
+        path: 'planning',
+        element: <PlanningLayout />,
+        children: [
+          { index: true, element: <PlanningHome /> },
+          { path: 'edt', element: <PlanningEdt /> },
+          { path: 'matieres', element: <PlanningSubjects /> },
         ],
       },
 
