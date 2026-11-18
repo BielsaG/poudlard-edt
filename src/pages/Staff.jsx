@@ -6,7 +6,6 @@ export default function Staff() {
   const [staff, setStaff] = useState([])
   const [error, setError] = useState(null)
   const [search, setSearch] = useState('')
-  const [roleId, setRoleId] = useState('')
 
   useEffect(() => {
     getStaffDirectory()
@@ -14,20 +13,10 @@ export default function Staff() {
       .catch(() => setError('Impossible de charger le staff. Le serveur est-il lancé (npm run server) ?'))
   }, [])
 
-  // Rôles présents dans le staff, sans doublon (pour le menu déroulant)
-  const roles = []
-  staff.forEach((wizard) =>
-    wizard.roles.forEach((role) => {
-      if (!roles.some((r) => r.id === role.id)) roles.push(role)
-    }),
-  )
-
-  // Liste filtrée par la recherche et par le rôle choisi
+  // Liste filtrée par la recherche (sur le prénom et le nom)
   const filteredStaff = staff.filter((wizard) => {
     const fullName = `${wizard.firstName} ${wizard.lastName}`.toLowerCase()
-    const matchesSearch = fullName.includes(search.trim().toLowerCase())
-    const matchesRole = roleId === '' || wizard.roleIds.includes(roleId)
-    return matchesSearch && matchesRole
+    return fullName.includes(search.trim().toLowerCase())
   })
 
   return (

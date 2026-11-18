@@ -3,9 +3,7 @@
 export default function HouseCard({ house }) {
   return (
     <article
-      // shadow-xl : taille de l'ombre / shadow-(color:--house-color)/20 : couleur de la maison à 20 % d'opacité
       className="h-full rounded-md bg-parchment-light px-6 py-8 text-center shadow-xl shadow-(color:--house-color)/20"
-      // La couleur vient du json : on la donne à Tailwind via une variable CSS
       style={{ '--house-color': house.color }}
     >
       <img src={house.image} alt={`Blason de ${house.name}`} className="mx-auto h-24 w-full object-contain" />
