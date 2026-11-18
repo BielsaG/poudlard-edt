@@ -3,8 +3,6 @@ import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 import Navbar from './Navbar'
 
-// La Navbar contient des liens React Router : il lui faut un routeur.
-// MemoryRouter simule la navigation sans vrai navigateur, à l'URL de notre choix.
 function renderNavbar(props, url = '/') {
   return render(
     <MemoryRouter initialEntries={[url]}>

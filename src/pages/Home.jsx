@@ -107,7 +107,6 @@ export default function Home() {
                     </span>
                     <span className="text-sm text-stone-dark">{teacher.subject.name}</span>
                   </span>
-                  {/* group-hover : la flèche réagit au survol de toute la ligne */}
                   <FontAwesomeIcon
                     icon={faChevronRight}
                     className="ml-auto text-sm text-stone-dark transition group-hover:translate-x-1 group-hover:text-brass-dark"
