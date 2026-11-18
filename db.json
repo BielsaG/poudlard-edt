@@ -1450,7 +1450,7 @@
     },
     {
       "firstName": "Charlene",
-      "lastName": "Billat",
+      "lastName": "Bille",
       "email": "cha@gmail.com",
       "password": "123456",
       "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
@@ -1472,27 +1472,6 @@
     {
       "firstName": "Charlene",
       "lastName": "Billat",
-      "email": "cha@gmail.com",
-      "password": "123456",
-      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
-      "roleIds": [
-        "f924"
-      ],
-      "houseId": "c3fc",
-      "classId": "145f",
-      "headOfHouseId": null,
-      "villeOrigine": "Mérignac",
-      "animal": "Hibou",
-      "baguette": {
-        "bois": "Chêne",
-        "coeur": "Dragon",
-        "longueur": "18cm"
-      },
-      "id": "M8YiZIo_iYI"
-    },
-    {
-      "firstName": "Charlene",
-      "lastName": "Billat",
       "email": "trentycharlene@gmail.com",
       "password": "123456",
       "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
@@ -1510,6 +1489,20 @@
         "longueur": "18cm"
       },
       "id": "Qtks24JlGDo"
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Nul",
+      "email": "char.blt@gmail.com",
+      "houseId": "3b02",
+      "classId": "145f",
+      "password": "unrat",
+      "avatar": "",
+      "headOfHouseId": null,
+      "roleIds": [
+        "f924"
+      ],
+      "id": "1fW0fiVhMYY"
     }
   ],
   "subjects": [

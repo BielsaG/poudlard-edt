@@ -1,12 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
-import { 
-  Home, 
-  NotFound, 
-  Profile,
-  Staff,
-  Subjects } from './pages'
+import { Home, NotFound, Profile, Staff, Subjects } from './pages'
 import { getWizardProfile } from './services'
+import AdminLayout, { AdminHome } from './pages/admin/AdminLayout.jsx'
+import AdminSubjects from './pages/admin/AdminSubjects.jsx'
+import AdminStudents from './pages/admin/AdminStudents.jsx'
+import AdminClasses from './pages/admin/AdminClasses.jsx'
 
 async function profileLoader({ params }) {
   return getWizardProfile(params.id)
@@ -23,6 +22,16 @@ const router = createBrowserRouter([
       // { path: 'connexion', element: <Login /> },
       { path: 'staff', element: <Staff /> },
       { path: 'matieres', element: <Subjects /> },
+      {
+        path: 'admin',
+        element: <AdminLayout />,
+        children: [
+          { index: true, element: <AdminHome /> },
+          { path: 'matieres', element: <AdminSubjects /> },
+          { path: 'eleves', element: <AdminStudents /> },
+          { path: 'classes', element: <AdminClasses /> },
+        ],
+      },
 
       // ---- Pages connectées ----
       // { path: 'emploi-du-temps', element: <Timetable /> },

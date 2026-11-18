@@ -1,13 +1,12 @@
-import { get } from './api'
+import { del, get, patch, post } from './api'
+import { getRoles } from './roleService'
+
+export const getWizards = () => get('/wizards')
 
 export const getWizardById = (id) => get(`/wizards/${id}`)
 
 export const createWizard = (wizard) =>
-  get('/wizards', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(wizard),
-  })
+  post('/wizards', wizard)
 
 export async function getWizardProfile(id) {
   const [wizard, roles, houses, classes] = await Promise.all([
@@ -38,18 +37,34 @@ export async function getWizardProfile(id) {
   }
 }
 
+export async function getStudents() {
+  const [wizards, roles] = await Promise.all([getWizards(), getRoles()])
+  const studentRole = roles.find((role) => role.name === 'user')
+
+  if (!studentRole) throw new Error('Le rôle élève est introuvable.')
+
+  return wizards.filter((wizard) => wizard.roleIds.includes(studentRole.id))
+}
+
+export async function createStudent(student) {
+  const roles = await getRoles()
+  const studentRole = roles.find((role) => role.name === 'user')
+
+  if (!studentRole) throw new Error('Le rôle élève est introuvable.')
+
+  return post('/wizards', {
+    ...student,
+    avatar: '',
+    headOfHouseId: null,
+    roleIds: [studentRole.id],
+  })
+}
+
 export const updateWizard = (id, wizard) =>
-  get(`/wizards/${id}`, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(wizard),
-  })
+  patch(`/wizards/${encodeURIComponent(id)}`, wizard)
+export const deleteWizard = (id) => del(`/wizards/${encodeURIComponent(id)}`)
 
-export const deleteWizard = (id) =>
-  get(`/wizards/${id}`, {
-    method: 'DELETE',
-  })
-
+// Le staff : les sorciers sans maison
 export const getStaff = () => get('/wizards?houseId=null')
 
 export async function getTeachers() {

@@ -1,0 +1,228 @@
+.admin-page {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  min-height: 100vh;
+  background: var(--color-parchment);
+}
+
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid var(--color-stone);
+  background: var(--color-stone-light);
+}
+
+.admin-sidebar-label,
+.admin-eyebrow {
+  margin: 0;
+  color: var(--color-brass-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.admin-sidebar-label {
+  padding: 0 0.75rem;
+}
+
+.admin-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.admin-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.35rem;
+  color: var(--color-castle);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-tab:hover,
+.admin-tab-active {
+  background: var(--color-castle);
+  color: var(--color-parchment-light);
+}
+
+.admin-school-year {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding: 1rem;
+  border: 1px solid var(--color-stone);
+  border-radius: 0.45rem;
+  background: var(--color-parchment);
+  font-size: 0.8rem;
+}
+
+.admin-school-year span:first-child {
+  color: var(--color-stone-dark);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.admin-school-year strong {
+  font-family: var(--font-title);
+  font-size: 1rem;
+}
+
+.admin-main {
+  min-width: 0;
+  padding: 2.5rem;
+}
+
+.admin-eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.admin-content {
+  min-height: 32rem;
+}
+
+.admin-content h2,
+.admin-content h3,
+.admin-form h3 {
+  margin: 0;
+  font-family: var(--font-title);
+}
+
+.admin-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.admin-add-button,
+.admin-cancel-button,
+.admin-icon-button {
+  min-height: 2.5rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--color-brass);
+  border-radius: 0.35rem;
+  background: var(--color-brass);
+  color: var(--color-parchment-light);
+  cursor: pointer;
+  font: inherit;
+}
+
+.admin-add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.admin-cancel-button,
+.admin-icon-button {
+  background: var(--color-parchment-light);
+  color: var(--color-castle);
+}
+
+.admin-icon-button {
+  width: 2.5rem;
+  padding: 0.5rem;
+}
+
+.admin-add-button:hover,
+.admin-cancel-button:hover,
+.admin-icon-button:hover {
+  border-color: var(--color-brass-dark);
+  background: var(--color-stone-light);
+  color: var(--color-castle);
+}
+
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--color-stone);
+  border-radius: 0.45rem;
+  background: var(--color-parchment);
+}
+
+.admin-form h3,
+.admin-form-actions {
+  grid-column: 1 / -1;
+}
+
+.admin-field {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.admin-field input,
+.admin-field select,
+.admin-field textarea {
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-stone);
+  border-radius: 0.3rem;
+  background: var(--color-parchment-light);
+  color: var(--color-castle);
+  font: inherit;
+  font-weight: 400;
+}
+
+.admin-field select[multiple] {
+  min-height: 7rem;
+}
+
+.admin-form-actions,
+.admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.admin-nowrap {
+  white-space: nowrap;
+}
+
+.admin-error {
+  margin: 0 0 1rem;
+  color: var(--color-error);
+}
+
+@media (max-width: 700px) {
+  .admin-page {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .admin-navigation {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .admin-school-year {
+    margin-top: 0;
+  }
+
+  .admin-main {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-actions {
+    justify-content: flex-start;
+  }
+}
