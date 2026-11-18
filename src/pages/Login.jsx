@@ -33,34 +33,36 @@ function Login() {
       <img src={couverturePoudlard} alt="" className="absolute inset-0 -z-20 size-full object-cover" />
       <div className="absolute inset-0 -z-10 bg-castle/75" />
 
-      <div className="mx-auto max-w-md rounded-lg bg-[#FFFDFA] p-6 shadow-md sm:p-8">
+      <div className="mx-auto max-w-md rounded-2xl border border-white/20 bg-parchment-light/95 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur-sm sm:p-8">
         <img src={logo} alt="Poudlard" className="relative z-10 mx-auto -mt-24 h-36 w-36 object-contain" />
-        <h1 className="text-center font-serif text-3xl font-bold">Connexion</h1>
+        <div className="mb-8 text-center">
+          <h1 className="font-title text-3xl font-bold">Connexion</h1>
+        </div>
 
-        {erreur && <p className="mt-5 rounded-md bg-red-100 p-3 text-red-700">{erreur}</p>}
+        {erreur && <p className="mb-5 rounded-xl border border-error/20 bg-error/10 p-3 text-error">{erreur}</p>}
 
-        <form className="mt-8 space-y-5" onSubmit={connecter}>
+        <form className="space-y-5" onSubmit={connecter}>
           <div>
-            <label className="mb-2 block text-sm font-semibold text-[#6E6459]">Adresse mail</label>
-            <input type="email" className="w-full rounded-md p-2 shadow-sm outline-none focus:ring-2 focus:ring-[#A8813F]" value={email}
+            <label className="mb-2 block text-sm font-bold text-stone-dark">Adresse mail</label>
+            <input type="email" className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={email}
               onChange={(e) => setEmail(e.target.value)} required />
           </div>
 
           <div>
-            <label className="mb-2 block text-sm font-semibold text-[#6E6459]">Mot de passe</label>
-            <input type="password" className="w-full rounded-md p-2 shadow-sm outline-none focus:ring-2 focus:ring-[#A8813F]" value={motDePasse}
+            <label className="mb-2 block text-sm font-bold text-stone-dark">Mot de passe</label>
+            <input type="password" className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={motDePasse}
               onChange={(e) => setMotDePasse(e.target.value)} required />
           </div>
 
-          <button className="w-full rounded-md bg-[#A8813F] px-5 py-3 font-semibold text-white transition hover:bg-[#89672F]"
+          <button className="w-full rounded-xl bg-brass px-5 py-3.5 font-bold text-white shadow-lg shadow-brass/20 transition hover:-translate-y-0.5 hover:bg-brass-dark disabled:cursor-not-allowed disabled:opacity-60"
             type="submit" disabled={chargement}>
             {chargement ? "Connexion" : "Se connecter"}
           </button>
         </form>
 
-        <p className="mt-6 text-center text-[#6E6459]">
+        <p className="mt-6 text-center text-stone-dark">
           Pas encore de compte ?{" "}
-          <Link to="/inscription" className="font-semibold text-[#89672F]">S'inscrire</Link>
+          <Link to="/inscription" className="font-bold text-brass-dark transition hover:text-brass">S'inscrire</Link>
         </p>
       </div>
     </div>
