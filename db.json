@@ -80,7 +80,7 @@
       "classId": null,
       "headOfHouseId": null,
       "villeOrigine": "Londres",
-      "animal": "Chouette",
+      "animal": "Hibou",
       "baguette": {
         "bois": "Chêne",
         "coeur": "Dragon",
@@ -106,8 +106,7 @@
         "bois": "Sapin",
         "coeur": "Ventricule de dragon",
         "longueur": "24cm"
-      },
-      "villeOrigine": "Caithness"
+      }
     },
     {
       "id": "8b5b",
@@ -127,8 +126,7 @@
         "bois": "Ébène",
         "coeur": "Ventricule de dragon",
         "longueur": "33cm"
-      },
-      "villeOrigine": "Carbone-les-Mines"
+      }
     },
     {
       "id": "7a76",
@@ -148,8 +146,7 @@
         "bois": "Charme",
         "coeur": "Crin de licorne",
         "longueur": "23cm"
-      },
-      "villeOrigine": "Inverness"
+      }
     },
     {
       "id": "7c76",
@@ -169,8 +166,7 @@
         "bois": "Saule",
         "coeur": "Crin de licorne",
         "longueur": "25cm"
-      },
-      "villeOrigine": "Cardiff"
+      }
     },
     {
       "id": "fb00",
@@ -190,8 +186,7 @@
         "bois": "Cyprès",
         "coeur": "Crin de licorne",
         "longueur": "26cm"
-      },
-      "villeOrigine": "Swansea"
+      }
     },
     {
       "id": "8f86",
@@ -211,8 +206,7 @@
         "bois": "Cèdre",
         "coeur": "Plume de phénix",
         "longueur": "30cm"
-      },
-      "villeOrigine": "Édimbourg"
+      }
     },
     {
       "id": "bebb",
@@ -232,8 +226,7 @@
         "bois": "Chêne",
         "coeur": "Ventricule de dragon",
         "longueur": "32cm"
-      },
-      "villeOrigine": "Oxford"
+      }
     },
     {
       "id": "f6a6",
@@ -253,8 +246,7 @@
         "bois": "Chêne",
         "coeur": "Crin de licorne",
         "longueur": "41cm"
-      },
-      "villeOrigine": "Forêt de Dean"
+      }
     },
     {
       "id": "f0fb",
@@ -274,8 +266,7 @@
         "bois": "Noisetier",
         "coeur": "Crin de licorne",
         "longueur": "29cm"
-      },
-      "villeOrigine": "Bath"
+      }
     },
     {
       "id": "23c6",
@@ -295,8 +286,7 @@
         "bois": "Érable",
         "coeur": "Ventricule de dragon",
         "longueur": "28cm"
-      },
-      "villeOrigine": "Cambridge"
+      }
     },
     {
       "id": "f5da",
@@ -316,8 +306,7 @@
         "bois": "Aulne",
         "coeur": "Plume de phénix",
         "longueur": "27cm"
-      },
-      "villeOrigine": "Glasgow"
+      }
     },
     {
       "id": "2cec",
@@ -337,8 +326,7 @@
         "bois": "Pommier",
         "coeur": "Crin de licorne",
         "longueur": "25cm"
-      },
-      "villeOrigine": "Brighton"
+      }
     },
     {
       "id": "fb44",
@@ -358,8 +346,7 @@
         "bois": "Frêne",
         "coeur": "Ventricule de dragon",
         "longueur": "30cm"
-      },
-      "villeOrigine": "Aberdeen"
+      }
     },
     {
       "id": "d660",
@@ -375,8 +362,7 @@
       "classId": null,
       "headOfHouseId": null,
       "animal": "Chat",
-      "baguette": null,
-      "villeOrigine": "Pré-au-Lard"
+      "baguette": null
     },
     {
       "id": "a8d4",
@@ -396,8 +382,7 @@
         "bois": "Cerisier",
         "coeur": "Crin de licorne",
         "longueur": "26cm"
-      },
-      "villeOrigine": "Pré-au-Lard"
+      }
     },
     {
       "id": "1bed",
@@ -417,8 +402,7 @@
         "bois": "Charme",
         "coeur": "Ventricule de dragon",
         "longueur": "24cm"
-      },
-      "villeOrigine": "Durham"
+      }
     },
     {
       "id": "440e",
@@ -438,8 +422,7 @@
         "bois": "Houx",
         "coeur": "Plume de phénix",
         "longueur": "28cm"
-      },
-      "villeOrigine": "Little Whinging"
+      }
     },
     {
       "id": "4f31",
@@ -459,8 +442,7 @@
         "bois": "Saule",
         "coeur": "Crin de licorne",
         "longueur": "35cm"
-      },
-      "villeOrigine": "Loutry Ste Chaspoule"
+      }
     },
     {
       "id": "af31",
@@ -480,8 +462,7 @@
         "bois": "Vigne",
         "coeur": "Ventricule de dragon",
         "longueur": "27cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "ea68",
@@ -501,8 +482,7 @@
         "bois": "Cerisier",
         "coeur": "Crin de licorne",
         "longueur": "33cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "ef78",
@@ -522,8 +502,7 @@
         "bois": "If",
         "coeur": "Ventricule de dragon",
         "longueur": "30cm"
-      },
-      "villeOrigine": "Loutry Ste Chaspoule"
+      }
     },
     {
       "id": "6e4d",
@@ -543,8 +522,7 @@
         "bois": "Frêne",
         "coeur": "Crin de licorne",
         "longueur": "30cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "3cea",
@@ -564,8 +542,7 @@
         "bois": "Chêne",
         "coeur": "Ventricule de dragon",
         "longueur": "31cm"
-      },
-      "villeOrigine": "Kenmare"
+      }
     },
     {
       "id": "27d2",
@@ -585,8 +562,7 @@
         "bois": "Pommier",
         "coeur": "Crin de licorne",
         "longueur": "26cm"
-      },
-      "villeOrigine": "Liverpool"
+      }
     },
     {
       "id": "b484",
@@ -606,8 +582,7 @@
         "bois": "Bouleau",
         "coeur": "Crin de licorne",
         "longueur": "27cm"
-      },
-      "villeOrigine": "Manchester"
+      }
     },
     {
       "id": "e73c",
@@ -627,8 +602,7 @@
         "bois": "Érable",
         "coeur": "Ventricule de dragon",
         "longueur": "32cm"
-      },
-      "villeOrigine": "Loutry Ste Chaspoule"
+      }
     },
     {
       "id": "f575",
@@ -648,8 +622,7 @@
         "bois": "Érable",
         "coeur": "Ventricule de dragon",
         "longueur": "32cm"
-      },
-      "villeOrigine": "Loutry Ste Chaspoule"
+      }
     },
     {
       "id": "dcad",
@@ -669,8 +642,7 @@
         "bois": "Saule",
         "coeur": "Crin de licorne",
         "longueur": "28cm"
-      },
-      "villeOrigine": "Norwich"
+      }
     },
     {
       "id": "6ba2",
@@ -690,8 +662,7 @@
         "bois": "Aubépine",
         "coeur": "Crin de licorne",
         "longueur": "25cm"
-      },
-      "villeOrigine": "Wiltshire"
+      }
     },
     {
       "id": "b0ae",
@@ -711,8 +682,7 @@
         "bois": "Cyprès",
         "coeur": "Ventricule de dragon",
         "longueur": "26cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "e0ca",
@@ -732,8 +702,7 @@
         "bois": "Chêne",
         "coeur": "Ventricule de dragon",
         "longueur": "33cm"
-      },
-      "villeOrigine": "Birmingham"
+      }
     },
     {
       "id": "d8c4",
@@ -753,8 +722,7 @@
         "bois": "Chêne",
         "coeur": "Crin de licorne",
         "longueur": "34cm"
-      },
-      "villeOrigine": "Birmingham"
+      }
     },
     {
       "id": "fa28",
@@ -774,8 +742,7 @@
         "bois": "Ébène",
         "coeur": "Plume de phénix",
         "longueur": "31cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "15d2",
@@ -795,8 +762,7 @@
         "bois": "Aulne",
         "coeur": "Ventricule de dragon",
         "longueur": "29cm"
-      },
-      "villeOrigine": "York"
+      }
     },
     {
       "id": "3e0a",
@@ -816,8 +782,7 @@
         "bois": "Sapin",
         "coeur": "Crin de licorne",
         "longueur": "30cm"
-      },
-      "villeOrigine": "Leeds"
+      }
     },
     {
       "id": "d841",
@@ -837,8 +802,7 @@
         "bois": "Saule",
         "coeur": "Plume de phénix",
         "longueur": "27cm"
-      },
-      "villeOrigine": "Gloucester"
+      }
     },
     {
       "id": "969e",
@@ -858,8 +822,7 @@
         "bois": "Cerisier",
         "coeur": "Crin de licorne",
         "longueur": "24cm"
-      },
-      "villeOrigine": "Gloucester"
+      }
     },
     {
       "id": "58b0",
@@ -879,8 +842,7 @@
         "bois": "Noyer",
         "coeur": "Ventricule de dragon",
         "longueur": "34cm"
-      },
-      "villeOrigine": "Sheffield"
+      }
     },
     {
       "id": "6f7e",
@@ -900,8 +862,7 @@
         "bois": "Frêne",
         "coeur": "Crin de licorne",
         "longueur": "31cm"
-      },
-      "villeOrigine": "Bristol"
+      }
     },
     {
       "id": "3dfc",
@@ -921,8 +882,7 @@
         "bois": "Chêne",
         "coeur": "Ventricule de dragon",
         "longueur": "32cm"
-      },
-      "villeOrigine": "Nottingham"
+      }
     },
     {
       "id": "967a",
@@ -942,8 +902,7 @@
         "bois": "Sorbier",
         "coeur": "Crin de licorne",
         "longueur": "25cm"
-      },
-      "villeOrigine": "Loutry Ste Chaspoule"
+      }
     },
     {
       "id": "64cb",
@@ -963,8 +922,7 @@
         "bois": "Noisetier",
         "coeur": "Plume de phénix",
         "longueur": "27cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "8d51",
@@ -984,8 +942,7 @@
         "bois": "Tilleul",
         "coeur": "Crin de licorne",
         "longueur": "26cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "2c97",
@@ -1005,8 +962,7 @@
         "bois": "Hêtre",
         "coeur": "Ventricule de dragon",
         "longueur": "29cm"
-      },
-      "villeOrigine": "Leicester"
+      }
     },
     {
       "id": "8baa",
@@ -1026,8 +982,7 @@
         "bois": "Aulne",
         "coeur": "Crin de licorne",
         "longueur": "30cm"
-      },
-      "villeOrigine": "Southampton"
+      }
     },
     {
       "id": "b50a",
@@ -1047,8 +1002,7 @@
         "bois": "Bouleau",
         "coeur": "Plume de phénix",
         "longueur": "28cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "c2f8",
@@ -1068,8 +1022,7 @@
         "bois": "Pommier",
         "coeur": "Crin de licorne",
         "longueur": "25cm"
-      },
-      "villeOrigine": "Canterbury"
+      }
     },
     {
       "id": "824c",
@@ -1089,8 +1042,7 @@
         "bois": "Frêne",
         "coeur": "Ventricule de dragon",
         "longueur": "31cm"
-      },
-      "villeOrigine": "Plymouth"
+      }
     },
     {
       "id": "1c09",
@@ -1110,8 +1062,7 @@
         "bois": "Cèdre",
         "coeur": "Crin de licorne",
         "longueur": "27cm"
-      },
-      "villeOrigine": "Bath"
+      }
     },
     {
       "id": "caf4",
@@ -1131,8 +1082,7 @@
         "bois": "Hêtre",
         "coeur": "Ventricule de dragon",
         "longueur": "29cm"
-      },
-      "villeOrigine": "Exeter"
+      }
     },
     {
       "id": "941d",
@@ -1152,8 +1102,7 @@
         "bois": "Saule",
         "coeur": "Plume de phénix",
         "longueur": "26cm"
-      },
-      "villeOrigine": "Coventry"
+      }
     },
     {
       "id": "014b",
@@ -1173,8 +1122,7 @@
         "bois": "Tilleul",
         "coeur": "Crin de licorne",
         "longueur": "24cm"
-      },
-      "villeOrigine": "Belfast"
+      }
     },
     {
       "id": "3ce1",
@@ -1194,8 +1142,7 @@
         "bois": "Frêne",
         "coeur": "Crin de licorne",
         "longueur": "31cm"
-      },
-      "villeOrigine": "Loutry Ste Chaspoule"
+      }
     },
     {
       "id": "07f8",
@@ -1215,8 +1162,7 @@
         "bois": "Chêne",
         "coeur": "Ventricule de dragon",
         "longueur": "30cm"
-      },
-      "villeOrigine": "Dundee"
+      }
     },
     {
       "id": "2f82",
@@ -1236,8 +1182,7 @@
         "bois": "Cerisier",
         "coeur": "Crin de licorne",
         "longueur": "25cm"
-      },
-      "villeOrigine": "Reading"
+      }
     },
     {
       "id": "efc2",
@@ -1257,8 +1202,7 @@
         "bois": "Hêtre",
         "coeur": "Plume de phénix",
         "longueur": "29cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "f916",
@@ -1278,8 +1222,7 @@
         "bois": "Saule",
         "coeur": "Crin de licorne",
         "longueur": "27cm"
-      },
-      "villeOrigine": "Londres"
+      }
     },
     {
       "id": "24a8",
@@ -1299,8 +1242,7 @@
         "bois": "If",
         "coeur": "Ventricule de dragon",
         "longueur": "30cm"
-      },
-      "villeOrigine": "Cornouailles"
+      }
     },
     {
       "id": "940f",
@@ -1320,8 +1262,7 @@
         "bois": "Bouleau",
         "coeur": "Crin de licorne",
         "longueur": "24cm"
-      },
-      "villeOrigine": "Ipswich"
+      }
     },
     {
       "id": "1f83",
@@ -1341,8 +1282,7 @@
         "bois": "Noisetier",
         "coeur": "Ventricule de dragon",
         "longueur": "28cm"
-      },
-      "villeOrigine": "Hereford"
+      }
     },
     {
       "id": "6f99",
@@ -1362,8 +1302,7 @@
         "bois": "Pommier",
         "coeur": "Crin de licorne",
         "longueur": "26cm"
-      },
-      "villeOrigine": "Newcastle"
+      }
     },
     {
       "id": "eee3",
@@ -1383,8 +1322,7 @@
         "bois": "Érable",
         "coeur": "Plume de phénix",
         "longueur": "27cm"
-      },
-      "villeOrigine": "Chester"
+      }
     },
     {
       "id": "692f",
@@ -1404,8 +1342,7 @@
         "bois": "Tilleul",
         "coeur": "Crin de licorne",
         "longueur": "25cm"
-      },
-      "villeOrigine": "Lincoln"
+      }
     },
     {
       "id": "e8c6",
@@ -1425,8 +1362,7 @@
         "bois": "Cerisier",
         "coeur": "Ventricule de dragon",
         "longueur": "23cm"
-      },
-      "villeOrigine": "Winchester"
+      }
     },
     {
       "firstName": "Charlene",
@@ -1485,27 +1421,6 @@
       "villeOrigine": "Mérignac",
       "animal": "Hibou",
       "baguette": {
-        "bois": "",
-        "coeur": "",
-        "longueur": ""
-      },
-      "id": "DrsP8KEpHfQ"
-    },
-    {
-      "firstName": "Charlene",
-      "lastName": "Billat",
-      "email": "charlene@gmail.com",
-      "password": "123456",
-      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
-      "roleIds": [
-        "f924"
-      ],
-      "houseId": "c3fc",
-      "classId": "145f",
-      "headOfHouseId": null,
-      "villeOrigine": "Mérignac",
-      "animal": "Hibou",
-      "baguette": {
         "bois": "Chêne",
         "coeur": "Dragon",
         "longueur": "18cm"
@@ -1514,7 +1429,7 @@
     },
     {
       "firstName": "Charlene",
-      "lastName": "Bille",
+      "lastName": "Billat",
       "email": "cha@gmail.com",
       "password": "123456",
       "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
@@ -1536,6 +1451,27 @@
     {
       "firstName": "Charlene",
       "lastName": "Billat",
+      "email": "cha@gmail.com",
+      "password": "123456",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "145f",
+      "headOfHouseId": null,
+      "villeOrigine": "Mérignac",
+      "animal": "Hibou",
+      "baguette": {
+        "bois": "Chêne",
+        "coeur": "Dragon",
+        "longueur": "18cm"
+      },
+      "id": "M8YiZIo_iYI"
+    },
+    {
+      "firstName": "Charlene",
+      "lastName": "Billat",
       "email": "trentycharlene@gmail.com",
       "password": "123456",
       "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Charlene%20Billat",
@@ -1553,20 +1489,6 @@
         "longueur": "18cm"
       },
       "id": "Qtks24JlGDo"
-    },
-    {
-      "firstName": "Charlene",
-      "lastName": "Nul",
-      "email": "char.blt@gmail.com",
-      "houseId": "3b02",
-      "classId": "145f",
-      "password": "unrat",
-      "avatar": "",
-      "headOfHouseId": null,
-      "roleIds": [
-        "f924"
-      ],
-      "id": "1fW0fiVhMYY"
     }
   ],
   "subjects": [
@@ -1575,117 +1497,91 @@
       "name": "Métamorphose",
       "room": "Salle de métamorphose",
       "teacherId": "506b",
-      "description": "Transformer la forme et l'apparence des objets et des êtres.",
-      "color": "#6B4E9B",
-      "textColor": "#FFFFFF"
+      "description": "Transformer la forme et l'apparence des objets et des êtres."
     },
     {
       "id": "3b7f",
       "name": "Sortilèges",
       "room": "Salle 2E",
       "teacherId": "7a76",
-      "description": "Apprendre les enchantements et leur bonne prononciation.",
-      "color": "#2F6FA3",
-      "textColor": "#FFFFFF"
+      "description": "Apprendre les enchantements et leur bonne prononciation."
     },
     {
       "id": "fc05",
       "name": "Potions",
       "room": "Cachot de potions",
       "teacherId": "8b5b",
-      "description": "Préparer des potions et connaître leurs ingrédients.",
-      "color": "#2E6B4F",
-      "textColor": "#FFFFFF"
+      "description": "Préparer des potions et connaître leurs ingrédients."
     },
     {
       "id": "0fec",
       "name": "Défense contre les forces du Mal",
       "room": "Salle 3C",
       "teacherId": "fb00",
-      "description": "Se protéger des créatures et des sorts maléfiques.",
-      "color": "#8E3B3B",
-      "textColor": "#FFFFFF"
+      "description": "Se protéger des créatures et des sorts maléfiques."
     },
     {
       "id": "94db",
       "name": "Botanique",
       "room": "Serre n°3",
       "teacherId": "7c76",
-      "description": "Étudier et cultiver les plantes magiques.",
-      "color": "#4F7A2F",
-      "textColor": "#FFFFFF"
+      "description": "Étudier et cultiver les plantes magiques."
     },
     {
       "id": "ca3a",
       "name": "Astronomie",
       "room": "Tour d'astronomie",
       "teacherId": "8f86",
-      "description": "Observer les étoiles et les planètes.",
-      "color": "#1F2F5C",
-      "textColor": "#FFFFFF"
+      "description": "Observer les étoiles et les planètes."
     },
     {
       "id": "0aac",
       "name": "Histoire de la magie",
       "room": "Salle 4F",
       "teacherId": "bebb",
-      "description": "Les grands événements du monde sorcier.",
-      "color": "#7A6A55",
-      "textColor": "#FFFFFF"
+      "description": "Les grands événements du monde sorcier."
     },
     {
       "id": "8b2c",
       "name": "Soins aux créatures magiques",
       "room": "Lisière de la Forêt interdite",
       "teacherId": "f6a6",
-      "description": "Soigner et comprendre les créatures magiques.",
-      "color": "#8A5A2B",
-      "textColor": "#FFFFFF"
+      "description": "Soigner et comprendre les créatures magiques."
     },
     {
       "id": "c2bd",
       "name": "Divination",
       "room": "Tour nord",
       "teacherId": "f0fb",
-      "description": "Lire l'avenir dans les feuilles de thé et les boules de cristal.",
-      "color": "#A0457A",
-      "textColor": "#FFFFFF"
+      "description": "Lire l'avenir dans les feuilles de thé et les boules de cristal."
     },
     {
       "id": "8da6",
       "name": "Arithmancie",
       "room": "Salle 7A",
       "teacherId": "23c6",
-      "description": "Les propriétés magiques des nombres.",
-      "color": "#3E7C7B",
-      "textColor": "#FFFFFF"
+      "description": "Les propriétés magiques des nombres."
     },
     {
       "id": "bd0c",
       "name": "Étude des runes",
       "room": "Salle 6A",
       "teacherId": "f5da",
-      "description": "Traduire les runes anciennes.",
-      "color": "#C9963E",
-      "textColor": "#2A2420"
+      "description": "Traduire les runes anciennes."
     },
     {
       "id": "621d",
       "name": "Étude des Moldus",
       "room": "Salle 1B",
       "teacherId": "2cec",
-      "description": "Comprendre la vie et les objets des Moldus.",
-      "color": "#A8552A",
-      "textColor": "#FFFFFF"
+      "description": "Comprendre la vie et les objets des Moldus."
     },
     {
       "id": "e49f",
       "name": "Vol sur balai",
       "room": "Terrain de Quidditch",
       "teacherId": "fb44",
-      "description": "Apprendre à voler sur un balai.",
-      "color": "#7FB3D5",
-      "textColor": "#2A2420"
+      "description": "Apprendre à voler sur un balai."
     }
   ],
   "classes": [

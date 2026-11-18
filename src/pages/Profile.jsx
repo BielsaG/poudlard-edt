@@ -16,7 +16,7 @@ import {
   faXmark,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import { deleteWizard, getCurrentUser, getWizardProfile, updateWizard } from "../services";
+import { deleteWizard, getCurrentUser, getWizardProfile, logout, updateWizard } from "../services";
 
 function Profile() {
   const { id } = useParams();
@@ -133,7 +133,15 @@ function Profile() {
 
     try {
       await deleteWizard(profil.id);
-      navigate("/");
+
+      // Si on vient de supprimer son propre compte : on le déconnecte
+      // (un gérant qui supprime le profil d'un autre sorcier reste connecté)
+      if (getCurrentUser()?.id === profil.id) {
+        logout();
+      }
+
+      // Retour à l'accueil, sans pouvoir revenir sur le profil supprimé avec "Retour"
+      navigate("/", { replace: true });
     } catch (error) {
       setErreur(error.message);
       setChargement(false);
