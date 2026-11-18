@@ -50,7 +50,7 @@ export default function Subjects() {
           value={search}
           onChange={handleSearch}
           placeholder="Rechercher une matière, un professeur, une salle…"
-          className="mx-auto mt-10 max-w-3xl"
+          className="mx-auto mt-10 w-full sm:w-2/3" // 2/3 de la largeur des cartes (pleine largeur sur mobile)
         />
 
         {error && <p className="mt-10 text-center text-error">{error}</p>}
