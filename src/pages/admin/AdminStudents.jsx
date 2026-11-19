@@ -17,18 +17,27 @@ export default function AdminStudents() {
   const [error, setError] = useState('')
 
   async function loadStudents() {
-    return Promise.all([getStudents(), getHouses(), getClasses()])
+    const studentList = await getStudents()
+    const houseList = await getHouses()
+    const classList = await getClasses()
+    return [studentList, houseList, classList]
   }
 
   useEffect(() => {
-    loadStudents()
-      .then(([studentList, houseList, classList]) => {
+    async function loadData() {
+      try {
+        const [studentList, houseList, classList] = await loadStudents()
         setStudents(studentList)
         setHouses(houseList)
         setClasses(classList)
-      })
-      .catch((loadError) => setError(loadError.message))
-      .finally(() => setLoading(false))
+      } catch (loadError) {
+        setError(loadError.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadData()
   }, [])
 
   function openForm(student = null) {

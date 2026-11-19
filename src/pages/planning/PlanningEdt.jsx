@@ -28,22 +28,26 @@ export default function PlanningEdt() {
     const wizard = await getWizardById(user.id)
     if (!wizard.classId) throw new Error('Aucune classe associée à votre compte.')
 
-    const [classTimeslots, subjectList] = await Promise.all([
-      getClassTimeslots(wizard.classId),
-      getSubjects(),
-    ])
+    const classTimeslots = await getClassTimeslots(wizard.classId)
+    const subjectList = await getSubjects()
 
     return { classTimeslots, subjectList }
   }
 
   useEffect(() => {
-    loadTimetable()
-      .then(({ classTimeslots, subjectList }) => {
+    async function loadPage() {
+      try {
+        const { classTimeslots, subjectList } = await loadTimetable()
         setTimeslots(classTimeslots)
         setSubjects(subjectList)
-      })
-      .catch((loadError) => setError(loadError.message))
-      .finally(() => setLoading(false))
+      } catch (loadError) {
+        setError(loadError.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadPage()
   }, [])
 
   const hours = [...new Set(timeslots.map((slot) => `${slot.start}|${slot.end}`))]

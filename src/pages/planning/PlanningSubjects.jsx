@@ -18,10 +18,8 @@ export default function PlanningSubjects() {
     const wizard = await getWizardById(user.id)
     if (!wizard.classId) throw new Error('Aucune classe associée à votre compte.')
 
-    const [studentClass, allSubjects] = await Promise.all([
-      getClassById(wizard.classId),
-      getSubjects(),
-    ])
+    const studentClass = await getClassById(wizard.classId)
+    const allSubjects = await getSubjects()
     const subjectIds = studentClass.subjectIds || []
 
     return allSubjects.filter(
@@ -32,10 +30,18 @@ export default function PlanningSubjects() {
   }
 
   useEffect(() => {
-    loadSubjects()
-      .then(setSubjects)
-      .catch((loadError) => setError(loadError.message))
-      .finally(() => setLoading(false))
+    async function loadPage() {
+      try {
+        const subjectList = await loadSubjects()
+        setSubjects(subjectList)
+      } catch (loadError) {
+        setError(loadError.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadPage()
   }, [])
 
   const query = search.trim().toLowerCase()

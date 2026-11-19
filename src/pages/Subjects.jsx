@@ -12,9 +12,16 @@ export default function Subjects() {
   const [page, setPage] = useState(1)
 
   useEffect(() => {
-    getSubjects()
-      .then(setSubjects)
-      .catch(() => setError('Impossible de charger les matières. Le serveur est-il lancé (npm run server) ?'))
+    async function loadSubjects() {
+      try {
+        const subjectList = await getSubjects()
+        setSubjects(subjectList)
+      } catch {
+        setError('Impossible de charger les matières. Le serveur est-il lancé (npm run server) ?')
+      }
+    }
+
+    loadSubjects()
   }, [])
 
   const query = search.trim().toLowerCase()
