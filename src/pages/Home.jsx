@@ -30,13 +30,20 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    Promise.all([getHouses(), getTeachers(), getSubjects()])
-      .then(([housesData, teachersData, subjectsData]) => {
+    async function loadData() {
+      try {
+        const housesData = await getHouses()
+        const teachersData = await getTeachers()
+        const subjectsData = await getSubjects()
         setHouses(housesData)
         setTeachers(teachersData.slice(0, TEACHERS_PREVIEW))
         setSubjects(subjectsData.slice(0, SUBJECTS_PREVIEW))
-      })
-      .catch(() => setError('Impossible de charger les données. Le serveur est-il lancé (npm run server) ?'))
+      } catch {
+        setError('Impossible de charger les données. Le serveur est-il lancé (npm run server) ?')
+      }
+    }
+
+    loadData()
   }, [])
 
   return (
