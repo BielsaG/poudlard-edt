@@ -12,9 +12,16 @@ export default function Staff() {
   const [page, setPage] = useState(1)
 
   useEffect(() => {
-    getStaffDirectory()
-      .then(setStaff)
-      .catch(() => setError('Impossible de charger le staff. Le serveur est-il lancé (npm run server) ?'))
+    async function loadStaff() {
+      try {
+        const staffList = await getStaffDirectory()
+        setStaff(staffList)
+      } catch {
+        setError('Impossible de charger le staff. Le serveur est-il lancé (npm run server) ?')
+      }
+    }
+
+    loadStaff()
   }, [])
 
   const filteredStaff = staff.filter((wizard) => {

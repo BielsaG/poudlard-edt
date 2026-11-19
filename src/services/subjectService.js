@@ -23,11 +23,9 @@ export const updateSubject = (id, subject) =>
 export const deleteSubject = (id) => del(`/subjects/${encodeURIComponent(id)}`)
 
 export async function getSubjects() {
-  const [subjects, staff, classes] = await Promise.all([
-    get('/subjects'),
-    get('/wizards?houseId=null'),
-    get('/classes'),
-  ])
+  const subjects = await get('/subjects')
+  const staff = await get('/wizards?houseId=null')
+  const classes = await get('/classes')
 
   return subjects.map((subject) => {
     const levels = getSubjectClasses(subject.id, classes).map((c) => c.level)

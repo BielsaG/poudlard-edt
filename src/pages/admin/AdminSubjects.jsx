@@ -15,17 +15,25 @@ export default function AdminSubjects() {
   const [error, setError] = useState('')
 
   async function loadSubjects() {
-    return Promise.all([getSubjects(), getTeachers()])
+    const subjectList = await getSubjects()
+    const teacherList = await getTeachers()
+    return [subjectList, teacherList]
   }
 
   useEffect(() => {
-    loadSubjects()
-      .then(([subjectList, teacherList]) => {
+    async function loadData() {
+      try {
+        const [subjectList, teacherList] = await loadSubjects()
         setSubjects(subjectList)
         setTeachers(teacherList)
-      })
-      .catch((loadError) => setError(loadError.message))
-      .finally(() => setLoading(false))
+      } catch (loadError) {
+        setError(loadError.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadData()
   }, [])
 
   function openForm(subject = null) {

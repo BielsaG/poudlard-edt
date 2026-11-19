@@ -32,11 +32,9 @@ export default function PlanningEdt() {
 
     // Professeur (pas de classe) : on affiche les créneaux des matières qu'il enseigne
     if (!wizard.classId) {
-      const [allTimeslots, subjectList, classList] = await Promise.all([
-        getTimeslots(),
-        getSubjects(),
-        getClasses(),
-      ])
+      const allTimeslots = await getTimeslots()
+      const subjectList = await getSubjects()
+      const classList = await getClasses()
       const mySubjectIds = subjectList
         .filter((subject) => subject.teacherId === wizard.id)
         .map((subject) => subject.id)
@@ -46,24 +44,28 @@ export default function PlanningEdt() {
       return { classTimeslots, subjectList, classList, teacher: true }
     }
 
-    const [classTimeslots, subjectList] = await Promise.all([
-      getClassTimeslots(wizard.classId),
-      getSubjects(),
-    ])
+    const classTimeslots = await getClassTimeslots(wizard.classId)
+    const subjectList = await getSubjects()
 
     return { classTimeslots, subjectList, classList: [], teacher: false }
   }
 
   useEffect(() => {
-    loadTimetable()
-      .then(({ classTimeslots, subjectList, classList, teacher }) => {
+    async function loadPage() {
+      try {
+        const { classTimeslots, subjectList, classList, teacher } = await loadTimetable()
         setTimeslots(classTimeslots)
         setSubjects(subjectList)
         setClasses(classList)
         setIsTeacher(teacher)
-      })
-      .catch((loadError) => setError(loadError.message))
-      .finally(() => setLoading(false))
+      } catch (loadError) {
+        setError(loadError.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadPage()
   }, [])
 
   const hours = [...new Set(timeslots.map((slot) => `${slot.start}|${slot.end}`))]
