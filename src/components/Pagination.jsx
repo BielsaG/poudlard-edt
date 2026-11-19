@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 function getPages(currentPage, totalPages) {
-  // 3 pages ou moins : on les affiche toutes -> 1 2 3
   if (totalPages <= 3) return Array.from({ length: totalPages }, (_, i) => i + 1)
 
   const shown = [...new Set([1, currentPage - 1, currentPage, totalPages])]
@@ -25,8 +24,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange, clas
   if (totalPages <= 1) return null
 
   const maxSlots = totalPages <= 3 ? totalPages : 5
-  const middleWidth = `calc(${maxSlots} * 2.5rem + ${maxSlots - 1} * 0.25rem)` // cases de 40 px + espaces de 4 px
-
+  const middleWidth = `calc(${maxSlots} * 2.5rem + ${maxSlots - 1} * 0.25rem)`
   const isFirst = currentPage === 1
   const isLast = currentPage === totalPages
 
