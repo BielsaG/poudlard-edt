@@ -1,32 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ListeDeroulante } from "../components";
 import { createWizard, getBois, getClasses, getCoeurs, getHouses, login } from "../services";
 import couverturePoudlard from "../assets/photos/photo-poudlard-accueil.jpg";
-
-function ListeDeroulante({ valeur, options, onChange, placeholder }) {
-  const [ouvert, setOuvert] = useState(false);
-
-  return (
-    <div className="relative" onBlur={() => setOuvert(false)}>
-      <button type="button" onClick={() => setOuvert(!ouvert)}
-        className={`flex w-full items-center justify-between rounded-md bg-white p-2 text-left shadow-sm outline-none focus:ring-2 focus:ring-[#A8813F] ${valeur ? "" : "text-[#6E6459]"}`}>
-        {valeur || placeholder}
-        <span className="text-xs text-[#8A9597]">▼</span>
-      </button>
-      {ouvert && (
-        <ul className="absolute inset-x-0 top-full z-10 mt-1 max-h-60 overflow-y-auto rounded-md bg-white shadow-md [scrollbar-color:#8A9597_#E5E7E8] [scrollbar-width:thin]">
-          {options.map((o) => (
-            <li key={o.id} onMouseDown={(e) => e.preventDefault()}
-              onClick={() => { onChange(o.name); setOuvert(false); }}
-              className={`cursor-pointer px-3 py-2 hover:bg-[#E5E7E8] ${o.name === valeur ? "font-semibold" : ""}`}>
-              {o.name}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
 
 function Register() {
 
@@ -192,14 +168,8 @@ function Register() {
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
               <ListeDeroulante valeur={bois} options={listeBois} onChange={setBois} placeholder="Bois" />
               <ListeDeroulante valeur={coeur} options={listeCoeurs} onChange={setCoeur} placeholder="Cœur" />
-              <input type="number" min="1" className="w-full rounded-md p-2 shadow-sm outline-none focus:ring-2 focus:ring-[#A8813F]" value={longueur}
+              <input type="number" min="1" className="w-full rounded-md bg-white p-2 shadow-sm outline-none focus:ring-2 focus:ring-[#A8813F]" value={longueur}
                 onChange={(e) => setLongueur(e.target.value)} placeholder="Longueur (cm)" />
-              <input className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={bois}
-                onChange={(e) => setBois(e.target.value)} placeholder="Bois" />
-              <input className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={coeur}
-                onChange={(e) => setCoeur(e.target.value)} placeholder="Cœur" />
-              <input className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={longueur}
-                onChange={(e) => setLongueur(e.target.value)} placeholder="Longueur" />
             </div>
 
             <label className="mb-2 mt-5 block text-sm font-bold text-stone-dark">Animal de compagnie</label>
