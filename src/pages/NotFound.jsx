@@ -10,9 +10,20 @@ export default function NotFound() {
       <meta name="robots" content="noindex" />
 
       <div className="w-full max-w-lg rounded-2xl border border-stone-light bg-parchment-light p-10 text-center shadow-sm">
-        <FontAwesomeIcon icon={faWandMagicSparkles} className="text-3xl text-brass" />
+        {/* GIF Tenor intégré en iframe : le script d'embed de Tenor ne se relance pas avec React Router */}
+        <div className="mx-auto aspect-[0.934375] w-full max-w-60 overflow-hidden rounded-xl border border-stone-light">
+          <iframe
+            src="https://tenor.com/embed/15416058"
+            title="Ron Weasley paniqué"
+            className="size-full"
+            loading="lazy"
+            allowFullScreen
+          />
+        </div>
 
-        <h1 className="mt-4 font-title text-7xl font-bold text-castle">404</h1>
+        <FontAwesomeIcon icon={faWandMagicSparkles} className="mt-6 text-2xl text-brass" />
+
+        <h1 className="mt-2 font-title text-7xl font-bold text-castle">404</h1>
 
         <Eyebrow className="mt-2 text-brass-dark">Page introuvable</Eyebrow>
 
