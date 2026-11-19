@@ -12,7 +12,8 @@
     "server": "json-server db.json --port 3000",
     "test": "jest",
     "api": "json-server db.json --host 0.0.0.0 --port ${PORT:-3000}",
-    "build:surge": "vite build && cp dist/index.html dist/200.html"
+    "build:surge": "vite build && cp dist/index.html dist/200.html",
+    "deploy": "npm run build:surge && surge ./dist poudlard-ynov.surge.sh"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
