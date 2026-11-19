@@ -16,7 +16,12 @@ export default function PlanningSubjects() {
     if (!user) throw new Error('Vous devez être connecté pour voir vos matières.')
 
     const wizard = await getWizardById(user.id)
-    if (!wizard.classId) throw new Error('Aucune classe associée à votre compte.')
+
+    // Professeur (pas de classe) : les matières qu'il enseigne
+    if (!wizard.classId) {
+      const allSubjects = await getSubjects()
+      return allSubjects.filter((subject) => subject.teacherId === wizard.id)
+    }
 
     const [studentClass, allSubjects] = await Promise.all([
       getClassById(wizard.classId),
