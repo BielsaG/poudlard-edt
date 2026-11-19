@@ -60,6 +60,11 @@ function Register() {
       return;
     }
 
+    if (!/[A-Z]/.test(motDePasse) || !/[0-9]/.test(motDePasse) || !/[^A-Za-z0-9]/.test(motDePasse)) {
+      setErreur("Le mot de passe doit contenir une majuscule, un chiffre et un caractère spécial.");
+      return;
+    }
+
     setChargement(true);
 
     const wizard = {
@@ -131,7 +136,7 @@ function Register() {
 
             <div>
               <label className="mb-2 block text-sm font-bold text-stone-dark">Mot de passe</label>
-              <input type="password" className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={motDePasse}
+              <input type="password" pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).*" title="Le mot de passe doit contenir une majuscule, un chiffre et un caractère spécial." className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={motDePasse}
                 onChange={(e) => setMotDePasse(e.target.value)} required />
             </div>
 
