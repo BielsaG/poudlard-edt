@@ -1468,6 +1468,27 @@
         "longueur": "18cm"
       },
       "id": "Qtks24JlGDo"
+    },
+    {
+      "firstName": "Gaïane",
+      "lastName": "Bielsa",
+      "email": "mail@mail.com",
+      "password": "azerty",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Ga%C3%AFane%20Bielsa",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "c3fc",
+      "classId": "da99",
+      "headOfHouseId": null,
+      "villeOrigine": "Londres",
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "chêne",
+        "coeur": "licorne",
+        "longueur": "36"
+      },
+      "id": "c4QTvk6wKdI"
     }
   ],
   "subjects": [
