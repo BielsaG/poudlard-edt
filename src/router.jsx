@@ -33,6 +33,11 @@ const router = createBrowserRouter([
               { index: true, element: <PlanningHome /> },
               { path: 'edt', element: <PlanningEdt /> },
               { path: 'matieres', element: <PlanningSubjects /> },
+              // Onglet Élèves réservé aux professeurs (réutilise la page admin)
+              {
+                element: <ProtectedRoute role="Professeur" />,
+                children: [{ path: 'eleves', element: <AdminStudents /> }],
+              },
             ],
           },
           { path: 'sorciers/:id', element: <Profile /> },
