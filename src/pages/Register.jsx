@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ListeDeroulante } from "../components";
 import { createWizard, getBois, getClasses, getCoeurs, getHouses, login } from "../services";
+import logo from "../assets/logos/logo-hogward.png";
 import couverturePoudlard from "../assets/photos/photo-poudlard-accueil.jpg";
 
 function Register() {
@@ -94,6 +95,7 @@ function Register() {
       <div className="absolute inset-0 -z-10 bg-castle/75" />
 
       <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-parchment-light/95 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur-sm sm:p-8">
+        <img src={logo} alt="Poudlard" className="relative z-10 mx-auto -mt-24 h-36 w-36 object-contain" />
         <div className="mb-8">
           <h1 className="font-title text-3xl font-bold">Inscription</h1>
         </div>
