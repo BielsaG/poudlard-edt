@@ -5,16 +5,19 @@ export const getWizards = () => get('/wizards')
 
 export const getWizardById = (id) => get(`/wizards/${id}`)
 
+export const updateWizard = (id, wizard) =>
+  patch(`/wizards/${id}`, wizard)
+
+export const deleteWizard = (id) => del(`/wizards/${id}`)
+
 export const createWizard = (wizard) =>
   post('/wizards', wizard)
 
 export async function getWizardProfile(id) {
-  const [wizard, roles, houses, classes] = await Promise.all([
-    getWizardById(id),
-    get('/roles'),
-    get('/houses'),
-    get('/classes'),
-  ])
+  const wizard = await getWizardById(id)
+  const roles = await get('/roles')
+  const houses = await get('/houses')
+  const classes = await get('/classes')
 
   return {
     id: wizard.id,
@@ -22,9 +25,7 @@ export async function getWizardProfile(id) {
     nom: wizard.lastName,
     email: wizard.email,
     photo: wizard.avatar,
-    roles: (wizard.roleIds || []).map(
-      (roleId) => roles.find((role) => role.id === roleId)?.label || roleId,
-    ),
+    roles: (wizard.roleIds || []).map((roleId) => roles.find((role) => role.id === roleId)?.label || roleId),
     maison: houses.find((house) => house.id === wizard.houseId)?.name || '',
     classe: classes.find((classe) => classe.id === wizard.classId)?.name || '',
     houseId: wizard.houseId || '',
@@ -38,7 +39,8 @@ export async function getWizardProfile(id) {
 }
 
 export async function getStudents() {
-  const [wizards, roles] = await Promise.all([getWizards(), getRoles()])
+  const wizards = await getWizards()
+  const roles = await getRoles()
   const studentRole = roles.find((role) => role.name === 'user')
 
   if (!studentRole) throw new Error('Le rôle élève est introuvable.')
@@ -60,34 +62,19 @@ export async function createStudent(student) {
   })
 }
 
-export const updateWizard = (id, wizard) =>
-  patch(`/wizards/${encodeURIComponent(id)}`, wizard)
-export const deleteWizard = (id) => del(`/wizards/${encodeURIComponent(id)}`)
-
-// Le staff : les sorciers sans maison
 export const getStaff = () => get('/wizards?houseId=null')
 
 export async function getTeachers() {
-  const [staff, subjects] = await Promise.all([getStaff(), get('/subjects')])
+  const staff = await getStaff()
+  const subjects = await get('/subjects')
 
-  return staff
-    .map((wizard) => ({
-      ...wizard,
-      subject: subjects.find((s) => s.teacherId === wizard.id) ?? null,
-    }))
-    .filter((wizard) => wizard.subject)
+  return staff.map((wizard) => ({ ...wizard, subject: subjects.find((subject) => subject.teacherId === wizard.id) || null })).filter((wizard) => wizard.subject)
 }
 
 export async function getStaffDirectory() {
-  const [staff, roles, subjects] = await Promise.all([
-    get('/wizards?houseId=null&_sort=lastName'),
-    get('/roles'),
-    get('/subjects'),
-  ])
+  const staff = await get('/wizards?houseId=null&_sort=lastName')
+  const roles = await get('/roles')
+  const subjects = await get('/subjects')
 
-  return staff.map((wizard) => ({
-    ...wizard,
-    roles: roles.filter((r) => wizard.roleIds.includes(r.id)),
-    subjects: subjects.filter((s) => s.teacherId === wizard.id),
-  }))
+  return staff.map((wizard) => ({ ...wizard, roles: roles.filter((role) => wizard.roleIds.includes(role.id)), subjects: subjects.filter((subject) => subject.teacherId === wizard.id) }))
 }

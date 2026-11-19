@@ -1489,6 +1489,27 @@
         "longueur": "36"
       },
       "id": "c4QTvk6wKdI"
+    },
+    {
+      "firstName": "Luna",
+      "lastName": "Lovegood",
+      "email": "luna@gmail.com",
+      "password": "alohomora",
+      "avatar": "https://api.dicebear.com/9.x/initials/svg?seed=Luna%20Lovegood",
+      "roleIds": [
+        "f924"
+      ],
+      "houseId": "e53a",
+      "classId": "da99",
+      "headOfHouseId": null,
+      "villeOrigine": "Loin",
+      "animal": "Chouette",
+      "baguette": {
+        "bois": "Charme",
+        "coeur": "Plume de phénix",
+        "longueur": "36 cm"
+      },
+      "id": "dwltsG_QSUc"
     }
   ],
   "subjects": [
@@ -1497,91 +1518,117 @@
       "name": "Métamorphose",
       "room": "Salle de métamorphose",
       "teacherId": "506b",
-      "description": "Transformer la forme et l'apparence des objets et des êtres."
+      "description": "Transformer la forme et l'apparence des objets et des êtres.",
+      "color": "#6B4E9B",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "3b7f",
       "name": "Sortilèges",
       "room": "Salle 2E",
       "teacherId": "7a76",
-      "description": "Apprendre les enchantements et leur bonne prononciation."
+      "description": "Apprendre les enchantements et leur bonne prononciation.",
+      "color": "#2F6FA3",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "fc05",
       "name": "Potions",
       "room": "Cachot de potions",
       "teacherId": "8b5b",
-      "description": "Préparer des potions et connaître leurs ingrédients."
+      "description": "Préparer des potions et connaître leurs ingrédients.",
+      "color": "#2E6B4F",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "0fec",
       "name": "Défense contre les forces du Mal",
       "room": "Salle 3C",
       "teacherId": "fb00",
-      "description": "Se protéger des créatures et des sorts maléfiques."
+      "description": "Se protéger des créatures et des sorts maléfiques.",
+      "color": "#8E3B3B",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "94db",
       "name": "Botanique",
       "room": "Serre n°3",
       "teacherId": "7c76",
-      "description": "Étudier et cultiver les plantes magiques."
+      "description": "Étudier et cultiver les plantes magiques.",
+      "color": "#4F7A2F",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "ca3a",
       "name": "Astronomie",
       "room": "Tour d'astronomie",
       "teacherId": "8f86",
-      "description": "Observer les étoiles et les planètes."
+      "description": "Observer les étoiles et les planètes.",
+      "color": "#1F2F5C",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "0aac",
       "name": "Histoire de la magie",
       "room": "Salle 4F",
       "teacherId": "bebb",
-      "description": "Les grands événements du monde sorcier."
+      "description": "Les grands événements du monde sorcier.",
+      "color": "#7A6A55",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "8b2c",
       "name": "Soins aux créatures magiques",
       "room": "Lisière de la Forêt interdite",
       "teacherId": "f6a6",
-      "description": "Soigner et comprendre les créatures magiques."
+      "description": "Soigner et comprendre les créatures magiques.",
+      "color": "#8A5A2B",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "c2bd",
       "name": "Divination",
       "room": "Tour nord",
       "teacherId": "f0fb",
-      "description": "Lire l'avenir dans les feuilles de thé et les boules de cristal."
+      "description": "Lire l'avenir dans les feuilles de thé et les boules de cristal.",
+      "color": "#A0457A",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "8da6",
       "name": "Arithmancie",
       "room": "Salle 7A",
       "teacherId": "23c6",
-      "description": "Les propriétés magiques des nombres."
+      "description": "Les propriétés magiques des nombres.",
+      "color": "#3E7C7B",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "bd0c",
       "name": "Étude des runes",
       "room": "Salle 6A",
       "teacherId": "f5da",
-      "description": "Traduire les runes anciennes."
+      "description": "Traduire les runes anciennes.",
+      "color": "#C9963E",
+      "textColor": "#2A2420"
     },
     {
       "id": "621d",
       "name": "Étude des Moldus",
       "room": "Salle 1B",
       "teacherId": "2cec",
-      "description": "Comprendre la vie et les objets des Moldus."
+      "description": "Comprendre la vie et les objets des Moldus.",
+      "color": "#A8552A",
+      "textColor": "#FFFFFF"
     },
     {
       "id": "e49f",
       "name": "Vol sur balai",
       "room": "Terrain de Quidditch",
       "teacherId": "fb44",
-      "description": "Apprendre à voler sur un balai."
+      "description": "Apprendre à voler sur un balai.",
+      "color": "#7FB3D5",
+      "textColor": "#2A2420"
     }
   ],
   "classes": [
@@ -2384,6 +2431,130 @@
       "day": "vendredi",
       "start": "20:00",
       "end": "21:30"
+    }
+  ],
+  "bois": [
+    {
+      "id": "b1",
+      "name": "Acacia"
+    },
+    {
+      "id": "b2",
+      "name": "Aubépine"
+    },
+    {
+      "id": "b3",
+      "name": "Aulne"
+    },
+    {
+      "id": "b4",
+      "name": "Bouleau"
+    },
+    {
+      "id": "b5",
+      "name": "Cèdre"
+    },
+    {
+      "id": "b6",
+      "name": "Cerisier"
+    },
+    {
+      "id": "b7",
+      "name": "Charme"
+    },
+    {
+      "id": "b8",
+      "name": "Chêne"
+    },
+    {
+      "id": "b9",
+      "name": "Cyprès"
+    },
+    {
+      "id": "b10",
+      "name": "Ébène"
+    },
+    {
+      "id": "b11",
+      "name": "Érable"
+    },
+    {
+      "id": "b12",
+      "name": "Frêne"
+    },
+    {
+      "id": "b13",
+      "name": "Hêtre"
+    },
+    {
+      "id": "b14",
+      "name": "Houx"
+    },
+    {
+      "id": "b15",
+      "name": "If"
+    },
+    {
+      "id": "b16",
+      "name": "Noisetier"
+    },
+    {
+      "id": "b17",
+      "name": "Noyer"
+    },
+    {
+      "id": "b18",
+      "name": "Pommier"
+    },
+    {
+      "id": "b19",
+      "name": "Sapin"
+    },
+    {
+      "id": "b20",
+      "name": "Saule"
+    },
+    {
+      "id": "b21",
+      "name": "Sorbier"
+    },
+    {
+      "id": "b22",
+      "name": "Sureau"
+    },
+    {
+      "id": "b23",
+      "name": "Tilleul"
+    },
+    {
+      "id": "b24",
+      "name": "Vigne"
+    }
+  ],
+  "coeurs": [
+    {
+      "id": "c1",
+      "name": "Crin de licorne"
+    },
+    {
+      "id": "c2",
+      "name": "Plume de phénix"
+    },
+    {
+      "id": "c3",
+      "name": "Ventricule de dragon"
+    },
+    {
+      "id": "c4",
+      "name": "Dragon"
+    },
+    {
+      "id": "c5",
+      "name": "Cheveu de Vélane"
+    },
+    {
+      "id": "c6",
+      "name": "Crin de Sombral"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
