@@ -6,6 +6,7 @@ import Eyebrow from './Eyebrow'
 import HouseCard from './HouseCard'
 import Label from './Label'
 import List from './List'
+import ListeDeroulante from './ListeDeroulante'
 import PageTitle from './PageTitle'
 import Pagination from './Pagination'
 import ProtectedRoute from './ProtectedRoute'
@@ -14,4 +15,4 @@ import StaffCard from './StaffCard'
 import SubjectCard from './SubjectCard'
 import SubjectInitial from './SubjectInitial'
 
-export { Avatar, BackLink, Badge, Card, Eyebrow, HouseCard, Label, List, PageTitle, Pagination, ProtectedRoute, SearchBar, StaffCard, SubjectCard, SubjectInitial }
+export { Avatar, BackLink, Badge, Card, Eyebrow, HouseCard, Label, List, ListeDeroulante, PageTitle, Pagination, ProtectedRoute, SearchBar, StaffCard, SubjectCard, SubjectInitial }

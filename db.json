@@ -2386,5 +2386,129 @@
       "end": "21:30"
     }
   ],
+  "bois": [
+    {
+      "id": "b1",
+      "name": "Acacia"
+    },
+    {
+      "id": "b2",
+      "name": "Aubépine"
+    },
+    {
+      "id": "b3",
+      "name": "Aulne"
+    },
+    {
+      "id": "b4",
+      "name": "Bouleau"
+    },
+    {
+      "id": "b5",
+      "name": "Cèdre"
+    },
+    {
+      "id": "b6",
+      "name": "Cerisier"
+    },
+    {
+      "id": "b7",
+      "name": "Charme"
+    },
+    {
+      "id": "b8",
+      "name": "Chêne"
+    },
+    {
+      "id": "b9",
+      "name": "Cyprès"
+    },
+    {
+      "id": "b10",
+      "name": "Ébène"
+    },
+    {
+      "id": "b11",
+      "name": "Érable"
+    },
+    {
+      "id": "b12",
+      "name": "Frêne"
+    },
+    {
+      "id": "b13",
+      "name": "Hêtre"
+    },
+    {
+      "id": "b14",
+      "name": "Houx"
+    },
+    {
+      "id": "b15",
+      "name": "If"
+    },
+    {
+      "id": "b16",
+      "name": "Noisetier"
+    },
+    {
+      "id": "b17",
+      "name": "Noyer"
+    },
+    {
+      "id": "b18",
+      "name": "Pommier"
+    },
+    {
+      "id": "b19",
+      "name": "Sapin"
+    },
+    {
+      "id": "b20",
+      "name": "Saule"
+    },
+    {
+      "id": "b21",
+      "name": "Sorbier"
+    },
+    {
+      "id": "b22",
+      "name": "Sureau"
+    },
+    {
+      "id": "b23",
+      "name": "Tilleul"
+    },
+    {
+      "id": "b24",
+      "name": "Vigne"
+    }
+  ],
+  "coeurs": [
+    {
+      "id": "c1",
+      "name": "Crin de licorne"
+    },
+    {
+      "id": "c2",
+      "name": "Plume de phénix"
+    },
+    {
+      "id": "c3",
+      "name": "Ventricule de dragon"
+    },
+    {
+      "id": "c4",
+      "name": "Dragon"
+    },
+    {
+      "id": "c5",
+      "name": "Cheveu de Vélane"
+    },
+    {
+      "id": "c6",
+      "name": "Crin de Sombral"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

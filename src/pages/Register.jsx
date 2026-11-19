@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createWizard, getClasses, getHouses, login } from "../services";
+import { ListeDeroulante } from "../components";
+import { createWizard, getBois, getClasses, getCoeurs, getHouses, login } from "../services";
+import logo from "../assets/logos/logo-hogward.png";
 import couverturePoudlard from "../assets/photos/photo-poudlard-accueil.jpg";
 
 function Register() {
@@ -9,6 +11,8 @@ function Register() {
 
   const [maisons, setMaisons] = useState([]);
   const [classes, setClasses] = useState([]);
+  const [listeBois, setListeBois] = useState([]);
+  const [listeCoeurs, setListeCoeurs] = useState([]);
   const [erreur, setErreur] = useState("");
   const [chargement, setChargement] = useState(false);
   const [chargementDonnees, setChargementDonnees] = useState(true);
@@ -34,6 +38,8 @@ function Register() {
         const classesData = await getClasses();
         setMaisons(maisonsData);
         setClasses(classesData);
+        setListeBois(await getBois());
+        setListeCoeurs(await getCoeurs());
       } catch {
         setErreur("Impossible de charger les données");
       } finally {
@@ -68,7 +74,7 @@ function Register() {
       headOfHouseId: null,
       villeOrigine: ville,
       animal,
-      baguette: { bois, coeur, longueur },
+      baguette: { bois, coeur, longueur: longueur ? `${longueur} cm` : "" },
     };
 
     try {
@@ -89,6 +95,7 @@ function Register() {
       <div className="absolute inset-0 -z-10 bg-castle/75" />
 
       <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-parchment-light/95 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur-sm sm:p-8">
+        <img src={logo} alt="Poudlard" className="relative z-10 mx-auto -mt-24 h-36 w-36 object-contain" />
         <div className="mb-8">
           <h1 className="font-title text-3xl font-bold">Inscription</h1>
         </div>
@@ -161,12 +168,10 @@ function Register() {
             <h2 className="mb-4 font-title text-2xl font-bold">Vos items magiques</h2>
             <label className="mb-2 block text-sm font-bold text-stone-dark">Baguette magique</label>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-              <input className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={bois}
-                onChange={(e) => setBois(e.target.value)} placeholder="Bois" />
-              <input className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={coeur}
-                onChange={(e) => setCoeur(e.target.value)} placeholder="Cœur" />
-              <input className="w-full rounded-xl border border-stone-light bg-white px-4 py-3 shadow-sm outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/20" value={longueur}
-                onChange={(e) => setLongueur(e.target.value)} placeholder="Longueur" />
+              <ListeDeroulante valeur={bois} options={listeBois} onChange={setBois} placeholder="Bois" />
+              <ListeDeroulante valeur={coeur} options={listeCoeurs} onChange={setCoeur} placeholder="Cœur" />
+              <input type="number" min="1" className="w-full rounded-md bg-white p-2 shadow-sm outline-none focus:ring-2 focus:ring-[#A8813F]" value={longueur}
+                onChange={(e) => setLongueur(e.target.value)} placeholder="Longueur (cm)" />
             </div>
 
             <label className="mb-2 mt-5 block text-sm font-bold text-stone-dark">Animal de compagnie</label>
