@@ -1,13 +1,16 @@
 import { NavLink, Navigate, Outlet } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarDays, faFlask } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarDays, faFlask, faHatWizard } from '@fortawesome/free-solid-svg-icons'
+import { getCurrentUser } from '../../services'
 
 const tabs = [
   { path: 'edt', label: 'Mon emploi du temps', icon: faCalendarDays },
-  { path: 'matieres', label: 'Mes Matières', icon: faFlask },
+  { path: 'matieres', label: 'Mes Matières', icon: faFlask, hiddenFor: 'Professeur' },
+  { path: 'eleves', label: 'Élèves', icon: faHatWizard, role: 'Professeur' },
 ]
 
 export default function PlanningLayout() {
+  const user = getCurrentUser()
   const today = new Date()
   const currentYear = today.getFullYear()
   const month = today.getMonth()
@@ -21,7 +24,7 @@ export default function PlanningLayout() {
           className="flex flex-col gap-[0.35rem] max-[700px]:flex-row max-[700px]:overflow-x-auto"
           aria-label="Gestion"
         >
-          {tabs.map((tab) => (
+          {tabs.filter((tab) => (!tab.role || tab.role === user?.role) && tab.hiddenFor !== user?.role).map((tab) => (
             <NavLink
               key={tab.path}
               to={`/planning/${tab.path}`}

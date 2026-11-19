@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { Card } from '../../components'
 import { getCurrentUser } from '../../services/authService.js'
 import { getSubjects } from '../../services/subjectService.js'
-import { getClassTimeslots } from '../../services/timeslotService.js'
+import { getClasses } from '../../services/classService.js'
+import { getClassTimeslots, getTimeslots } from '../../services/timeslotService.js'
 import { getWizardById } from '../../services/wizardService.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
@@ -18,6 +19,8 @@ const days = [
 export default function PlanningEdt() {
   const [timeslots, setTimeslots] = useState([])
   const [subjects, setSubjects] = useState([])
+  const [classes, setClasses] = useState([])
+  const [isTeacher, setIsTeacher] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
@@ -26,20 +29,35 @@ export default function PlanningEdt() {
     if (!user) throw new Error('Vous devez être connecté pour voir votre emploi du temps.')
 
     const wizard = await getWizardById(user.id)
-    if (!wizard.classId) throw new Error('Aucune classe associée à votre compte.')
+
+    // Professeur (pas de classe) : on affiche les créneaux des matières qu'il enseigne
+    if (!wizard.classId) {
+      const allTimeslots = await getTimeslots()
+      const subjectList = await getSubjects()
+      const classList = await getClasses()
+      const mySubjectIds = subjectList
+        .filter((subject) => subject.teacherId === wizard.id)
+        .map((subject) => subject.id)
+      if (mySubjectIds.length === 0) throw new Error('Aucune classe ni aucun cours associé à votre compte.')
+
+      const classTimeslots = allTimeslots.filter((slot) => mySubjectIds.includes(slot.subjectId))
+      return { classTimeslots, subjectList, classList, teacher: true }
+    }
 
     const classTimeslots = await getClassTimeslots(wizard.classId)
     const subjectList = await getSubjects()
 
-    return { classTimeslots, subjectList }
+    return { classTimeslots, subjectList, classList: [], teacher: false }
   }
 
   useEffect(() => {
     async function loadPage() {
       try {
-        const { classTimeslots, subjectList } = await loadTimetable()
+        const { classTimeslots, subjectList, classList, teacher } = await loadTimetable()
         setTimeslots(classTimeslots)
         setSubjects(subjectList)
+        setClasses(classList)
+        setIsTeacher(teacher)
       } catch (loadError) {
         setError(loadError.message)
       } finally {
@@ -124,9 +142,11 @@ export default function PlanningEdt() {
                               >
                                 <div className="min-w-0">
                                   <p className="truncate text-sm font-bold text-stone-dark">
-                                    {subject.teacher
-                                      ? `${subject.teacher.firstName} ${subject.teacher.lastName}`
-                                      : 'Aucun professeur'}
+                                    {isTeacher
+                                      ? classes.find((item) => item.id === timeslot.classId)?.name
+                                      : subject.teacher
+                                        ? `${subject.teacher.firstName} ${subject.teacher.lastName}`
+                                        : 'Aucun professeur'}
                                   </p>
                                   <p className="mt-1 truncate text-[0.7rem] text-stone">
                                     <FontAwesomeIcon icon={faLocationDot} className="shrink-0 text-sm" />
